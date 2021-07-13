@@ -1,0 +1,127 @@
+@import url("https://use.fontawesome.com/releases/v5.10.2/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+body {
+  background: #eeeeee;
+  margin: 0px;
+  padding: 0px;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+  font-family: Helvetica, sans-serif;
+}
+.header-img {
+  max-width: 30px;
+}
+.header-img img {
+  width: 100%;
+}
+.nav-link-item a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #1e1f26;
+}
+.nav-link-item {
+  list-style-type: none;
+  margin: 0px 60px;
+}
+.nav-link {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* HEADER */
+
+.header-submit {
+  text-align: center;
+}
+.header-submit-title {
+  font-size: 25px;
+  font-family: "Lat", sans-serif;
+}
+#email {
+  padding: 5px 100px 5px 6px;
+}
+#submit {
+  font-family: Helvetica, sans-serif;
+  margin-top: 15px;
+  background: #ffc20c;
+  font-weight: 900;
+  font-size: 17px;
+  border: none;
+  padding: 5px 15px;
+}
+#submit:hover {
+  background: #ffa500;
+}
+
+/* MAIN HEADER */
+
+.services {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+.service-content {
+  display: flex;
+}
+.service-content-icon i {
+  color: #ff8c00;
+  font-size: 50px;
+  margin-top: 35px;
+  margin-right: 50px;
+}
+/* MAIN SERVICES */
+
+.cards {
+  display: flex;
+  justify-content: center;
+}
+.cards-content {
+  display: flex;
+  flex-direction: column;
+  background: #eeeeee;
+  border: 1px solid #1e1f26;
+  text-align: center;
+  margin: 10px;
+  border-radius: 3px;
+  width: 320px;
+}
+.cards-content-title {
+  background: #dddddd;
+}
+.cards-content-title h3 {
+  color: #1e1f26;
+}
+button {
+  border: 0;
+  margin: 15px 0;
+  background-color: #f1c40f;
+  font-weight: 400;
+}
+.btn {
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+}
+/* MAIN  CONTENT */
+
+footer {
+  background: #dddddd;
+  width: 800px;
+  margin-top: 30px;
+  padding: 20px;
+}
+.footer-nav {
+  display: flex;
+}
+.footer-nav p {
+  text-align: right;
+}
+.footer-info {
+  text-align: right;
+}
+/* FOOTER */

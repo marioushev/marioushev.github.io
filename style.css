@@ -1,0 +1,93 @@
+@import url("https://use.fontawesome.com/releases/v5.10.2/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700,700i|Montserrat:700");
+body {
+  margin: 0;
+  padding: 0px;
+  background: #393e46;
+  font-family: "Roboto", monospace;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-logo img {
+  width: 150px;
+  margin-left: 300px;
+}
+.nav-list {
+  flex-basis: 40%;
+}
+.nav-list ul {
+  display: flex;
+  align-items: center;
+}
+.nav-list-item {
+  margin-top: 50px;
+  list-style-type: none;
+  margin: 25px;
+}
+.nav-list-item a {
+  color: #fff;
+  font-weight: 550;
+  text-decoration: none;
+  font-size: 25px;
+}
+.nav-list-item .one:hover {
+  transition: all 0.3s ease-in;
+  padding: 9px 15px 9px 10px;
+  border-radius: 4px;
+  background: white;
+  color: purple;
+}
+.nav-list-item .two:hover {
+  transition: all 0.3s ease-in;
+  padding: 9px 15px 9px 10px;
+  border-radius: 4px;
+  background: white;
+  color: rgb(2, 173, 10);
+}
+.nav-list-item .three:hover {
+  transition: all 0.3s ease-in;
+  padding: 9px 15px 9px 10px;
+  border-radius: 4px;
+  background: white;
+  color: rgb(238, 225, 45);
+}
+.header-logo img:hover {
+  cursor: pointer;
+}
+@media all and (min-width: 375px) and (max-width: 667px) {
+  .header-logo img {
+    width: 150px;
+    margin-left: 150px;
+  }
+  .nav-list {
+    flex-basis: 50%;
+  }
+  .updates-title {
+    color: white;
+    position: absolute;
+    font-size: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-25%, -25%);
+  }
+}
+/* HEADER */
+.updates-title {
+  color: white;
+  position: absolute;
+  font-size: 150px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.section-image {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  color: white;
+}

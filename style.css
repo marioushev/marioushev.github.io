@@ -69,10 +69,10 @@ header {
 @media all and (min-width: 375px) and (max-width: 667px) {
   .header-logo img {
     width: 150px;
-    margin-left: 150px;
+    margin-left: 40px;
   }
   .nav-list {
-    flex-basis: 50%;
+    flex-basis: 30%;
   }
   .updates-title {
     color: white;
@@ -83,6 +83,7 @@ header {
     transform: translate(-25%, -25%);
   }
 }
+
 /*
 header {
   position: fixed;
@@ -130,5 +131,9 @@ header {
   font-weight: 700;
   color: wheat;
 }
-
+@media all and (min-width: 375px) and (max-width: 667px) {
+  .updates-title {
+    transform: translate(-25%, -25%);
+  }
+}
 /* MAIN INTRO */

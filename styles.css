@@ -169,11 +169,19 @@ p {
   color: var(--clr-secondary);
 }
 .title-list {
-  padding-left: 20px;
+  margin-left: 70px;
   font-style: Helvetica;
+  font-size: 20px;
+}
+.projects-list {
+  /*
+  margin-top: 50px;
+  width: 50%;
+  */
+  display: inline-flexbox;
 }
 .list-of-projects {
-  margin-left: 50px;
+  margin-left: 100px;
   line-height: 3rem;
 }
 /* section */
@@ -395,8 +403,11 @@ footer p {
   }
 }
 .sub-text {
+  margin: auto;
+  padding: 20px 10px;
   text-align: center;
   width: 100%;
+  width: 800px;
 }
 .sertificates {
   display: flex;

@@ -3,6 +3,11 @@
 // slice extracts a section of a string without modifying original string
 //offsetTop - A Number, representing the top position of the element, in pixels
 
+// ** popup banner **//
+document.querySelector("#cookies-close-btn").addEventListener("click", () => {
+  document.querySelector("#cookies").style.display = "none";
+});
+
 // ********** set date ************
 const date = document.getElementById("date"); /*querySelector*/
 date.innerHTML = new Date().getFullYear();

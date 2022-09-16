@@ -88,7 +88,43 @@ img:not(.logo) {
 img {
   display: block;
 }
-
+.bigContainer {
+  width: 1000px;
+  margin: auto;
+}
+.subcontainer {
+  width: 85%;
+  margin: auto;
+}
+.cookies {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#cookies-close-btn {
+  padding: 1px 3px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+@media (max-width: 1600px) {
+  .bigContainer {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .cookies {
+    padding: 10px 0;
+  }
+}
+#cookies {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  color: white;
+  background-color: #222;
+}
 h1,
 h2,
 h3,

@@ -363,11 +363,11 @@ header {
   text-align: center;
 }
 .container h1 {
-  color: var(--clr-white);
+  color: #272829;
   text-transform: uppercase;
 }
 .container p {
-  color: var(--clr-white);
+  color: #272829;
   max-width: 25rem;
   margin: 0 auto;
   margin-bottom: 1.25rem;

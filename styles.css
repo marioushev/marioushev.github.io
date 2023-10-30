@@ -361,6 +361,7 @@ header {
   display: grid;
   place-items: center;
   text-align: center;
+  color: #d8d9da;
 }
 .container h1 {
   color: #272829;

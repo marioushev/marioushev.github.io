@@ -202,7 +202,7 @@ p {
 }
 .btn:hover {
   background: var(--clr-white);
-  color: var(--clr-secondary);
+  color: #272829;
 }
 .title-list {
   margin-left: 70px;

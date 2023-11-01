@@ -195,7 +195,7 @@ p {
   background: var(--clr-black);
 }
 .btn-white {
-  color: var(--clr-white);
+  color: #d8d9da;
   border-color: var(--clr-white);
   border-radius: 0;
   padding: 0.5rem 1rem;
@@ -264,7 +264,7 @@ nav {
   color: var(--clr-grey-1);
 }
 .fixed-nav .links a:hover {
-  color: #61677a;
+  color: #9eb384;
 }
 /* .fixed-nav .links-container {
   height: auto !important;

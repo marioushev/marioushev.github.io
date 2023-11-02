@@ -143,6 +143,11 @@
   line-height: normal;
 }
 
+.home .cv-2 a {
+  color: #efefef;
+  text-decoration: none;
+}
+
 .home .img {
   width: 1px;
   height: 1px;

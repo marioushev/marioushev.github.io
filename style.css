@@ -203,6 +203,10 @@
   top: 0;
 }
 
+.home .vector-2 a {
+  text-decoration: none;
+}
+
 .home .vector-3 {
   left: 457px;
   position: absolute;

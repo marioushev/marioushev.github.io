@@ -1,0 +1,30 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "PP Monument Extended-Regular";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/6011b6e0ffe80da1226c0887/fonts/ppmonumentextended-regular.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "PP Monument Extended-Black";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/633c2bf70ae1dbd35fe00ea2/fonts/ppmonumentextended-black.otf")
+    format("opentype");
+}

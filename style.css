@@ -132,6 +132,7 @@
 }
 
 .home .cv-2 {
+  /*
   position: absolute;
   top: 4px;
   left: 12px;
@@ -141,6 +142,18 @@
   font-size: 30px;
   letter-spacing: 0;
   line-height: normal;
+  */
+  font-family: "PP Monument Extended-Black", Helvetica;
+  font-weight: 900;
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px;
+  color: #efefef;
+  transition: all 0.6s ease-out;
+  display: block;
+}
+.home.cv-2:hover {
+  color: #000000;
 }
 
 .home .cv-2 a {

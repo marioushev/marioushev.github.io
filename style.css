@@ -130,6 +130,11 @@
   left: 1066px;
   /*  background-color: #000000; */
   background: linear-gradient(to right, black 50%, white 50%);
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
+}
+.home .cv:hover {
+  background-position: left bottom;
 }
 
 .home .cv-2 {
@@ -142,6 +147,11 @@
   font-size: 30px;
   letter-spacing: 0;
   line-height: normal;
+}
+
+.home .cv-2:hover {
+  transition: all 0.6s ease-out;
+  color: #000000;
 }
 
 .home .cv-2 a {

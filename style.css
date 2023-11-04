@@ -150,12 +150,6 @@
 .home .cv-2 a {
   color: #efefef;
   text-decoration: none;
-  text-align: center;
-  font-size: 16px;
-  line-height: 30px;
-  color: #efefef;
-  transition: all 0.6s ease-out;
-  display: block;
 }
 
 .home .img {

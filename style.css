@@ -128,7 +128,8 @@
   height: 51px;
   top: 29px;
   left: 1066px;
-  background-color: #000000;
+  /*  background-color: #000000; */
+  background: linear-gradient(to right, black 50%, white 50%);
 }
 
 .home .cv-2 {

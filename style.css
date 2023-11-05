@@ -128,7 +128,7 @@
   height: 51px;
   top: 29px;
   left: 1066px;
-  background: linear-gradient(to right, white 100%);
+  background: black;
   background-position: right bottom;
   transition: all 0.5s ease-out;
 }

@@ -137,6 +137,7 @@
   background-position: left bottom;
   background: linear-gradient(to right, white 100%);
   color: #000000;
+  text-decoration: none;
 }
 
 .home .cv-2 {

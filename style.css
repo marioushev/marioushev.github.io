@@ -129,7 +129,7 @@
   top: 29px;
   left: 1066px;
   /*  background-color: #000000; */
-  background: linear-gradient(to right, black 50%, white 50%);
+  background: linear-gradient(to right, white 50%, black 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.5s ease-out;

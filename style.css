@@ -103,7 +103,7 @@
 
 .home .full-name-mario {
   position: absolute;
-  top: 48px;
+  top: 61px;
   left: 0;
   font-family: "PP Monument Extended-Regular", Helvetica;
   font-weight: 400;
@@ -135,7 +135,7 @@
 
 .home .cv:hover {
   background-position: left bottom;
-  background-color: #efefef;
+  background: linear-gradient(to right, white 100%);
   color: #000000;
 }
 
@@ -152,7 +152,6 @@
 
 .home .cv-2 a {
   color: #efefef;
-  background-color: #000000;
   text-decoration: none;
   transition: all 0.6s ease-out;
 }

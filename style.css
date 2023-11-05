@@ -122,7 +122,6 @@
   object-fit: cover;
 }
 
-/* CV BUTTON
 .home .cv {
   position: absolute;
   width: 90px;
@@ -161,41 +160,6 @@
 .home .cv-2 a:hover {
   color: #000000;
   background-color: #efefef;
-}
-*/
-
-.cv-2 {
-  margin: 50px;
-}
-
-.cv-2 {
-  border: 1px solid black;
-  border-radius: 3px;
-  width: 100px;
-  height: 30px;
-  display: block;
-
-  background: linear-gradient(to right, black 50%, white 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition: all 0.5s ease-out;
-}
-
-.cv-2:hover {
-  background-position: left bottom;
-}
-
-.cv-2 a {
-  text-align: center;
-  font-size: 16px;
-  line-height: 30px;
-  color: black;
-  transition: all 0.6s ease-out;
-  display: block;
-}
-
-.cv-2 a:hover {
-  color: white;
 }
 
 .home .img {

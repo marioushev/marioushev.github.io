@@ -157,7 +157,8 @@
 }
 
 .home .cv-2 a:hover {
-  color: #000000;
+  color: #1c1e21;
+  text-decoration: none;
 }
 
 .home .img {

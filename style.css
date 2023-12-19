@@ -1,5 +1,5 @@
 .home {
-  background-color: #000000;
+  background-color: #181818;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -7,7 +7,7 @@
 }
 
 .home .div {
-  background-color: #000000;
+  background-color: #181818;
   overflow: hidden;
   width: 1536px;
   height: 1037px;

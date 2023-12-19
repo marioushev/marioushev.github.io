@@ -135,9 +135,11 @@
   background-position: right bottom;
   transition: all 0.5s ease-out;
   text-decoration: none;
+  border-radius: 60%;
 }
 .home .cv:hover {
   background-position: left bottom;
+  border: 60%;
 }
 
 .home .cv-2 {

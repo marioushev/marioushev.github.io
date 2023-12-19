@@ -139,7 +139,7 @@
 }
 .home .cv:hover {
   background-position: left bottom;
-  border: 60%;
+  border-radius: 60%;
 }
 
 .home .cv-2 {

@@ -70,6 +70,7 @@
 
 .home .text-wrapper-2 {
   position: absolute;
+  text-decoration: none;
   top: 545px;
   left: 60px;
   font-family: "PP Monument Extended-Regular", Helvetica;

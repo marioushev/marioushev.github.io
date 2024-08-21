@@ -264,6 +264,10 @@
   width: 46px;
   height: 50px;
   top: 0;
+  transition: color 0.3s ease-in-out !important;
+}
+.home .vector-3:hover {
+  color: #54546d !important;
 }
 
 #certifications img {

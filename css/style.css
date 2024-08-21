@@ -55,7 +55,19 @@
   line-height: 36px;
   text-decoration: underline;
 }
-.home .figma-item {
+.home .design-title-1 {
+  position: relative;
+  top: 19px;
+  font-family: "PP Monument Extended-Black", Helvetica;
+  font-weight: 900;
+  color: #181818;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+.home .design-project-item {
+  position: relative;
+  top: 19px;
   font-family: "PP Monument Extended-Regular", Helvetica;
   font-weight: 400;
   color: #181818;
@@ -215,38 +227,53 @@
   letter-spacing: 0;
   line-height: normal;
 }
-
+.fluent--document-checkmark-24-filled {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='%23000'%3E%3Cpath d='M12 2v6a2 2 0 0 0 2 2h6v10a2 2 0 0 1-2 2h-6.81A6.5 6.5 0 0 0 4 11.498V4a2 2 0 0 1 2-2z'/%3E%3Cpath d='M13.5 2.5V8a.5.5 0 0 0 .5.5h5.5zm-1.5 15a5.5 5.5 0 1 1-11 0a5.5 5.5 0 0 1 11 0m-2.146-2.354a.5.5 0 0 0-.708 0L5.5 18.793l-1.646-1.647a.5.5 0 0 0-.708.708l2 2a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0 0-.708'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
 .home .vector {
+  background-color: #181818;
   left: 325px;
+  text-decoration: none;
   position: absolute;
-  width: 42px;
-  height: 48px;
+  width: 46px;
+  height: 50px;
   top: 0;
 }
-
 .home .vector:hover {
   color: blue;
 }
 
 .home .vector-2 {
+  background-color: #181818;
   left: 391px;
   position: absolute;
-  width: 42px;
-  height: 48px;
+  width: 46px;
+  height: 50px;
   top: 0;
 }
-
 .home .vector-2 a {
   text-decoration: none;
 }
 
 .home .vector-3 {
+  background-color: #181818;
   left: 457px;
   position: absolute;
-  width: 42px;
-  height: 48px;
+  width: 46px;
+  height: 50px;
   top: 0;
 }
+
 #certifications img {
   cursor: pointer;
 }

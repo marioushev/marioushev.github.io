@@ -278,52 +278,6 @@
 /* 
 RESPONSIVE SECTION
 */
-/* Global Styles */
-/* Add your global styles here */
-
-/* Desktop Styles */
-@media (min-width: 1200px) {
-  /* Add your desktop-specific styles here */
-  .home .div {
-    width: 100%;
-    height: auto;
-  }
-
-  .home .overlap {
-    width: 100%;
-    height: auto;
-    top: 110px;
-    left: 178px;
-  }
-
-  .home .overlap-group {
-    width: 100%;
-    height: auto;
-    top: 107px;
-    left: 36px;
-  }
-
-  .home .overlap-group-2 {
-    width: 100%;
-    height: auto;
-    top: 0;
-    left: 178px;
-  }
-
-  .home .certification-wrapper {
-    width: 100%;
-    height: auto;
-    top: 876px;
-    left: 178px;
-  }
-
-  .home .certification {
-    width: 100%;
-    height: auto;
-    top: 30px;
-    left: 36px;
-  }
-}
 
 /* Tablet Styles */
 @media (min-width: 768px) and (max-width: 1199px) {

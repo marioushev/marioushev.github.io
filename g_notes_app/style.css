@@ -14,7 +14,7 @@ body {
 }
 
 .notes__sidebar {
-  border-right: 2px solid #dddddd;
+  border-right: 2px solid #f9f9f9;
   flex-shrink: 0;
   overflow-y: auto;
   padding: 1em;
@@ -22,10 +22,10 @@ body {
 }
 
 .notes__add {
-  background: rgb(253, 215, 0);
+  background: rgb(255, 213, 46);
   border: none;
   border-radius: 7px;
-  color: #ffffff;
+  color: #f9f9f9;
   cursor: pointer;
   font-size: 1.25em;
   font-weight: bold;
@@ -47,7 +47,7 @@ body {
 }
 */
 .notes__list-item--selected {
-  background: #eeeeee;
+  background: #e5e5e5;
   border-radius: 7px;
   font-weight: bold;
 }
@@ -66,7 +66,7 @@ body {
 }
 
 .notes__small-lastUpdate {
-  color: #aaaaaa;
+  color: #e5e5e5;
   font-style: italic;
   text-align: right;
   font-size: 11px;

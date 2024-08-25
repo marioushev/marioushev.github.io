@@ -121,15 +121,19 @@ export default class notesView {
 */
 
 export default class notesView {
+  // Constructor for the notesView class
   constructor(
     root,
     { onNoteSelect, onNoteAdd, onNoteEdit, onNoteDelete } = {}
   ) {
+    // Store the root element and callback functions
     this.root = root;
     this.onNoteSelect = onNoteSelect;
     this.onNoteAdd = onNoteAdd;
     this.onNoteEdit = onNoteEdit;
     this.onNoteDelete = onNoteDelete;
+
+    // Set up the initial HTML structure for the notes app
     this.root.innerHTML = `
           <div class="notes__sidebar">
               <button class="notes__add" type="button">Add Note</button>
@@ -141,26 +145,30 @@ export default class notesView {
           </div>
       `;
 
+    // Get references to important elements
     const btnAddNote = this.root.querySelector(".notes__add");
     const inpTitle = this.root.querySelector(".notes__title");
     const inpBody = this.root.querySelector(".notes__body");
 
+    // Add event listener for adding a new note
     btnAddNote.addEventListener("click", () => {
       this.onNoteAdd();
     });
 
+    // Add event listeners for editing note title and body
     [inpTitle, inpBody].forEach((inputField) => {
       inputField.addEventListener("blur", () => {
         const updatedTitle = inpTitle.value.trim();
         const updatedBody = inpBody.value.trim();
-
         this.onNoteEdit(updatedTitle, updatedBody);
       });
     });
 
+    // Initially hide the note preview
     this.updateNotePreviewVisibility(false);
   }
 
+  // Helper method to create HTML for a single note list item
   _createListItemHTML(id, title, body, lastUpdate) {
     const MAX_BODY_LENGTH = 60;
 
@@ -181,12 +189,12 @@ export default class notesView {
       `;
   }
 
+  // Method to update the list of notes in the sidebar
   updateNoteList(notes) {
     const notesListContainer = this.root.querySelector(".notes__list");
-
-    // Empty list
     notesListContainer.innerHTML = "";
 
+    // Create and add HTML for each note
     for (const note of notes) {
       const html = this._createListItemHTML(
         note.id,
@@ -194,11 +202,10 @@ export default class notesView {
         note.body,
         new Date(note.lastUpdate)
       );
-
       notesListContainer.insertAdjacentHTML("beforeend", html);
     }
 
-    // Add select/delete events for each list item
+    // Add event listeners for selecting and deleting notes
     notesListContainer
       .querySelectorAll(".notes__list-item")
       .forEach((noteListItem) => {
@@ -210,7 +217,6 @@ export default class notesView {
           const doDelete = confirm(
             "Are you sure you want to delete this note?"
           );
-
           if (doDelete) {
             this.onNoteDelete(noteListItem.dataset.noteId);
           }
@@ -218,19 +224,23 @@ export default class notesView {
       });
   }
 
+  // Method to update the active note in the preview area
   updateActiveNote(note) {
     this.root.querySelector(".notes__title").value = note.title;
     this.root.querySelector(".notes__body").value = note.body;
 
+    // Remove selection styling from all notes
     this.root.querySelectorAll(".notes__list-item").forEach((noteListItem) => {
       noteListItem.classList.remove("notes__list-item--selected");
     });
 
+    // Add selection styling to the active note
     this.root
       .querySelector(`.notes__list-item[data-note-id="${note.id}"]`)
       .classList.add("notes__list-item--selected");
   }
 
+  // Method to show or hide the note preview area
   updateNotePreviewVisibility(visible) {
     this.root.querySelector(".notes__preview").style.visibility = visible
       ? "visible"

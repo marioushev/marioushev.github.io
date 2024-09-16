@@ -80,9 +80,8 @@ body.fade-out {
   display: block;
   height: 3px;
   width: 100%;
-  background-color: black;
+  background-color: #333;
 }
-
 /* Introduction Section */
 .hero-section {
   height: 60vh;
@@ -322,14 +321,20 @@ footer a:hover {
   .hamburger {
     display: flex; /* Show hamburger button */
   }
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
   /* Show the navigation when the hamburger button is active */
   .nav.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
     position: absolute;
-    top: 80px; /* Adjust the top position based on header height */
+    top: 50px; /* Adjust based on header height */
     left: 0;
     width: 100%;
-    background-color: #f5f1eb;
+    padding: 10px;
   }
   /* Header */
   .header {

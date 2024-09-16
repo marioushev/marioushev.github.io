@@ -24,11 +24,11 @@ window.addEventListener("pageshow", (event) => {
 });
 
 // hamburger
-document.addEventListener("DOMContentLoaded", function () {
-  const hamburger = document.querySelector(".hamburger");
-  const nav = document.querySelector(".nav");
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav");
 
-  hamburger.addEventListener("click", function () {
-    nav.classList.toggle("active");
-  });
+// Add an event listener to the hamburger button
+hamburger.addEventListener("click", () => {
+  // Toggle the 'active' class on the navigation menu
+  navMenu.classList.toggle("active");
 });

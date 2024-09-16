@@ -366,8 +366,8 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
-    height: 21px;
+    width: 25px;
+    height: 16px;
     cursor: pointer;
   }
 
@@ -494,7 +494,7 @@ footer a:hover {
 
   /* Introduction Section */
   .hero-section {
-    height: 60vh;
+    height: 65vh;
     width: 100%;
   }
   .intro {

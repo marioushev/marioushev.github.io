@@ -31,4 +31,7 @@ const navMenu = document.getElementById("nav");
 hamburger.addEventListener("click", () => {
   // Toggle the 'active' class on the navigation menu
   navMenu.classList.toggle("active");
+
+  // Also toggle the 'active' class on the hamburger button
+  hamburger.classList.toggle("active");
 });

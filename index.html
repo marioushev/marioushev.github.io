@@ -12,7 +12,6 @@
       href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-    <script src="main.js"></script>
   </head>
   <body id="content">
     <!-- Header -->
@@ -144,30 +143,6 @@
         >
       </p>
     </footer>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const links = document.querySelectorAll("a[data-link]");
-
-        links.forEach((link) => {
-          link.addEventListener("click", (e) => {
-            e.preventDefault();
-            const href = link.getAttribute("href");
-
-            if (href !== "#") {
-              document.body.classList.add("fade-out");
-              setTimeout(() => {
-                window.location.href = href;
-              }, 300);
-            }
-          });
-        });
-      });
-
-      window.addEventListener("pageshow", (event) => {
-        if (event.persisted) {
-          document.body.classList.remove("fade-out");
-        }
-      });
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>

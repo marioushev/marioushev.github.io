@@ -488,6 +488,10 @@ footer a:hover {
   }
 
   /* Introduction Section */
+  .hero-section {
+    height: 50vh;
+    width: 100%;
+  }
   .intro {
     width: 90%;
     height: auto;

@@ -547,6 +547,12 @@ footer a:hover {
     flex-direction: column;
     margin: 0px 20px;
   }
+  .project-item:hover {
+    /* Override hover effect */
+    transform: none;
+    transition: none;
+  }
+
   .project-item-img-box {
     width: 100%;
     height: auto;
@@ -557,7 +563,22 @@ footer a:hover {
     width: 100%;
     height: auto;
   }
+  .project-item-img-box {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 6px;
+    overflow: visible; /* Change to visible to allow the border to expand outside */
+    width: 350px;
+    height: 260px;
+  }
 
+  .project-item-img-box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    transition: all 0.1s ease-in-out;
+  }
   .project-heading h3 {
     font-size: 18px;
   }

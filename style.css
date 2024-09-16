@@ -312,6 +312,9 @@ footer a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  body {
+    font-family: "Adieu", sans-serif;
+  }
   .nav {
     display: none; /* Hide the navigation menu */
   }
@@ -456,6 +459,9 @@ footer a:hover {
 }
 
 @media (max-width: 390px) {
+  body {
+    font-family: "Adieu", sans-serif;
+  }
   /* Header */
   .header {
     padding: 5px 20px;

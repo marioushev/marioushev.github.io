@@ -552,14 +552,6 @@ footer a:hover {
     flex-direction: column;
     margin: 0px 20px;
   }
-  .project-item:hover {
-    pointer-events: none; /* Disable hover events */
-  }
-  .project-item:hover {
-    /* Override hover effect */
-    transform: none;
-    transition: none;
-  }
 
   .project-item-img-box {
     width: 100%;

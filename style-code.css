@@ -1,0 +1,549 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Adieu", "sans-serif";
+  background-color: #f5f1eb;
+  color: #0c0c0c;
+  line-height: 1.6;
+  background: linear-gradient(to bottom, #f7f1e8 40%, #fdfcfa 65%);
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 100px;
+  background-color: #f5f1eb;
+}
+.logo {
+  display: flex;
+  gap: 6px;
+  height: 80px;
+  align-items: center;
+}
+.logo-img img {
+  width: 49px;
+  height: 68px;
+}
+.logo a {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: lowercase;
+  transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+  font-style: italic;
+  color: #2c2c2a;
+}
+
+/* Introduction Section */
+.hero-section {
+  height: 65vh;
+  width: 100%;
+}
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #e88c02;
+  border-right: 12px solid #e88c02;
+  border-bottom: 12px solid #e88c02;
+  margin: 100px auto;
+  width: 50%;
+  height: 360px;
+  position: relative;
+}
+
+.intro-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-left: 50px;
+  margin-right: 100px;
+}
+
+.intro-text {
+  font-size: 20px;
+  line-height: 1.8;
+  flex: 1;
+  margin-right: 20px;
+}
+
+.intro-text p:first-child {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.intro-image {
+  flex-shrink: 0;
+  width: 140px; /* Set container width */
+  height: 140px; /* Set container height */
+  border-radius: 50%;
+  background-color: #e88c02; /* Placeholder for actual image */
+  overflow: hidden; /* Ensure image doesn't overflow */
+}
+
+.intro-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease-in-out; /* Fade in over 0.5 seconds */
+}
+.intro-image img[src] {
+  opacity: 1; /* Fade in once the image source is loaded */
+}
+/* Projects Section */
+
+.projects {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.projects h2 {
+  font-size: 14px;
+  margin-bottom: 60px;
+  font-weight: 400;
+  color: #92918e;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  width: 85%;
+  margin: 0 auto;
+}
+.project-list-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 40px;
+}
+.project-item {
+  text-align: center;
+}
+.project-item-img-box {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+  overflow: visible; /* Change to visible to allow the border to expand outside */
+  width: 500px; /* Set a fixed width */
+  height: 412px; /* Set a fixed height */
+}
+
+.project-item-img-box img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  transition: all 0.1s ease-in-out;
+}
+
+.project-item-img-box:hover img {
+  transform: translate(-12px, -12px); /* Move the image up and left */
+  width: calc(100% + 12px); /* Increase width */
+  height: calc(100% + 12px); /* Increase height */
+}
+
+.project-item-img-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.project-item-img-box:hover::after {
+  border-right: 1px solid #e88c02;
+  border-bottom: 1px solid #e88c02;
+  transition: all 0.1s ease-in-out;
+  border-right-width: 12px;
+  border-bottom-width: 12px;
+  transform: translate(12px, 12px); /* Move the border down and right */
+}
+
+/* OG code for the border transition */
+/*
+  .project-item-img-box {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+  .project-item-img-box img {
+    width: 550px;
+    height: 412px;
+    display: block; /* Removes any extra space below the image
+  }
+  
+  .project-item-img-box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 0 solid blue;
+    transition: border-width 0.2s ease-in;
+    pointer-events: none;
+  }
+  .project-item-img-box:hover::after {
+    border-right-width: 12px;
+    border-bottom-width: 12px;
+  }
+  /*
+  .project-item-img-box :hover {
+    padding: 0 12px 12px 0; /* Expands the right and bottom padding on hover
+    border-color: 12px solid blue;
+    width: 550px;
+    height: 412px;
+    object-fit: cover; /* Crop the image while maintaining aspect ratio
+    border-right: 12px solid blue;
+    border-bottom: 12px solid blue;
+    transition: ease-in-out 0.1s;
+    margin-bottom: 15px;
+  }
+  */
+
+.project-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+.project-item h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #161417;
+}
+
+.project-item p {
+  font-family: "Space Mono", monospace;
+  font-size: 14px;
+  color: #9c9892;
+  text-transform: uppercase;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0c0c0c;
+  color: #fff;
+  padding: 20px 180px;
+  text-align: center;
+  margin-top: 80px;
+  height: 68px;
+}
+footer p {
+  font-size: 12.5px;
+  font-weight: 300;
+}
+footer a {
+  display: inline-flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: #ffff;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-left: 10;
+  font-weight: 300;
+}
+
+footer a:hover {
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* Hide the navigation menu */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger button */
+  }
+  /* Show the navigation when the hamburger button is active */
+  .nav.active {
+    display: block;
+    position: absolute;
+    top: 80px; /* Adjust the top position based on header height */
+    left: 0;
+    width: 100%;
+    background-color: #f5f1eb;
+  }
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between; /* Align logo to left and hamburger to right */
+    align-items: center;
+    padding: 5px 20px;
+    position: relative; /* Ensure the absolute positioning of nav doesn't affect layout */
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo a {
+    font-size: 18px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 20px;
+    display: none; /* Hide by default (hamburger menu will show it) */
+  }
+
+  .nav ul li a {
+    font-size: 16px;
+  }
+
+  /* Hamburger Menu for 768px */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+  }
+
+  /* Show navigation when the hamburger is clicked */
+  .nav.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f5f1eb;
+    padding: 10px;
+  }
+
+  /* Introduction Section */
+  .intro {
+    width: 90%;
+    height: auto;
+    margin: 50px auto;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .intro-content {
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .intro-text {
+    margin-right: 0;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  .intro-text p:first-child {
+    font-size: 18px;
+  }
+
+  .intro-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Projects Section */
+  .projects h2 {
+    font-size: 12px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr; /* Single column grid */
+    width: 100%;
+    gap: 20px;
+  }
+
+  .project-item-img-box {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-item-img-box img {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-heading h3 {
+    font-size: 18px;
+  }
+
+  .project-heading p {
+    font-size: 12px;
+  }
+
+  /* Footer */
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  footer p {
+    font-size: 10px;
+  }
+
+  footer a {
+    font-size: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 390px) {
+  /* Header */
+  .header {
+    padding: 5px 20px;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo a {
+    font-size: 18px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav ul li a {
+    font-size: 14px;
+  }
+
+  /* Introduction Section */
+  .intro {
+    width: 90%;
+    height: auto;
+    margin: 50px auto;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .intro-content {
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 12px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .intro-text {
+    margin-right: 0;
+    margin-bottom: 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    padding-bottom: 12px;
+  }
+
+  .intro-text p:first-child {
+    font-size: 18px;
+  }
+
+  .intro-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Projects Section */
+  .projects h2 {
+    font-size: 14px;
+  }
+
+  .project-grid {
+    /* grid-template-columns: 1fr; */
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .project-list-section {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+  }
+  .project-item-img-box {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1px;
+  }
+
+  .project-item-img-box img {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-heading h3 {
+    font-size: 18px;
+  }
+
+  .project-heading p {
+    font-size: 12px;
+  }
+
+  /* Footer */
+  footer {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  footer p {
+    font-size: 10px;
+  }
+
+  footer a {
+    font-size: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Mario Ushev Portfolio</title>
+    <link rel="stylesheet" href="style-code.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <div class="logo-img">
+          <img src="M.png" alt="Mario's Logo" />
+        </div>
+        <div class="logo-name">
+          <a href="index.html" data-link>Mario Ushev</a>
+        </div>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html" data-link>design</a></li>
+          <li><a href="code.html" data-link>code</a></li>
+          <li><a href="#" data-link>about me</a></li>
+          <li><a href="Mario CV.pdf" target="_blank">resume</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+      <!-- Introduction Section -->
+      <section class="hero-section">
+        <section class="intro">
+          <div class="intro-content">
+            <div class="intro-text">
+              <p>Привет, казвам се Марио</p>
+              <p>Design & Software Development.</p>
+            </div>
+            <div class="intro-image">
+              <img
+                src="cv-photo/cv-photo-orange.png"
+                alt="Mario's Image"
+                data-link
+              />
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="projects">
+        <h2 class="projects-section-scroll">ПРОЕКТИ ↓</h2>
+        <div class="project-grid">
+          <!-- Project 1 -->
+          <section class="project-list">
+            <div class="project-list-section">
+              <div class="project-item">
+                <a
+                  class="project-item-img-box"
+                  href="coding-apps/apps/g_notes_app/index.html"
+                  target="_blank"
+                >
+                  <img
+                    src="coding-apps/coding-images/Note App.png"
+                    alt="Note App"
+                  />
+                </a>
+                <div class="project-heading">
+                  <p>An app that allows you to take notes</p>
+                  <h3>Note App</h3>
+                </div>
+              </div>
+              <!-- Project 2 -->
+              <div class="project-item">
+                <a
+                  class="project-item-img-box"
+                  href="coding-apps/apps/audio_synch/index.html"
+                  target="_blank"
+                >
+                  <img
+                    src="coding-apps/coding-images/Audio App.png"
+                    alt="Audio Synchonizer App"
+                  />
+                </a>
+                <div class="project-heading">
+                  <p>An app that allows you to synchonize your audio</p>
+                  <h3>Audio Synchonizer</h3>
+                </div>
+              </div>
+            </div>
+            <div class="project-list-section">
+              <!-- Project 3 -->
+              <div class="project-item">
+                <a
+                  class="project-item-img-box"
+                  href="coding-apps/apps/color-flipper/index.html"
+                  target="_blank"
+                >
+                  <img
+                    src="coding-apps/coding-images/Color App.png"
+                    alt="Color App"
+                  />
+                </a>
+                <div class="project-heading">
+                  <p>
+                    An app that lets you change the background color of the page
+                  </p>
+                  <h3>Color App</h3>
+                </div>
+              </div>
+              <!-- Project 4 -->
+              <div class="project-item">
+                <a
+                  class="project-item-img-box"
+                  href="coding-apps/apps/counter/index.html"
+                  target="_blank"
+                >
+                  <img
+                    src="coding-apps/coding-images/Counter App.png"
+                    alt="Counter App"
+                  />
+                </a>
+                <div class="project-heading">
+                  <p>A simple counter app</p>
+                  <h3>Counter App</h3>
+                </div>
+              </div>
+            </div>
+            <div class="project-list-section">
+              <!-- Project 5 -->
+              <div class="project-item">
+                <a
+                  class="project-item-img-box"
+                  href="coding-apps/apps/dark_mode/index.html"
+                  target="_blank"
+                >
+                  <img
+                    src="coding-apps/coding-images/Dark Mode App.png"
+                    alt="Dark Mode App"
+                  />
+                </a>
+                <div class="project-heading">
+                  <p>A small app that allows you to change the theme</p>
+                  <h3>Dark Mode</h3>
+                </div>
+              </div>
+              <!-- Project 6 -->
+              <div class="project-item">
+                <a
+                  class="project-item-img-box"
+                  href="coding-apps/apps/stripe/index.html"
+                  target="_blank"
+                >
+                  <img
+                    src="coding-apps/coding-images/Stripe Demo Homepage.png"
+                    alt="Stripe Demo Page"
+                  />
+                </a>
+                <div class="project-heading">
+                  <p>Recreation of Stripe Homepage</p>
+                  <h3>Stripe Demo Homepage</h3>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Mario Ushev</p>
+      <p>
+        <a href="mailto:mario@example.com">mario.p.ushev@gmail.com</a>|
+        <a
+          href="https://www.linkedin.com/in/mario-ushev-5b7b8624a/"
+          target="_blank"
+          >LinkedIn</a
+        >
+      </p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const links = document.querySelectorAll("a[data-link]");
+
+        links.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const href = link.getAttribute("href");
+
+            if (href !== "#") {
+              document.body.classList.add("fade-out");
+              setTimeout(() => {
+                window.location.href = href;
+              }, 300);
+            }
+          });
+        });
+      });
+
+      window.addEventListener("pageshow", (event) => {
+        if (event.persisted) {
+          document.body.classList.remove("fade-out");
+        }
+      });
+    </script>
+  </body>
+</html>

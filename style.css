@@ -552,8 +552,8 @@ footer a:hover {
     flex-direction: column;
     margin: 0px 20px;
   }
-  .project-item {
-    pointer-events: none; /* Disable hover and click events */
+  .project-item:hover {
+    pointer-events: none; /* Disable hover events */
   }
   .project-item:hover {
     /* Override hover effect */

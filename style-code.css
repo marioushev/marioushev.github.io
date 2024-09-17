@@ -440,13 +440,9 @@ footer a:hover {
   /* Header */
   .header {
     padding: 5px 20px;
-  }
-
-  .logo {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between; /* Align logo and nav */
     align-items: center;
-    gap: 6px;
   }
 
   .logo-img img {
@@ -455,21 +451,28 @@ footer a:hover {
   }
 
   .logo a {
-    font-size: 14px;
+    font-size: 16px;
   }
 
+  /* Adjust the nav links layout for mobile */
   .nav ul {
-    flex-direction: column;
+    display: flex;
+    flex-direction: column; /* Stack the links vertically */
     gap: 20px;
+    text-align: center;
+    padding: 10px 20px;
+    display: block; /* Ensure the nav links are visible */
   }
 
   .nav ul li a {
-    font-size: 14px;
+    font-size: 16px;
+    text-decoration: none;
+    display: block; /* Ensure each link is visible */
   }
 
   /* Introduction Section */
   .hero-section {
-    height: 60vh;
+    height: 55vh;
     width: 100%;
   }
   .intro {

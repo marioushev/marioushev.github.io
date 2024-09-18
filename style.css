@@ -466,10 +466,11 @@ footer a:hover {
   .nav ul {
     display: flex;
     flex-direction: column; /* Stack the links vertically */
-    gap: 20px;
-    text-align: center;
+    gap: 10px;
+    text-align: right;
     padding: 10px 20px;
     display: block; /* Ensure the nav links are visible */
+    line-height: 30px;
   }
 
   .nav ul li a {

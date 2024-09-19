@@ -464,6 +464,7 @@ footer a:hover {
 
   /* Adjust the nav links layout for mobile */
   .nav ul {
+    margin-top: 20px;
     display: flex;
     flex-direction: column; /* Stack the links vertically */
     gap: 20px;

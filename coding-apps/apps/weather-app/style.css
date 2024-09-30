@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #333;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.weatherForm {
+  margin: 100px;
+}
+header {
+  background-color: #4bc970;
+  padding: 1em;
+  text-align: center;
+}
+
+header h1 {
+  color: #fff;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+}
+.card {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border: 1px solid black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+}
+p {
+  padding: 0.3em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cityDisplay {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+.tempDisplay {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.humidityDisplay {
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.weatherEmoji {
+  margin: 0;
+  font-size: 3rem;
+}
+.descDisplay {
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.errorDisplay {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: red;
+}
+
+input[type="text"] {
+  padding: 1em;
+  font-size: 1.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+}
+
+button {
+  background-color: #4bc970;
+  color: #fff;
+  border: none;
+  padding: 1em 2em;
+  font-size: 1.5em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+.weather-data {
+  margin-top: 2em;
+}
+
+.weather-data h2 {
+  margin-top: 0;
+}
+
+.weather-data p {
+  font-size: 1.2em;
+}

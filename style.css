@@ -155,11 +155,76 @@ body.fade-out {
 .intro-image img[src] {
   opacity: 1; /* Fade in once the image source is loaded */
 }
+
+/* Technologies Section */
+.technologies {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  margin: 50px, 50px, 100px, 50px;
+  padding: 20px;
+  max-width: 100%;
+}
+
+.technologies h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.technologies p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 4px 8px 4px 8px;
+  border-radius: 6px;
+}
+
+.tech-item img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  object-fit: contain;
+  background-color: white;
+  border-radius: 6px;
+}
+
+.tech-item div {
+  text-align: left;
+  padding: 10px;
+}
+
+.tech-item strong {
+  font-size: 16px;
+  color: #333;
+}
+
+.tech-item p {
+  font-size: 12px;
+  color: #777;
+}
+
 /* Projects Section */
 
 .projects {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 500px;
 }
 
 .projects h2 {
@@ -289,6 +354,63 @@ body.fade-out {
   font-size: 14px;
   color: #9c9892;
   text-transform: uppercase;
+}
+
+/* Technologies Section */
+.technologies {
+  text-align: center;
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+.technologies h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.technologies > p {
+  font-size: 16px;
+  color: #9c9892;
+  margin-bottom: 30px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  background-color: #ded9d1;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px #9c9892 solid;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.tech-item img {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.tech-item strong {
+  display: block;
+  font-size: 18px;
+  color: #161417;
+  margin-bottom: 5px;
+}
+
+.tech-item p {
+  font-size: 14px;
+  color: #9c9892;
+  margin: 0;
 }
 
 /* Footer */
@@ -517,6 +639,12 @@ footer a:hover {
   .intro-image {
     width: 120px;
     height: 120px;
+  }
+
+  .button-container {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
   }
 
   /* Projects Section */

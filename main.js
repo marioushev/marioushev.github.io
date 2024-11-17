@@ -23,6 +23,30 @@ window.addEventListener("pageshow", (event) => {
   }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll(".intro-image");
+
+  const lazyLoad = (image) => {
+    const src = image.getAttribute("data-src");
+    if (src) {
+      image.src = src;
+      image.removeAttribute("data-src");
+    }
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        lazyLoad(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  images.forEach((img) => {
+    observer.observe(img);
+  });
+});
 // hamburger
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav");

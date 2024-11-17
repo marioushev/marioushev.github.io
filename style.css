@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: "Adieu", sans-serif;
+  font-family: "DM Sans", sans-serif;
   background-color: #f5f1eb;
   color: #0c0c0c;
   line-height: 1.6;
@@ -169,7 +169,6 @@ body.fade-out {
 .technologies h2 {
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 10px;
 }
 
 .technologies p {
@@ -393,24 +392,23 @@ body.fade-out {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: left;
   height: 100px;
-  width: 240px;
+  width: 280px;
 }
 
 .tech-item img {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   margin-right: 15px;
+  border: 1px #b9b5ae solid;
+  padding: 4px 2px;
+  image-rendering: crisp-edges;
+  object-fit: contain;
 }
 
 .tech-item strong {
   display: block;
   font-size: 18px;
   color: #161417;
-  margin-bottom: 5px;
-}
-
-.tech-item div strong {
-  font-size: 18px;
 }
 
 .tech-item p {
@@ -518,8 +516,8 @@ footer a:hover {
   }
 
   .intro-image {
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
   }
 
   /* Projects Section */

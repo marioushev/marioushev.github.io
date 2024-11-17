@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Adieu", sans-serif;
+  font-family: "DM Sans", sans-serif;
   background-color: #f5f1eb;
   color: #0c0c0c;
   line-height: 1.6;
@@ -118,6 +118,88 @@ body {
 .intro-image img[src] {
   opacity: 1; /* Fade in once the image source is loaded */
 }
+
+/* Technologies Section */
+.technologies {
+  text-align: center;
+  margin: 50px auto;
+  padding: 120px;
+  max-width: 1200px;
+  /*
+    position: relative;
+  z-index: 10;
+  text-align: center;
+  margin: 50px, 50px, 100px, 50px;
+  padding: 20px;
+  max-width: 1000px;
+  */
+}
+
+.technologies p {
+  font-size: 16px;
+  color: #9c9892;
+  margin-bottom: 30px;
+  /*  font-size: 16px;
+  color: #9c9892;
+  margin-bottom: 30px;*/
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  /*  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;*/
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  background-color: #ded9d1;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px #9c9892 solid;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  height: 100px;
+  width: 280px;
+  /*
+    display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 4px 8px 4px 8px;
+  border-radius: 6px;*/
+}
+
+.tech-item img {
+  width: 38px;
+  height: 38px;
+  margin-right: 10px;
+  border: 1px #b9b5ae solid;
+  background-color: white;
+  padding: 4px 2px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.tech-item strong {
+  display: block;
+  font-size: 18px;
+  color: #161417;
+}
+
+.tech-item p {
+  font-size: 14px;
+  color: #464442;
+  margin: 0;
+}
+
 /* Projects Section */
 
 .projects {

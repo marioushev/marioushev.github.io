@@ -392,6 +392,8 @@ body.fade-out {
   border: 1px #9c9892 solid;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: left;
+  height: 100px;
+  width: 240px;
 }
 
 .tech-item img {
@@ -405,6 +407,10 @@ body.fade-out {
   font-size: 18px;
   color: #161417;
   margin-bottom: 5px;
+}
+
+.tech-item div strong {
+  font-size: 18px;
 }
 
 .tech-item p {

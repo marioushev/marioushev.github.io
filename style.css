@@ -157,44 +157,6 @@ body.fade-out {
 }
 
 /* Technologies Section */
-.technologies {
-  position: relative;
-  z-index: 10;
-  text-align: center;
-  margin: 50px, 50px, 100px, 50px;
-  padding: 20px;
-  max-width: 1000px;
-}
-
-.technologies h2 {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.technologies p {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 30px;
-}
-
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  justify-content: center;
-}
-
-.tech-item {
-  display: flex;
-  align-items: center;
-  background-color: #f5f5f5;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 4px 8px 4px 8px;
-  border-radius: 6px;
-}
-
 .tech-item img {
   width: 30px;
   height: 30px;
@@ -216,7 +178,7 @@ body.fade-out {
 
 .tech-item p {
   font-size: 12px;
-  color: #777;
+  color: #464442;
 }
 
 /* Projects Section */
@@ -359,20 +321,25 @@ body.fade-out {
 .technologies {
   text-align: center;
   margin: 50px auto;
-  padding: 20px;
+  padding: 120px;
   max-width: 1200px;
+  /*
+    position: relative;
+  z-index: 10;
+  text-align: center;
+  margin: 50px, 50px, 100px, 50px;
+  padding: 20px;
+  max-width: 1000px;
+  */
 }
 
-.technologies h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.technologies > p {
+.technologies p {
   font-size: 16px;
   color: #9c9892;
   margin-bottom: 30px;
+  /*  font-size: 16px;
+  color: #9c9892;
+  margin-bottom: 30px;*/
 }
 
 .tech-grid {
@@ -380,29 +347,42 @@ body.fade-out {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   justify-content: center;
+  /*  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;*/
 }
 
 .tech-item {
   display: flex;
   align-items: center;
   background-color: #ded9d1;
-  padding: 15px;
+  padding: 16px;
   border-radius: 8px;
   border: 1px #9c9892 solid;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: left;
   height: 100px;
   width: 280px;
+  /*
+    display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 4px 8px 4px 8px;
+  border-radius: 6px;*/
 }
 
 .tech-item img {
   width: 38px;
   height: 38px;
-  margin-right: 15px;
+  margin-right: 10px;
   border: 1px #b9b5ae solid;
   padding: 4px 2px;
-  image-rendering: crisp-edges;
   object-fit: contain;
+  border-radius: 6px;
 }
 
 .tech-item strong {
@@ -413,7 +393,7 @@ body.fade-out {
 
 .tech-item p {
   font-size: 14px;
-  color: #9c9892;
+  color: #464442;
   margin: 0;
 }
 
@@ -516,8 +496,8 @@ footer a:hover {
   }
 
   .intro-image {
-    width: 200px;
-    height: 200px;
+    width: 120px;
+    height: 120px;
   }
 
   /* Projects Section */
@@ -649,6 +629,45 @@ footer a:hover {
     display: flex;
     gap: 1rem;
     padding: 1rem;
+  }
+
+  /* technologies section */
+  .tech-grid {
+    grid-template-columns: 1fr; /* Stacks items in a single column */
+    gap: 10px; /* Reduce spacing between items */
+    width: fit-content;
+  }
+
+  .tech-item {
+    flex-direction: column; /* Stack the image and text vertically */
+    align-items: center;
+    text-align: center; /* Center-align the text */
+  }
+
+  .tech-item img {
+    margin: 0 0 10px 0; /* Add spacing below the image */
+    width: 50px; /* Adjust image size for smaller screens */
+    height: 50px;
+  }
+
+  .tech-item strong {
+    font-size: 14px; /* Reduce text size */
+  }
+
+  .tech-item p {
+    font-size: 12px; /* Reduce paragraph size */
+  }
+
+  .technologies {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .technologies h2 {
+    font-size: 20px; /* Adjust heading size */
+  }
+
+  .technologies p {
+    font-size: 14px; /* Adjust subheading size */
   }
 
   /* Projects Section */

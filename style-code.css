@@ -71,6 +71,7 @@ body {
   border: 2px solid #e88c02;
   border-right: 12px solid #e88c02;
   border-bottom: 12px solid #e88c02;
+  border-radius: 8px;
   margin: 100px auto;
   width: 50%;
   height: 360px;
@@ -247,6 +248,7 @@ body {
   height: 100%;
   object-fit: cover; /* Ensures the image covers the area without distortion */
   transition: all 0.1s ease-in-out;
+  border-radius: 6px;
 }
 
 .project-item-img-box:hover img {

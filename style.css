@@ -108,6 +108,7 @@ body.fade-out {
   border: 2px solid blue;
   border-right: 12px solid blue;
   border-bottom: 12px solid blue;
+  border-radius: 8px;
   margin: 100px auto;
   width: 50%;
   height: 360px;
@@ -150,7 +151,8 @@ body.fade-out {
   border-radius: 50%;
   object-fit: cover;
   opacity: 0; /* Initially hidden */
-  transition: opacity 0.5s ease-in-out; /* Fade in over 0.5 seconds */
+  /*  transition: opacity 0.5s ease-in-out;  Fade in over 0.5 seconds */
+  transition: opacity 0.1s ease-in-out;
 }
 .intro-image img[src] {
   opacity: 1; /* Fade in once the image source is loaded */
@@ -228,6 +230,7 @@ body.fade-out {
   height: 100%;
   object-fit: cover; /* Ensures the image covers the area without distortion */
   transition: all 0.1s ease-in-out;
+  border-radius: 6px;
 }
 
 .project-item-img-box:hover img {

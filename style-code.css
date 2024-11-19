@@ -571,6 +571,25 @@ footer a:hover {
     height: 120px;
   }
 
+  /* Technologies */
+  .technologies {
+    padding: 20px;
+  }
+
+  .technologies p {
+    font-size: 14px;
+  }
+
+  .technologies li {
+    margin: 5px;
+    font-size: 12px;
+  }
+
+  .technologies img {
+    width: 30px;
+    height: 30px;
+  }
+
   /* Projects Section */
   .projects h2 {
     font-size: 14px;

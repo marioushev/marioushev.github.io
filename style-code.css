@@ -99,10 +99,14 @@ body {
   font-size: 26px;
 }
 
+.intro-text p {
+  font-size: 1.5rem;
+}
+
 .intro-image {
   flex-shrink: 0;
-  width: 140px; /* Set container width */
-  height: 140px; /* Set container height */
+  width: 180px; /* Set container width */
+  height: 180px; /* Set container height */
   border-radius: 50%;
   background-color: #e88c02; /* Placeholder for actual image */
   overflow: hidden; /* Ensure image doesn't overflow */

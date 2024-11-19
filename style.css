@@ -125,7 +125,6 @@ body.fade-out {
 }
 
 .intro-text {
-  font-size: 20px;
   line-height: 1.8;
   flex: 1;
   margin-right: 20px;
@@ -136,13 +135,18 @@ body.fade-out {
   font-size: 26px;
 }
 
+.intro-text p {
+  font-size: 1.5rem;
+}
+
 .intro-image {
   flex-shrink: 0;
-  width: 140px; /* Set container width */
-  height: 140px; /* Set container height */
+  width: 180px; /* Set container width */
+  height: 180px; /* Set container height */
   border-radius: 50%;
   background-color: blue; /* Placeholder for actual image */
   overflow: hidden; /* Ensure image doesn't overflow */
+  margin-left: 10px;
 }
 
 .intro-image img {

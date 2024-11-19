@@ -162,6 +162,10 @@ body.fade-out {
 }
 
 /* Technologies Section */
+.technologies span {
+  color: blue;
+  font-family: "Space mono", "";
+}
 .tech-item img {
   width: 30px;
   height: 30px;
@@ -576,7 +580,6 @@ footer a:hover {
 
   /* Adjust the nav links layout for mobile */
   .nav ul {
-    margin-top: 20px;
     display: flex;
     flex-direction: column; /* Stack the links vertically */
     gap: 20px;
@@ -631,54 +634,9 @@ footer a:hover {
     height: 120px;
   }
 
-  .button-container {
-    display: flex;
-    gap: 1rem;
-    padding: 1rem;
-  }
-
-  /* technologies section */
-  .tech-grid {
-    grid-template-columns: 1fr; /* Stacks items in a single column */
-    gap: 10px; /* Reduce spacing between items */
-    width: fit-content;
-  }
-
-  .tech-item {
-    flex-direction: column; /* Stack the image and text vertically */
-    align-items: center;
-    text-align: center; /* Center-align the text */
-  }
-
-  .tech-item img {
-    margin: 0 0 10px 0; /* Add spacing below the image */
-    width: 50px; /* Adjust image size for smaller screens */
-    height: 50px;
-  }
-
-  .tech-item strong {
-    font-size: 14px; /* Reduce text size */
-  }
-
-  .tech-item p {
-    font-size: 12px; /* Reduce paragraph size */
-  }
-
-  .technologies {
-    padding: 10px; /* Adjust padding for smaller screens */
-  }
-
-  .technologies h2 {
-    font-size: 20px; /* Adjust heading size */
-  }
-
-  .technologies p {
-    font-size: 14px; /* Adjust subheading size */
-  }
-
   /* Projects Section */
   .projects h2 {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .project-grid {

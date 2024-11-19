@@ -94,9 +94,9 @@ body {
   margin-right: 20px;
 }
 
-.intro-text p:first-child {
-  font-weight: bold;
-  font-size: 22px;
+.intro-text h1 {
+  font-weight: 500;
+  font-size: 26px;
 }
 
 .intro-image {
@@ -113,8 +113,12 @@ body {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  object-position: center;
   opacity: 0; /* Initially hidden */
-  transition: opacity 0.5s ease-in-out; /* Fade in over 0.5 seconds */
+  /*  transition: opacity 0.5s ease-in-out;  Fade in over 0.5 seconds */
+  transition: opacity 0.1s ease-in-out;
 }
 .intro-image img[src] {
   opacity: 1; /* Fade in once the image source is loaded */

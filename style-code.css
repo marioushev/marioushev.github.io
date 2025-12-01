@@ -214,9 +214,28 @@ body {
 
 /* Projects Section */
 
-/* Category Toggle Buttons */
+/* CSS Toggle Logic */
+input[name="project-tabs"] {
+  display: none;
+}
+
+/* Default State - Hide Sections */
+.web_applications,
+.mobile_applications {
+  display: none;
+  width: 100%;
+}
+
+/* Show Section based on Checked Input */
+#tab-web:checked ~ .web_applications,
+#tab-mobile:checked ~ .mobile_applications {
+  display: block;
+}
+
+/* Category Toggle Buttons (Labels) */
 .web_applications_btn,
 .mobile_applications_btn {
+  display: inline-block; /* Needed for labels */
   font-size: 18px;
   color: #464442;
   font-weight: 500;
@@ -229,6 +248,7 @@ body {
   margin: 20px 10px;
   border-radius: 6px;
   position: relative;
+  transition: ease-out 0.3s;
 }
 
 .web_applications_btn:hover,
@@ -237,15 +257,16 @@ body {
   background-color: rgba(232, 140, 2, 0.05);
 }
 
-.web_applications_btn.active,
-.mobile_applications_btn.active {
+/* Active State for Labels */
+#tab-web:checked ~ .project-category-buttons .web_applications_btn,
+#tab-mobile:checked ~ .project-category-buttons .mobile_applications_btn {
   color: #e88c02;
   font-weight: 600;
-  border-bottom: 2px solid #e88c02;
+  transition: ease-out 0.3s;
 }
 
-.web_applications_btn.active::after,
-.mobile_applications_btn.active::after {
+#tab-web:checked ~ .project-category-buttons .web_applications_btn::after,
+#tab-mobile:checked ~ .project-category-buttons .mobile_applications_btn::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -260,12 +281,6 @@ body {
 .project-category-buttons {
   text-align: center;
   margin: 40px 0 20px 0;
-}
-
-/* Web Applications Section */
-.web_applications,
-.mobile_applications {
-  width: 100%;
 }
 
 .projects {

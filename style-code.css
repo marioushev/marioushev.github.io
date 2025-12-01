@@ -214,6 +214,60 @@ body {
 
 /* Projects Section */
 
+/* Category Toggle Buttons */
+.web_applications_btn,
+.mobile_applications_btn {
+  font-size: 18px;
+  color: #464442;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 12px 24px;
+  margin: 20px 10px;
+  border-radius: 6px;
+  position: relative;
+}
+
+.web_applications_btn:hover,
+.mobile_applications_btn:hover {
+  color: #e88c02;
+  background-color: rgba(232, 140, 2, 0.05);
+}
+
+.web_applications_btn.active,
+.mobile_applications_btn.active {
+  color: #e88c02;
+  font-weight: 600;
+  border-bottom: 2px solid #e88c02;
+}
+
+.web_applications_btn.active::after,
+.mobile_applications_btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background-color: #e88c02;
+}
+
+/* Button Container */
+.project-category-buttons {
+  text-align: center;
+  margin: 40px 0 20px 0;
+}
+
+/* Web Applications Section */
+.web_applications,
+.mobile_applications {
+  width: 100%;
+}
+
 .projects {
   text-align: center;
   margin-top: 50px;
@@ -233,6 +287,7 @@ body {
   width: 85%;
   margin: 0 auto;
 }
+
 .project-list-section {
   display: flex;
   flex-direction: row;
@@ -241,9 +296,11 @@ body {
   gap: 35px;
   margin-bottom: 40px;
 }
+
 .project-item {
   text-align: center;
 }
+
 .project-item-img-box {
   position: relative;
   display: inline-block;
@@ -287,55 +344,13 @@ body {
   transform: translate(12px, 12px); /* Move the border down and right */
 }
 
-/* OG code for the border transition */
-/*
-  .project-item-img-box {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 15px;
-    overflow: hidden;
-  }
-  .project-item-img-box img {
-    width: 550px;
-    height: 412px;
-    display: block; /* Removes any extra space below the image
-  }
-  
-  .project-item-img-box::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 0 solid blue;
-    transition: border-width 0.2s ease-in;
-    pointer-events: none;
-  }
-  .project-item-img-box:hover::after {
-    border-right-width: 12px;
-    border-bottom-width: 12px;
-  }
-  /*
-  .project-item-img-box :hover {
-    padding: 0 12px 12px 0; /* Expands the right and bottom padding on hover
-    border-color: 12px solid blue;
-    width: 550px;
-    height: 412px;
-    object-fit: cover; /* Crop the image while maintaining aspect ratio
-    border-right: 12px solid blue;
-    border-bottom: 12px solid blue;
-    transition: ease-in-out 0.1s;
-    margin-bottom: 15px;
-  }
-  */
-
 .project-heading {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-top: 10px;
 }
+
 .project-item h3 {
   font-size: 20px;
   margin-bottom: 5px;

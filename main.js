@@ -59,3 +59,39 @@ hamburger.addEventListener("click", () => {
   // Also toggle the 'active' class on the hamburger button
   hamburger.classList.toggle("active");
 });
+
+// Project category toggle functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const webBtn = document.querySelector(".web_applications_btn");
+  const mobileBtn = document.querySelector(".mobile_applications_btn");
+  const webSection = document.querySelector(".web_applications");
+  const mobileSection = document.querySelector(".mobile_applications");
+
+  // Initially show web applications and hide mobile applications
+  if (webSection) webSection.style.display = "block";
+  if (mobileSection) mobileSection.style.display = "none";
+  
+  // Set initial active state for buttons
+  if (webBtn) webBtn.classList.add("active");
+  if (mobileBtn) mobileBtn.classList.remove("active");
+
+  // Web Applications button click handler
+  if (webBtn) {
+    webBtn.addEventListener("click", () => {
+      if (webSection) webSection.style.display = "block";
+      if (mobileSection) mobileSection.style.display = "none";
+      webBtn.classList.add("active");
+      if (mobileBtn) mobileBtn.classList.remove("active");
+    });
+  }
+
+  // Mobile Applications button click handler
+  if (mobileBtn) {
+    mobileBtn.addEventListener("click", () => {
+      if (webSection) webSection.style.display = "none";
+      if (mobileSection) mobileSection.style.display = "block";
+      mobileBtn.classList.add("active");
+      if (webBtn) webBtn.classList.remove("active");
+    });
+  }
+});

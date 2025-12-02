@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Mario Ushev Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Adieu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="content">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <div class="logo-img">
+          <img src="M.png" alt="Mario's Logo" />
+        </div>
+        <div class="logo-name">
+          <a href="index.html">Mario Ushev</a>
+        </div>
+      </div>
+      <!-- Hamburger Button -->
+      <!--
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      -->
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="design.html" data-link>design</a></li>
+          <li><a href="code.html" data-link>code</a></li>
+          <!-- <li><a href="#" data-link>about me</a></li> -->
+          <li><a href="resume.pdf" target="_blank">resume</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+      <!-- Introduction Section -->
+      <section class="hero-section">
+        <section class="intro">
+          <div class="intro-content">
+            <div class="intro-text">
+              <h1>
+                It's a me,
+                <em style="font-weight: 700; font-size: 1em" ;
+                  ><b>Mario!</b></em
+                >
+                👋
+              </h1>
+              <p>Design & Software Development</p>
+            </div>
+            <div class="intro-image">
+              <img
+                src="cv-photo/IMG_0710-b.png"
+                alt="Mario's Image"
+                data-link
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="technologies">
+          <h2>Current <span>Technologies</span></h2>
+          <p>some of my main tools:</p>
+          <div class="tech-grid">
+            <div class="tech-item">
+              <img
+                src="/coding-apps/coding-images/tech-icons/figma-icon.png"
+                alt="Figma Icon"
+              />
+              <div>
+                <strong>Figma</strong>
+                <p>UI/UX Design Tool</p>
+              </div>
+            </div>
+            <div class="tech-item">
+              <img
+                src="/coding-apps/coding-images/tech-icons/javascript-icon-2.png"
+                alt="JavaScript Icon"
+              />
+              <div>
+                <strong>JavaScript</strong>
+                <p>Interactive Web Development</p>
+              </div>
+            </div>
+            <div class="tech-item">
+              <img
+                src="/coding-apps/coding-images/tech-icons/html&css.png"
+                alt="HTML & CSS Icon"
+              />
+              <div>
+                <strong>HTML & CSS</strong>
+                <p>Web Structure & Styles</p>
+              </div>
+            </div>
+            <!--
+              <div class="tech-item">
+                <img
+                  src="/coding-apps/coding-images/tech-icons/devicon_react.png"
+                  alt="React Icon"
+                />
+                <div>
+                  <strong>React</strong>
+                  <p>javascript library</p>
+                </div>
+              </div>
+            -->
+            <div class="tech-item">
+              <img
+                src="/coding-apps/coding-images/tech-icons/photoshop-icon.png"
+                alt="Photoshop Icon"
+              />
+              <div>
+                <strong>Photoshop</strong>
+                <p>Graphic Design Software</p>
+              </div>
+            </div>
+
+            <div class="tech-item">
+              <img
+                src="/coding-apps/coding-images/tech-icons/git-icon.png"
+                alt="Git Icon"
+              />
+              <div>
+                <strong>Git</strong>
+                <p>Code Version Control</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="projects">
+        <h2 class="projects-section-scroll">PROJECTS ↓</h2>
+        <div class="project-grid">
+          <!-- Project 1 -->
+          <section class="project-list">
+            <div class="project-list-section">
+              <div class="project-item">
+                <a
+                  class="project-item-img-box"
+                  href="https://www.behance.net/gallery/207284503/Yasio-Finance-Web-Design"
+                  target="_blank"
+                >
+                  <img src="images/behance-1.png" alt="Yasio Project" />
+                </a>
+                <div class="project-heading">
+                  <p>Finance Web Design</p>
+                  <h3>Yasio</h3>
+                </div>
+              </div>
+              <!-- Project 2 -->
+              <div class="project-item">
+                <a
+                  class="project-item-img-box"
+                  href="https://www.figma.com/proto/HabFtmC8DGdITJztLss8O4/notero---saas-note-management?node-id=2-2&node-type=frame&t=pImPBaYEEZKcg9aG-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
+                  target="_blank"
+                >
+                  <img src="images/logo-notero.png" alt="Notero Project" />
+                </a>
+                <div class="project-heading">
+                  <p>Note Management Web Design</p>
+                  <h3>Notero</h3>
+                </div>
+              </div>
+            </div>
+            <div class="project-list-section">
+              <!-- Project 3 -->
+              <div class="project-item">
+                <a
+                  class="project-item-img-box"
+                  href="https://www.figma.com/proto/cYgrHZ3vExulvVr766sF1G/NexWave-Communications---Web-Design?node-id=1-6&node-type=frame&t=i9ZsAFe40hFrWF1o-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A3"
+                  target="_blank"
+                >
+                  <img src="images/logo-nexwave.png" alt="NexWave Project" />
+                </a>
+                <div class="project-heading">
+                  <p>Telecommunications Company Web Design</p>
+                  <h3>NexWave Communications</h3>
+                </div>
+              </div>
+              <!--
+                <div class="project-item">
+                  <a
+                    class="project-item-img-box"
+                    href="https://www.behance.net/gallery/191831135/Mayshine-Skincare-Web-Design
+                    "
+                    target="_blank"
+                  >
+                    <img src="images/logo-mayshine.png" alt="Mayshine Project" />
+                  </a>
+                  <div class="project-heading">
+                    <p>Skincare Web Design</p>
+                    <h3>Mayshine</h3>
+                  </div>
+                </div>
+               -->
+              <!-- Project 4 -->
+              <div class="project-item">
+                <a
+                  class="project-item-img-box"
+                  href="https://www.behance.net/gallery/188176459/Katoshi-BJJ-Web-Design"
+                  target="_blank"
+                >
+                  <img src="images/katoshi-logo.jpg" alt="Katoshi Project" />
+                </a>
+                <div class="project-heading">
+                  <p>Brazilian Jiu-Jitsu Web Design</p>
+                  <h3>Katoshi</h3>
+                </div>
+              </div>
+            </div>
+            <div class="project-list-section">
+              <!-- Project 5 -->
+              <div class="project-item">
+                <a
+                  class="project-item-img-box"
+                  href="https://www.behance.net/gallery/190607231/Primera-Marketing-Agency-Web-Design"
+                  target="_blank"
+                >
+                  <img src="images/primera-logo.png" alt="Primera Project" />
+                </a>
+                <div class="project-heading">
+                  <p>Marketing Agency Web Design</p>
+                  <h3>Primera</h3>
+                </div>
+              </div>
+              <!-- Project 6 -->
+              <div class="project-item">
+                <a
+                  class="project-item-img-box"
+                  href="https://www.behance.net/gallery/191831135/Mayshine-Skincare-Web-Design
+                  "
+                  target="_blank"
+                >
+                  <img src="images/logo-mayshine.png" alt="Mayshine Project" />
+                </a>
+                <div class="project-heading">
+                  <p>Skincare Web Design</p>
+                  <h3>Mayshine</h3>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Mario Ushev</p>
+      <p>
+        <a href="mailto:mario@example.com">mario.p.ushev@gmail.com</a>|
+        <a
+          href="https://www.linkedin.com/in/mario-ushev-5b7b8624a/"
+          target="_blank"
+          >LinkedIn</a
+        >
+      </p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>

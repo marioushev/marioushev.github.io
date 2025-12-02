@@ -257,24 +257,29 @@ input[name="project-tabs"] {
   background-color: rgba(232, 140, 2, 0.05);
 }
 
+/* Button Underline Base */
+.web_applications_btn::after,
+.mobile_applications_btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 0%;
+  height: 2px;
+  background-color: #e88c02;
+  transition: width 0.3s ease-out;
+}
+
 /* Active State for Labels */
 #tab-web:checked ~ .project-category-buttons .web_applications_btn,
 #tab-mobile:checked ~ .project-category-buttons .mobile_applications_btn {
   color: #e88c02;
   font-weight: 600;
-  transition: ease-out 0.3s;
 }
 
 #tab-web:checked ~ .project-category-buttons .web_applications_btn::after,
 #tab-mobile:checked ~ .project-category-buttons .mobile_applications_btn::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
   width: 60%;
-  height: 2px;
-  background-color: #e88c02;
 }
 
 /* Button Container */

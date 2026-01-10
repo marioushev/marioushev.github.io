@@ -1,3 +1,24 @@
+// Scroll Animations
+document.addEventListener("DOMContentLoaded", () => {
+  const reveals = document.querySelectorAll(".reveal");
+
+  const revealOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        observer.unobserve(entry.target); // Only animate once
+      }
+    });
+  }, {
+    threshold: 0.1, // Trigger when 10% of the element is visible
+    rootMargin: "0px 0px -50px 0px" // Trigger slightly before the bottom
+  });
+
+  reveals.forEach((reveal) => {
+    revealOnScroll.observe(reveal);
+  });
+});
+
 // page fade-out
 document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll("a[data-link]");

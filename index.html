@@ -16,17 +16,17 @@
     <meta property="og:url" content="https://marioushev.github.io/">
     <meta property="og:title" content="Mario Ushev | iOS & Web Developer Portfolio">
     <meta property="og:description" content="Portfolio of Mario Ushev, a Software Developer specializing in iOS and Web Development.">
-    <meta property="og:image" content="https://marioushev.github.io/M.png">
+    <meta property="og:image" content="https://marioushev.github.io/assets/images/logo.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://marioushev.github.io/">
     <meta property="twitter:title" content="Mario Ushev | iOS & Web Developer Portfolio">
     <meta property="twitter:description" content="Portfolio of Mario Ushev, a Software Developer specializing in iOS and Web Development.">
-    <meta property="twitter:image" content="https://marioushev.github.io/M.png">
+    <meta property="twitter:image" content="https://marioushev.github.io/assets/images/logo.png">
 
-    <link rel="stylesheet" href="style-code.css" />
-    <link rel="icon" type="image/png" href="M.png">
+    <link rel="stylesheet" href="assets/css/style-code.css" />
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,7 +47,7 @@
     <header class="header">
       <div class="logo">
         <div class="logo-img">
-          <img src="M.png" alt="Mario Ushev Logo" />
+          <img src="assets/images/logo.png" alt="Mario Ushev Logo" />
         </div>
         <div class="logo-name">
           <a href="index.html" data-link>Mario Ushev</a>
@@ -57,7 +57,7 @@
         <ul>
           <li><a href="design.html" data-link>design</a></li>
           <li><a href="index.html" data-link style="font-style: italic; color: #2c2c2a;">code</a></li>
-          <li><a href="resume.pdf" target="_blank">resume</a></li>
+          <li><a href="assets/docs/resume.pdf" target="_blank">resume</a></li>
         </ul>
       </nav>
     </header>
@@ -65,20 +65,20 @@
     <!-- Main Section -->
     <main>
       <!-- Introduction Section -->
-      <section class="hero-section">
+      <section class="hero-section reveal">
         <section class="intro">
           <div class="intro-content">
             <div class="intro-text">
               <h1>
                 It's a me,
                 <em style="font-weight: 700; font-size: 1em"><b>Mario!</b></em>
-                👋
+                <span class="wave-emoji">👋</span>
               </h1>
               <p>Design & Software Development</p>
             </div>
             <div class="intro-image">
               <img
-                src="cv-photo/IMG_0710-o.png"
+                src="assets/images/profile/IMG_0710-o.png"
                 alt="Mario Ushev Portrait"
                 data-link
               />
@@ -87,13 +87,13 @@
         </section>
       </section>
 
-      <section class="technologies">
+      <section class="technologies reveal">
         <h2>Current <span>Technologies</span></h2>
         <p>some of my tools:</p>
         <div class="tech-grid">
-          <div class="tech-item">
+          <div class="tech-item reveal">
             <img
-              src="/coding-apps/coding-images/tech-icons/devicon_react.png"
+              src="assets/images/tech/devicon_react.png"
               alt="React Icon"
             />
             <div>
@@ -102,9 +102,9 @@
             </div>
           </div>
 
-          <div class="tech-item">
+          <div class="tech-item reveal">
             <img
-              src="/coding-apps/coding-images/tech-icons/typescript-icon.png"
+              src="assets/images/tech/typescript-icon.png"
               alt="Typescript Icon"
             />
             <div>
@@ -113,9 +113,9 @@
             </div>
           </div>
           
-          <div class="tech-item">
+          <div class="tech-item reveal">
             <img
-              src="/coding-apps/coding-images/tech-icons/javascript-icon-2.png"
+              src="assets/images/tech/javascript-icon-2.png"
               alt="JavaScript Icon"
             />
             <div>
@@ -123,9 +123,9 @@
               <p>Programming Languages</p>
             </div>
           </div>
-          <div class="tech-item">
+          <div class="tech-item reveal">
             <img
-              src="/coding-apps/coding-images/tech-icons/html&css.png"
+              src="assets/images/tech/html&css.png"
               alt="HTML & CSS Icon"
             />
             <div>
@@ -134,9 +134,22 @@
             </div>
           </div>
 
-          <div class="tech-item">
+          <div class="tech-item reveal">
             <img
-              src="/coding-apps/coding-images/tech-icons/git-icon.png"
+              src="assets/images/tech/devicon_redux.png"
+              alt="Redux Icon"
+              onerror="this.style.display='none'" 
+            />
+            <!-- Note: Please add a 'devicon_redux.png' to the tech-icons folder -->
+            <div>
+              <strong>Redux</strong>
+              <p>State Management</p>
+            </div>
+          </div>
+
+          <div class="tech-item reveal">
+            <img
+              src="assets/images/tech/git-icon.png"
               alt="Git Icon"
             />
             <div>
@@ -161,14 +174,14 @@
           <h2 class="projects-section-scroll">PROJECTS ↓</h2>
           <div class="project-grid">
             <!-- Web Projects -->
-            <div class="project-item">
+            <div class="project-item reveal">
               <a
                 class="project-item-img-box"
-                href="coding-apps/apps/g_notes_app/index.html"
+                href="projects/g_notes_app/index.html"
                 target="_blank"
               >
                 <img
-                  src="coding-apps/coding-images/Note App.png"
+                  src="assets/images/projects/Note App.png"
                   alt="Google Keep Clone Note App"
                 />
               </a>
@@ -178,14 +191,14 @@
               </div>
             </div>
 
-            <div class="project-item">
+            <div class="project-item reveal">
               <a
                 class="project-item-img-box"
-                href="coding-apps/apps/audio_synch/index.html"
+                href="projects/audio_synch/index.html"
                 target="_blank"
               >
                 <img
-                  src="coding-apps/coding-images/Audio App.png"
+                  src="assets/images/projects/Audio App.png"
                   alt="Audio Synchronizer Web App"
                 />
               </a>
@@ -195,14 +208,14 @@
               </div>
             </div>
 
-            <div class="project-item">
+            <div class="project-item reveal">
               <a
                 class="project-item-img-box"
-                href="coding-apps/apps/color-flipper/index.html"
+                href="projects/color-flipper/index.html"
                 target="_blank"
               >
                 <img
-                  src="coding-apps/coding-images/Color App.png"
+                  src="assets/images/projects/Color App.png"
                   alt="Color Flipper Web App"
                 />
               </a>
@@ -212,14 +225,14 @@
               </div>
             </div>
 
-            <div class="project-item">
+            <div class="project-item reveal">
               <a
                 class="project-item-img-box"
-                href="coding-apps/apps/weather-app/index.html"
+                href="projects/weather-app/index.html"
                 target="_blank"
               >
                 <img
-                  src="coding-apps/coding-images/Weather App.png"
+                  src="assets/images/projects/Weather App.png"
                   alt="Weather Dashboard API App"
                 />
               </a>
@@ -229,14 +242,14 @@
               </div>
             </div>
 
-            <div class="project-item">
+            <div class="project-item reveal">
               <a
                 class="project-item-img-box"
-                href="coding-apps/apps/dark_mode/index.html"
+                href="projects/dark_mode/index.html"
                 target="_blank"
               >
                 <img
-                  src="coding-apps/coding-images/Dark Mode App.png"
+                  src="assets/images/projects/Dark Mode App.png"
                   alt="Dark Mode Toggle Example"
                 />
               </a>
@@ -246,14 +259,14 @@
               </div>
             </div>
 
-            <div class="project-item">
+            <div class="project-item reveal">
               <a
                 class="project-item-img-box"
-                href="coding-apps/apps/stripe/index.html"
+                href="projects/stripe/index.html"
                 target="_blank"
               >
                 <img
-                  src="coding-apps/coding-images/Stripe Demo Homepage.png"
+                  src="assets/images/projects/Stripe Demo Homepage.png"
                   alt="Stripe Homepage Clone"
                 />
               </a>
@@ -271,14 +284,14 @@
         <h2 class="projects-section-scroll">PROJECTS ↓</h2>
         <div class="project-grid">
           <!-- Mobile Projects -->
-          <div class="project-item">
+          <div class="project-item reveal">
             <a
               class="project-item-img-box"
               href="https://apps.apple.com/us/app/zero-smoke/id6743452857"
               target="_blank"
             >
               <img
-                src="coding-apps/coding-images/zerosmoke.png"
+                src="assets/images/projects/zerosmoke.png"
                 alt="ZeroSmoke iOS App"
               />
             </a>
@@ -305,6 +318,6 @@
         >
       </p>
     </footer>
-    <script src="main.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

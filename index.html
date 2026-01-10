@@ -65,14 +65,14 @@
     <!-- Main Section -->
     <main>
       <!-- Introduction Section -->
-      <section class="hero-section">
+      <section class="hero-section reveal">
         <section class="intro">
           <div class="intro-content">
             <div class="intro-text">
               <h1>
                 It's a me,
                 <em style="font-weight: 700; font-size: 1em"><b>Mario!</b></em>
-                👋
+                <span class="wave-emoji">👋</span>
               </h1>
               <p>Design & Software Development</p>
             </div>
@@ -87,11 +87,11 @@
         </section>
       </section>
 
-      <section class="technologies">
+      <section class="technologies reveal">
         <h2>Current <span>Technologies</span></h2>
         <p>some of my tools:</p>
         <div class="tech-grid">
-          <div class="tech-item">
+          <div class="tech-item reveal">
             <img
               src="/coding-apps/coding-images/tech-icons/devicon_react.png"
               alt="React Icon"
@@ -136,6 +136,19 @@
 
           <div class="tech-item">
             <img
+              src="/coding-apps/coding-images/tech-icons/devicon_redux.png"
+              alt="Redux Icon"
+              onerror="this.style.display='none'" 
+            />
+            <!-- Note: Please add a 'devicon_redux.png' to the tech-icons folder -->
+            <div>
+              <strong>Redux</strong>
+              <p>State Management</p>
+            </div>
+          </div>
+
+          <div class="tech-item">
+            <img
               src="/coding-apps/coding-images/tech-icons/git-icon.png"
               alt="Git Icon"
             />
@@ -161,7 +174,7 @@
           <h2 class="projects-section-scroll">PROJECTS ↓</h2>
           <div class="project-grid">
             <!-- Web Projects -->
-            <div class="project-item">
+            <div class="project-item reveal">
               <a
                 class="project-item-img-box"
                 href="coding-apps/apps/g_notes_app/index.html"

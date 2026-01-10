@@ -13,6 +13,63 @@ body {
   background: linear-gradient(to bottom, #f7f1e8 40%, #fdfcfa 65%);
 }
 
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wave-emoji {
+  display: inline-block;
+  animation: wave 2.5s infinite;
+  transform-origin: 70% 70%;
+}
+
+/* Staggered delays for grid items */
+.tech-item:nth-child(1) { transition-delay: 0.1s; }
+.tech-item:nth-child(2) { transition-delay: 0.2s; }
+.tech-item:nth-child(3) { transition-delay: 0.3s; }
+.tech-item:nth-child(4) { transition-delay: 0.4s; }
+.tech-item:nth-child(5) { transition-delay: 0.5s; }
+.tech-item:nth-child(6) { transition-delay: 0.6s; }
+
+/* Enhanced Hover Effects */
+.tech-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tech-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
 /* Header Styles */
 .header {
   display: flex;

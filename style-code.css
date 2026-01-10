@@ -303,19 +303,15 @@ input[name="project-tabs"] {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
-  width: 85%;
+  width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .project-list-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 35px;
-  margin-bottom: 40px;
+  display: contents; /* Allows grid to control layout instead of flexbox wrapper */
 }
 
 .project-item {
@@ -327,8 +323,10 @@ input[name="project-tabs"] {
   display: inline-block;
   margin-bottom: 15px;
   overflow: visible; /* Change to visible to allow the border to expand outside */
-  width: 500px; /* Set a fixed width */
-  height: 412px; /* Set a fixed height */
+  width: 100%; /* Make width fluid */
+  max-width: 500px; /* Set a max width */
+  aspect-ratio: 500 / 412; /* Maintain aspect ratio */
+  height: auto; /* Let height adjust based on aspect ratio */
 }
 
 .project-item-img-box img {

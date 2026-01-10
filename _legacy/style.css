@@ -210,14 +210,18 @@ body.fade-out {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
-  width: 90%;
-  max-width: 1200px;
+  width: 85%;
   margin: 0 auto;
 }
 .project-list-section {
-  display: contents; /* Allows grid to control layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 40px;
 }
 .project-item {
   text-align: center;
@@ -227,10 +231,8 @@ body.fade-out {
   display: inline-block;
   margin-bottom: 15px;
   overflow: visible; /* Change to visible to allow the border to expand outside */
-  width: 100%; /* Make width fluid */
-  max-width: 500px; /* Set a max width */
-  aspect-ratio: 500 / 412; /* Maintain aspect ratio */
-  height: auto; /* Let height adjust based on aspect ratio */
+  width: 500px; /* Set a fixed width */
+  height: 412px; /* Set a fixed height */
 }
 
 .project-item-img-box img {

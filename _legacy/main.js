@@ -51,15 +51,13 @@ document.addEventListener("DOMContentLoaded", () => {
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav");
 
-if (hamburger && navMenu) {
-  // Add an event listener to the hamburger button
-  hamburger.addEventListener("click", () => {
-    // Toggle the 'active' class on the navigation menu
-    navMenu.classList.toggle("active");
+// Add an event listener to the hamburger button
+hamburger.addEventListener("click", () => {
+  // Toggle the 'active' class on the navigation menu
+  navMenu.classList.toggle("active");
 
-    // Also toggle the 'active' class on the hamburger button
-    hamburger.classList.toggle("active");
-  });
-}
+  // Also toggle the 'active' class on the hamburger button
+  hamburger.classList.toggle("active");
+});
 
 

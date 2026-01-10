@@ -1,14 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=code.html">
-    <title>Redirecting...</title>
-    <script>
-        window.location.href = "code.html";
-    </script>
-</head>
-<body>
-    <p>If you are not redirected automatically, follow this <a href="code.html">link to the Code page</a>.</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- SEO Meta Tags -->
+    <title>Mario Ushev | iOS & Web Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Mario Ushev, a Software Developer specializing in iOS (Swift/React Native) and Web Development. View my latest projects and skills.">
+    <meta name="keywords" content="Mario Ushev, iOS Developer, Web Developer, Swift, React Native, JavaScript, Portfolio">
+    <meta name="author" content="Mario Ushev">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://marioushev.github.io/">
+    <meta property="og:title" content="Mario Ushev | iOS & Web Developer Portfolio">
+    <meta property="og:description" content="Portfolio of Mario Ushev, a Software Developer specializing in iOS and Web Development.">
+    <meta property="og:image" content="https://marioushev.github.io/M.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://marioushev.github.io/">
+    <meta property="twitter:title" content="Mario Ushev | iOS & Web Developer Portfolio">
+    <meta property="twitter:description" content="Portfolio of Mario Ushev, a Software Developer specializing in iOS and Web Development.">
+    <meta property="twitter:image" content="https://marioushev.github.io/M.png">
+
+    <link rel="stylesheet" href="style-code.css" />
+    <link rel="icon" type="image/png" href="M.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Adieu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <div class="logo-img">
+          <img src="M.png" alt="Mario Ushev Logo" />
+        </div>
+        <div class="logo-name">
+          <a href="index.html" data-link>Mario Ushev</a>
+        </div>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="design.html" data-link>design</a></li>
+          <li><a href="index.html" data-link style="font-style: italic; color: #2c2c2a;">code</a></li>
+          <li><a href="resume.pdf" target="_blank">resume</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+      <!-- Introduction Section -->
+      <section class="hero-section">
+        <section class="intro">
+          <div class="intro-content">
+            <div class="intro-text">
+              <h1>
+                It's a me,
+                <em style="font-weight: 700; font-size: 1em"><b>Mario!</b></em>
+                👋
+              </h1>
+              <p>Design & Software Development</p>
+            </div>
+            <div class="intro-image">
+              <img
+                src="cv-photo/IMG_0710-o.png"
+                alt="Mario Ushev Portrait"
+                data-link
+              />
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="technologies">
+        <h2>Current <span>Technologies</span></h2>
+        <p>some of my tools:</p>
+        <div class="tech-grid">
+          <div class="tech-item">
+            <img
+              src="/coding-apps/coding-images/tech-icons/devicon_react.png"
+              alt="React Icon"
+            />
+            <div>
+              <strong>React & React Native</strong>
+              <p>Javascript Library & <br> Mobile Development</p>
+            </div>
+          </div>
+
+          <div class="tech-item">
+            <img
+              src="/coding-apps/coding-images/tech-icons/typescript-icon.png"
+              alt="Typescript Icon"
+            />
+            <div>
+              <strong>Typescript</strong>
+              <p>Programming Languages</p>
+            </div>
+          </div>
+          
+          <div class="tech-item">
+            <img
+              src="/coding-apps/coding-images/tech-icons/javascript-icon-2.png"
+              alt="JavaScript Icon"
+            />
+            <div>
+              <strong>JavaScript</strong>
+              <p>Programming Languages</p>
+            </div>
+          </div>
+          <div class="tech-item">
+            <img
+              src="/coding-apps/coding-images/tech-icons/html&css.png"
+              alt="HTML & CSS Icon"
+            />
+            <div>
+              <strong>HTML & CSS</strong>
+              <p>Web Structure & Styles</p>
+            </div>
+          </div>
+
+          <div class="tech-item">
+            <img
+              src="/coding-apps/coding-images/tech-icons/git-icon.png"
+              alt="Git Icon"
+            />
+            <div>
+              <strong>Git</strong>
+              <p>Code Version Control</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <input type="radio" name="project-tabs" id="tab-web" checked>
+      <input type="radio" name="project-tabs" id="tab-mobile">
+
+      <div class="project-category-buttons">
+        <label for="tab-web" class="web_applications_btn">Web Applications</label>
+        <label for="tab-mobile" class="mobile_applications_btn">Mobile Applications</label>
+      </div>
+    
+      <div class="web_applications">
+        <!-- Projects Section -->
+        <section class="projects">
+          <h2 class="projects-section-scroll">PROJECTS ↓</h2>
+          <div class="project-grid">
+            <!-- Web Projects -->
+            <div class="project-item">
+              <a
+                class="project-item-img-box"
+                href="coding-apps/apps/g_notes_app/index.html"
+                target="_blank"
+              >
+                <img
+                  src="coding-apps/coding-images/Note App.png"
+                  alt="Google Keep Clone Note App"
+                />
+              </a>
+              <div class="project-heading">
+                <p>A website that allows you to take notes</p>
+                <h3>Note App</h3>
+              </div>
+            </div>
+
+            <div class="project-item">
+              <a
+                class="project-item-img-box"
+                href="coding-apps/apps/audio_synch/index.html"
+                target="_blank"
+              >
+                <img
+                  src="coding-apps/coding-images/Audio App.png"
+                  alt="Audio Synchronizer Web App"
+                />
+              </a>
+              <div class="project-heading">
+                <p>A website that allows you to synchronize your audio</p>
+                <h3>Audio Synchronizer</h3>
+              </div>
+            </div>
+
+            <div class="project-item">
+              <a
+                class="project-item-img-box"
+                href="coding-apps/apps/color-flipper/index.html"
+                target="_blank"
+              >
+                <img
+                  src="coding-apps/coding-images/Color App.png"
+                  alt="Color Flipper Web App"
+                />
+              </a>
+              <div class="project-heading">
+                <p>A website that lets you change the background color</p>
+                <h3>Color App</h3>
+              </div>
+            </div>
+
+            <div class="project-item">
+              <a
+                class="project-item-img-box"
+                href="coding-apps/apps/weather-app/index.html"
+                target="_blank"
+              >
+                <img
+                  src="coding-apps/coding-images/Weather App.png"
+                  alt="Weather Dashboard API App"
+                />
+              </a>
+              <div class="project-heading">
+                <p>A website that allows you to check the weather</p>
+                <h3>Weather App (API)</h3>
+              </div>
+            </div>
+
+            <div class="project-item">
+              <a
+                class="project-item-img-box"
+                href="coding-apps/apps/dark_mode/index.html"
+                target="_blank"
+              >
+                <img
+                  src="coding-apps/coding-images/Dark Mode App.png"
+                  alt="Dark Mode Toggle Example"
+                />
+              </a>
+              <div class="project-heading">
+                <p>A website that allows you to change the homepage theme</p>
+                <h3>Dark Mode</h3>
+              </div>
+            </div>
+
+            <div class="project-item">
+              <a
+                class="project-item-img-box"
+                href="coding-apps/apps/stripe/index.html"
+                target="_blank"
+              >
+                <img
+                  src="coding-apps/coding-images/Stripe Demo Homepage.png"
+                  alt="Stripe Homepage Clone"
+                />
+              </a>
+              <div class="project-heading">
+                <p>Recreation of the Stripe Homepage</p>
+                <h3>Stripe Demo Homepage</h3>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="mobile_applications">
+        <section class="projects">
+        <h2 class="projects-section-scroll">PROJECTS ↓</h2>
+        <div class="project-grid">
+          <!-- Mobile Projects -->
+          <div class="project-item">
+            <a
+              class="project-item-img-box"
+              href="https://apps.apple.com/us/app/zero-smoke/id6743452857"
+              target="_blank"
+            >
+              <img
+                src="coding-apps/coding-images/zerosmoke.png"
+                alt="ZeroSmoke iOS App"
+              />
+            </a>
+            <div class="project-heading">
+              <p>An app that helps people stop smoking</p>
+              <h3>ZeroSmoke App</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
+    
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 Mario Ushev</p>
+      <p>
+        <a href="mailto:mario.p.ushev@gmail.com">mario.p.ushev@gmail.com</a>|
+        <a
+          href="https://www.linkedin.com/in/mario-ushev-5b7b8624a/"
+          target="_blank"
+          >LinkedIn</a
+        >
+      </p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
 </html>

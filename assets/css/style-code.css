@@ -425,6 +425,8 @@ input[name="project-tabs"] {
   flex-direction: column;
   align-items: flex-start;
   margin-top: 10px;
+  width: 100%;
+  text-align: left;
 }
 
 .project-item h3 {

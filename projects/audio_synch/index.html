@@ -3,37 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio Synchronizer | Pro</title>
     <link rel="stylesheet" href="style.css" />
-    <title>Audio Synchronizer</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-      button {
-        font-size: 18px;
-        padding: 10px;
-        margin: 10px 0;
-      }
-    </style>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>Audio Synchronizer</h1>
-    <div>
-      <h2>Step 1: Upload Files</h2>
-      <input type="file" id="file1" accept="audio/*" />
-      <input type="file" id="file2" accept="audio/*" />
+    <div class="container">
+      <header>
+        <div class="logo-area">
+          <i data-lucide="waves"></i>
+          <h1>Audio Sync</h1>
+        </div>
+        <p>Align and merge two audio files with precision</p>
+      </header>
+
+      <main class="sync-card">
+        <section class="upload-section">
+          <div class="file-input-group">
+            <label for="file1" class="file-label" id="label-file1">
+              <div class="icon-box">
+                <i data-lucide="music"></i>
+              </div>
+              <div class="text-box">
+                <span class="title">Reference Track</span>
+                <span class="file-name" id="name-file1">Choose first audio file...</span>
+              </div>
+            </label>
+            <input type="file" id="file1" accept="audio/*" hidden />
+          </div>
+
+          <div class="file-input-group">
+            <label for="file2" class="file-label" id="label-file2">
+              <div class="icon-box">
+                <i data-lucide="mic"></i>
+              </div>
+              <div class="text-box">
+                <span class="title">Second Track</span>
+                <span class="file-name" id="name-file2">Choose second audio file...</span>
+              </div>
+            </label>
+            <input type="file" id="file2" accept="audio/*" hidden />
+          </div>
+        </section>
+
+        <section class="action-section">
+          <button id="syncButton" class="btn-primary">
+            <i data-lucide="zap"></i>
+            <span>Synchronize Tracks</span>
+          </button>
+          <div id="status" class="status-msg"></div>
+        </section>
+
+        <section class="result-section" id="resultArea" style="display: none;">
+          <h3><i data-lucide="play-circle"></i> Resulting Mix</h3>
+          <audio id="outputAudio" controls></audio>
+          <a id="downloadBtn" class="btn-secondary" style="display: none;">
+            <i data-lucide="download"></i>
+            Download WAV
+          </a>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; 2026 Audio Sync Utility. Built with Web Audio API.</p>
+      </footer>
     </div>
-    <div>
-      <h2>Step 2: Synchronize</h2>
-      <button id="syncButton">Synchronize</button>
-    </div>
-    <div>
-      <h2>Step 3: Listen to Result</h2>
-      <audio id="outputAudio" controls></audio>
-    </div>
+
     <script src="audio-sync.js"></script>
+    <script>
+      // Initialize Lucide icons
+      lucide.createIcons();
+    </script>
   </body>
 </html>

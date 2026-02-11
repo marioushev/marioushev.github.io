@@ -4,33 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App | Personal Workspace</title>
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css" />
-    <script src="main.js" type="module"></script>
-    <title>Notes App</title>
   </head>
   <body>
     <div class="notes" id="app">
-      <!--
-          <div class="notes__sidebar">
-            <button class="notes__add" type="button">Add Note</button>
-              <div class="notes__list">
-                <div class="notes__list-item notes__list-item--selected">
-                  <div class="notes__small-title">Lecture Notes</div>
-                  <div class="notes__small-body">body</div>
-                  <div class="notes__small-lastUpdate">Wednesday 13th, 2022</div>
-                </div>
-            </div>
-          </div>
-        <div class="notes__preview">
-          <input
-          class="notes__title"
-          type="text"
-          placeholder="Enter a title..."
-          />
-          <textarea class="notes__body">I am the notes body...</textarea>
-        </div>
-      -->
+      <!-- App renders here -->
     </div>
     <script src="./main.js" type="module"></script>
+    <script>
+      // Initialize icons after potential dynamic content
+      window.addEventListener('load', () => lucide.createIcons());
+    </script>
   </body>
 </html>

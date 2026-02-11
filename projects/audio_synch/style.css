@@ -1,81 +1,226 @@
-#syncButton {
-  border-radius: 15px;
-  background-color: #ffffff;
-  font-weight: 550;
-  color: #000000;
-  padding: 10px 18px;
-  box-shadow: none;
+:root {
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --bg: #0f172a;
+  --card-bg: rgba(30, 41, 59, 0.7);
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+  --border: rgba(255, 255, 255, 0.1);
+  --success: #10b981;
 }
-#syncButton:hover {
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  background-image: radial-gradient(circle at top right, #1e1b4b, transparent),
+                    radial-gradient(circle at bottom left, #1e1b4b, transparent);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.logo-area i {
+  color: var(--primary);
+  width: 32px;
+  height: 32px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.sync-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.upload-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.file-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px dashed var(--border);
+  border-radius: 16px;
   cursor: pointer;
-  background-color: #322e2e;
-  color: #ffffff;
-  transition: all 0.3s ease-in;
-}
-#outputAudio {
-  border-radius: 1px black solid;
+  transition: all 0.2s ease;
 }
 
-/* Option 1: Target all file inputs */
-input[type="file"] {
-  display: block;
-  margin: 10px 0;
-  padding: 10px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
+.file-label:hover {
+  border-color: var(--primary);
+  background: rgba(99, 102, 241, 0.05);
 }
 
-/* Option 2: Target file inputs with specific IDs */
-/*
-#file1,
-#file2 {
-  background-color: #f0f0f0;
-  color: #333;
+.icon-box {
+  width: 48px;
+  height: 48px;
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-box .title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.text-box .file-name {
+  font-size: 1rem;
+  color: var(--text);
+  word-break: break-all;
+}
+
+.action-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-primary {
   width: 100%;
-  max-width: 300px;
-  border-radius: 10px;
-}
-*/
-/* Option 3: Target file inputs that accept audio files */
-input[type="file"][accept="audio/*"] {
-  border: 1px solid #202020;
-  border-radius: 10px;
-}
-
-/* Option 4: Combine selectors for more specificity */
-input[type="file"]#file1,
-input[type="file"]#file2 {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Option 5: Use adjacent sibling combinator */
-#file1 + input[type="file"] {
-  margin-top: 20px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: transform 0.1s active, background 0.2s ease;
 }
 
-/* New styles for the audio element */
-#outputAudio {
-  display: block;
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.status-msg {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  height: 20px;
+}
+
+.result-section {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.result-section h3 {
+  font-size: 1rem;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--success);
+}
+
+audio {
   width: 100%;
-  max-width: 300px;
-  margin: 20px 0;
-  border-radius: 10px;
-  overflow: hidden; /* This ensures the content doesn't spill outside the rounded corners */
-  background-color: #f0f0f0;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  height: 45px;
+  margin-bottom: 20px;
 }
 
-/* Additional styles to try and influence the controls */
-#outputAudio::-webkit-media-controls-panel {
-  background-color: #f0f0f0;
+/* Customizing Audio Player for Dark Theme (Partial) */
+audio::-webkit-media-controls-panel {
+  background-color: #1e293b;
 }
 
-#outputAudio::-webkit-media-controls-play-button {
-  border-radius: 50%;
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: rgba(99, 102, 241, 0.1);
+  transition: all 0.2s ease;
 }
 
-#outputAudio::-webkit-media-controls-current-time-display,
-#outputAudio::-webkit-media-controls-time-remaining-display {
-  color: #000000;
+.btn-secondary:hover {
+  background: rgba(99, 102, 241, 0.2);
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
 }

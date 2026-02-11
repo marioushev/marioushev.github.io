@@ -136,12 +136,17 @@ export default class notesView {
     // Set up the initial HTML structure for the notes app
     this.root.innerHTML = `
           <div class="notes__sidebar">
-              <button class="notes__add" type="button">Add Note</button>
+              <div class="notes__sidebar-header">
+                <button class="notes__add" type="button">
+                  <i data-lucide="plus"></i>
+                  <span>New Note</span>
+                </button>
+              </div>
               <div class="notes__list"></div>
           </div>
           <div class="notes__preview">
-              <input class="notes__title" type="text" placeholder="New Note...">
-              <textarea class="notes__body" placeholder="Take Note..."></textarea>
+              <input class="notes__title" type="text" placeholder="Note Title">
+              <textarea class="notes__body" placeholder="Write something amazing..."></textarea>
           </div>
       `;
 
@@ -174,14 +179,17 @@ export default class notesView {
 
     return `
           <div class="notes__list-item" data-note-id="${id}">
-              <div class="notes__small-title">${title}</div>
+              <button class="notes__delete" data-note-id="${id}">
+                <i data-lucide="trash-2" style="width: 16px; height: 16px;"></i>
+              </button>
+              <div class="notes__small-title">${title || "Untitled Note"}</div>
               <div class="notes__small-body">
                   ${body.substring(0, MAX_BODY_LENGTH)}
                   ${body.length > MAX_BODY_LENGTH ? "..." : ""}
               </div>
               <div class="notes__small-lastUpdate">
                   ${lastUpdate.toLocaleString(undefined, {
-                    dateStyle: "full",
+                    dateStyle: "medium",
                     timeStyle: "short",
                   })}
               </div>
@@ -205,15 +213,24 @@ export default class notesView {
       notesListContainer.insertAdjacentHTML("beforeend", html);
     }
 
+    // Refresh Lucide icons
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+
     // Add event listeners for selecting and deleting notes
     notesListContainer
       .querySelectorAll(".notes__list-item")
       .forEach((noteListItem) => {
-        noteListItem.addEventListener("click", () => {
+        noteListItem.addEventListener("click", (e) => {
+          // Don't select if the delete button was clicked
+          if (e.target.closest(".notes__delete")) return;
           this.onNoteSelect(noteListItem.dataset.noteId);
         });
 
-        noteListItem.addEventListener("dblclick", () => {
+        const deleteBtn = noteListItem.querySelector(".notes__delete");
+        deleteBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
           const doDelete = confirm(
             "Are you sure you want to delete this note?"
           );
@@ -235,9 +252,10 @@ export default class notesView {
     });
 
     // Add selection styling to the active note
-    this.root
-      .querySelector(`.notes__list-item[data-note-id="${note.id}"]`)
-      .classList.add("notes__list-item--selected");
+    const activeItem = this.root.querySelector(`.notes__list-item[data-note-id="${note.id}"]`);
+    if (activeItem) {
+      activeItem.classList.add("notes__list-item--selected");
+    }
   }
 
   // Method to show or hide the note preview area

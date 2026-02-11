@@ -75,30 +75,91 @@ document.addEventListener("DOMContentLoaded", () => {
   const file1Input = document.getElementById("file1");
   const file2Input = document.getElementById("file2");
   const outputAudio = document.getElementById("outputAudio");
+  const status = document.getElementById("status");
+  const resultArea = document.getElementById("resultArea");
+  const downloadBtn = document.getElementById("downloadBtn");
+  const name1 = document.getElementById("name-file1");
+  const name2 = document.getElementById("name-file2");
+
+  // Show file names when selected
+  file1Input.addEventListener("change", (e) => {
+    if (e.target.files.length > 0) {
+      name1.textContent = e.target.files[0].name;
+      name1.style.color = "var(--text)";
+    }
+  });
+
+  file2Input.addEventListener("change", (e) => {
+    if (e.target.files.length > 0) {
+      name2.textContent = e.target.files[0].name;
+      name2.style.color = "var(--text)";
+    }
+  });
 
   syncButton.addEventListener("click", async () => {
     if (!file1Input.files[0] || !file2Input.files[0]) {
-      alert("Please select two audio files");
+      alert("Please select two audio files first");
       return;
     }
 
     try {
+      // UI feedback
+      syncButton.disabled = true;
+      syncButton.innerHTML = `<i data-lucide="loader-2" class="spin"></i> <span>Processing...</span>`;
+      lucide.createIcons();
+      status.textContent = "Analyzing audio tracks...";
+      resultArea.style.display = "none";
+
       audioContext = new (window.AudioContext || window.webkitAudioContext)();
 
+      status.textContent = "Decoding files...";
       file1Buffer = await loadAudioFile(file1Input.files[0]);
       file2Buffer = await loadAudioFile(file2Input.files[0]);
 
+      status.textContent = "Finding synchronization point...";
       const offset = findOffset(file1Buffer, file2Buffer);
+      
+      status.textContent = "Merging tracks...";
       const syncedBuffer = synchronizeAudio(file1Buffer, file2Buffer, offset);
 
+      status.textContent = "Generating output...";
       const blob = bufferToWave(syncedBuffer, syncedBuffer.length);
-      outputAudio.src = URL.createObjectURL(blob);
+      const url = URL.createObjectURL(blob);
+      
+      outputAudio.src = url;
+      downloadBtn.href = url;
+      downloadBtn.download = "synced_audio.wav";
+      downloadBtn.style.display = "inline-flex";
+      
+      resultArea.style.display = "block";
+      status.textContent = "Synchronization complete!";
+      
+      syncButton.disabled = false;
+      syncButton.innerHTML = `<i data-lucide="zap"></i> <span>Synchronize Again</span>`;
+      lucide.createIcons();
     } catch (error) {
       console.error("Error synchronizing audio:", error);
+      status.textContent = "Error occurred.";
       alert("An error occurred while synchronizing the audio");
+      syncButton.disabled = false;
+      syncButton.innerHTML = `<i data-lucide="zap"></i> <span>Synchronize Tracks</span>`;
+      lucide.createIcons();
     }
   });
 });
+
+// Add rotation animation for loader
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .spin {
+    animation: spin 1s linear infinite;
+  }
+`;
+document.head.appendChild(style);
 
 // Step 6: Helper function to convert AudioBuffer to WAV
 function bufferToWave(abuffer, len) {

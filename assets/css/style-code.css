@@ -396,7 +396,7 @@ input[name="project-tabs"] {
 }
 
 .project-item-img-box:hover img {
-  transform: translate(-12px, -12px); /* Move the image up and left */
+  transform: translate(-10px, -12px); /* Move the image up and left */
   width: calc(100% + 12px); /* Increase width */
   height: calc(100% + 12px); /* Increase height */
 }
@@ -434,7 +434,7 @@ input[name="project-tabs"] {
   grid-template-columns: 1fr;
   max-width: 800px;
   margin: 0 auto;
-  gap: 80px;
+  gap: 120px;
 }
 
 .mobile_applications .project-item {
@@ -443,16 +443,43 @@ input[name="project-tabs"] {
   align-items: center;
 }
 
-.mobile_applications .project-item-img-box {
-  max-width: 300px;
-  aspect-ratio: 9 / 19.5; /* Modern phone aspect ratio */
+.project-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-mobile .project-item-img-box {
+  max-width: 320px;
+  width: 100%;
+  aspect-ratio: auto;
+  height: auto;
+  margin-bottom: 25px;
+}
+
+.project-mobile .project-item-img-box img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.project-mobile .project-item-img-box:hover img {
+  transform: translate(-4px, -4px);
+  width: 100%;
   height: auto;
 }
 
-.mobile_applications .project-heading {
+.project-mobile .project-item-img-box:hover::after {
+  border-right: 4px solid #e88c02;
+  border-bottom: 4px solid #e88c02;
+  transform: translate(4px, 4px);
+}
+
+.project-mobile .project-heading {
   align-items: center;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .project-item h3 {
@@ -500,122 +527,6 @@ footer a:hover {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  body {
-    font-family: "DM Sans", sans-serif;
-  }
-
-  /* Header */
-  .header {
-    display: flex;
-    justify-content: space-between; /* Align logo to left and hamburger to right */
-    align-items: center;
-    padding: 5px 20px;
-    position: relative; /* Ensure the absolute positioning of nav doesn't affect layout */
-  }
-
-  .logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .logo a {
-    font-size: 18px;
-  }
-
-  .nav ul {
-    display: flex;
-    flex-direction: column; /* Stack the links vertically */
-    gap: 20px;
-    text-align: right;
-    padding: 10px 20px;
-    display: block; /* Ensure the nav links are visible */
-    line-height: 30px;
-  }
-
-  .nav ul li a {
-    font-size: 16px;
-  }
-
-  /* Introduction Section */
-  .intro {
-    width: 90%;
-    height: auto;
-    margin: 50px auto;
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .intro-content {
-    flex-direction: column;
-    margin-left: 0;
-    margin-right: 0;
-    text-align: center;
-  }
-
-  .intro-text {
-    margin-right: 0;
-    margin-bottom: 20px;
-    font-size: 16px;
-  }
-
-  .intro-text p:first-child {
-    font-size: 14px;
-  }
-
-  .intro-image {
-    width: 120px;
-    height: 120px;
-  }
-
-  /* Projects Section */
-  .projects h2 {
-    font-size: 12px;
-  }
-
-  .project-grid {
-    grid-template-columns: 1fr; /* Single column grid */
-    width: 100%;
-    gap: 20px;
-  }
-
-  .project-item-img-box {
-    width: 100%;
-    height: auto;
-  }
-
-  .project-item-img-box img {
-    width: 100%;
-    height: auto;
-  }
-
-  .project-heading h3 {
-    font-size: 18px;
-  }
-
-  .project-heading p {
-    font-size: 12px;
-  }
-
-  /* Footer */
-  footer {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-
-  footer p {
-    font-size: 10px;
-  }
-
-  footer a {
-    font-size: 10px;
-    margin-right: 5px;
-    margin-left: 5px;
-  }
-}
 
 @media (max-width: 390px) {
   body {

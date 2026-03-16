@@ -588,13 +588,15 @@ input[name="project-tabs"] {
 }
 
 .web_applications,
-.mobile_applications {
+.mobile_applications,
+.design_applications {
   display: none;
   width: 100%;
 }
 
 #tab-web:checked ~ .web_applications,
-#tab-mobile:checked ~ .mobile_applications {
+#tab-mobile:checked ~ .mobile_applications,
+#tab-design:checked ~ .design_applications {
   display: block;
 }
 
@@ -623,7 +625,8 @@ input[name="project-tabs"] {
 }
 
 .web_applications_btn,
-.mobile_applications_btn {
+.mobile_applications_btn,
+.design_applications_btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -642,7 +645,8 @@ input[name="project-tabs"] {
 }
 
 .web_applications_btn::after,
-.mobile_applications_btn::after {
+.mobile_applications_btn::after,
+.design_applications_btn::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -654,19 +658,22 @@ input[name="project-tabs"] {
 }
 
 .web_applications_btn:hover,
-.mobile_applications_btn:hover {
+.mobile_applications_btn:hover,
+.design_applications_btn:hover {
   color: var(--text);
   background: none;
 }
 
 #tab-web:checked ~ .project-category-buttons .web_applications_btn,
-#tab-mobile:checked ~ .project-category-buttons .mobile_applications_btn {
+#tab-mobile:checked ~ .project-category-buttons .mobile_applications_btn,
+#tab-design:checked ~ .project-category-buttons .design_applications_btn {
   color: var(--text);
   font-weight: 700;
 }
 
 #tab-web:checked ~ .project-category-buttons .web_applications_btn::after,
-#tab-mobile:checked ~ .project-category-buttons .mobile_applications_btn::after {
+#tab-mobile:checked ~ .project-category-buttons .mobile_applications_btn::after,
+#tab-design:checked ~ .project-category-buttons .design_applications_btn::after {
   width: 100%;
 }
 

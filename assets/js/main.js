@@ -68,6 +68,27 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(img);
   });
 });
+// Tab nav links — select radio + smooth scroll to project section
+document.addEventListener("DOMContentLoaded", () => {
+  const tabLinks = document.querySelectorAll("a[data-tab]");
+
+  tabLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const tabId = link.getAttribute("data-tab");
+      const radio = document.getElementById(tabId);
+      if (radio) radio.checked = true;
+
+      const target = document.getElementById("projects-tabs");
+      if (target) {
+        const headerHeight = document.querySelector(".header")?.offsetHeight ?? 64;
+        const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+    });
+  });
+});
+
 // hamburger
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav");

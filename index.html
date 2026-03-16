@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     
     <!-- SEO Meta Tags -->
-    <title>Mario Ushev | iOS & Web Developer Portfolio</title>
+    <title>Mario Ushev | iOS &amp; Web Developer Portfolio</title>
     <meta name="description" content="Portfolio of Mario Ushev, a Software Developer specializing in iOS (Swift/React Native) and Web Development. View my latest projects and skills.">
     <meta name="keywords" content="Mario Ushev, iOS Developer, Web Developer, Swift, React Native, JavaScript, Portfolio">
     <meta name="author" content="Mario Ushev">
@@ -14,14 +14,14 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://marioushev.github.io/">
-    <meta property="og:title" content="Mario Ushev | iOS & Web Developer Portfolio">
+    <meta property="og:title" content="Mario Ushev | iOS &amp; Web Developer Portfolio">
     <meta property="og:description" content="Portfolio of Mario Ushev, a Software Developer specializing in iOS and Web Development.">
     <meta property="og:image" content="https://marioushev.github.io/assets/images/logo.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://marioushev.github.io/">
-    <meta property="twitter:title" content="Mario Ushev | iOS & Web Developer Portfolio">
+    <meta property="twitter:title" content="Mario Ushev | iOS &amp; Web Developer Portfolio">
     <meta property="twitter:description" content="Portfolio of Mario Ushev, a Software Developer specializing in iOS and Web Development.">
     <meta property="twitter:image" content="https://marioushev.github.io/assets/images/logo.png">
 
@@ -31,13 +31,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-    </style>
-
   </head>
   <body>
     <!-- Header -->
@@ -52,8 +48,8 @@
       </div>
       <nav class="nav">
         <ul>
-          <li><a href="design.html" data-link>design</a></li>
-          <li><a href="index.html" data-link style="font-style: italic; color: #2c2c2a;">code</a></li>
+          <li><a href="#projects-tabs" data-tab="tab-design">design</a></li>
+          <li><a href="#projects-tabs" data-tab="tab-web">code</a></li>
           <li><a href="assets/docs/resume.pdf" target="_blank">resume</a></li>
         </ul>
       </nav>
@@ -61,92 +57,109 @@
 
     <!-- Main Section -->
     <main>
-      <!-- Introduction Section -->
+      <!-- ── Hero / Introduction ── -->
       <section class="hero-section reveal">
         <section class="intro">
           <div class="intro-content">
+            <!-- Photo — left side, large and commanding -->
+            <div class="intro-image">
+              <div class="intro-image-inner">
+                <img
+                  src="assets/images/profile/photo.png"
+                  alt="Mario Ushev Portrait"
+                />
+              </div>
+              <span class="intro-image-label">mario_ushev.png</span>
+            </div>
+
+            <!-- Text — right side -->
             <div class="intro-text">
+              <div class="section-meta">
+                <span class="section-meta-label">01 / init</span>
+                <span class="section-meta-line"></span>
+              </div>
+
               <h1>
                 It's a me,
                 <em style="font-weight: 700; font-size: 1em"><b>Mario!</b></em>
                 <span class="wave-emoji">👋</span>
               </h1>
-              <p>Design & Software Development</p>
-            </div>
-            <div class="intro-image">
-              <img
-                src="assets/images/profile/IMG_0710-o.png"
-                alt="Mario Ushev Portrait"
-                data-link
-              />
+
+              <p>Design &amp; Software Development<span class="cursor"></span></p>
+
+              <div class="hero-stats">
+                <div class="hero-stat">
+                  <div class="hero-stat-num">iOS</div>
+                  <div class="hero-stat-label">Swift / RN</div>
+                </div>
+                <div class="hero-stat">
+                  <div class="hero-stat-num">Web</div>
+                  <div class="hero-stat-label">React / TS</div>
+                </div>
+                <div class="hero-stat">
+                  <div class="hero-stat-num">UI</div>
+                  <div class="hero-stat-label">Design</div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </section>
 
+      <!-- ── Technologies ── -->
       <section class="technologies reveal">
+        <div class="section-meta">
+          <span class="section-meta-label">02 / stack</span>
+          <span class="section-meta-line"></span>
+          <span class="section-meta-index">.technologies[]</span>
+        </div>
+
         <h2>Current <span>Technologies</span></h2>
         <p>some of my tools:</p>
+
         <div class="tech-grid">
-          <div class="tech-item reveal">
-            <img
-              src="assets/images/tech/devicon_react.png"
-              alt="React Icon"
-            />
+          <div class="tech-item reveal" data-index="01">
+            <img src="assets/images/tech/devicon_react.png" alt="React Icon" />
             <div>
-              <strong>React & React Native</strong>
-              <p>Javascript Library & <br> Mobile Development</p>
+              <strong>React &amp; React Native</strong>
+              <p>Javascript Library &amp; Mobile Development</p>
             </div>
           </div>
 
-          <div class="tech-item reveal">
-            <img
-              src="assets/images/tech/typescript-icon.png"
-              alt="Typescript Icon"
-            />
+          <div class="tech-item reveal" data-index="02">
+            <img src="assets/images/tech/typescript-icon.png" alt="Typescript Icon" />
             <div>
               <strong>Typescript</strong>
-              <p>Programming Languages</p>
+              <p>Programming Language</p>
             </div>
           </div>
-          
-          <div class="tech-item reveal">
-            <img
-              src="assets/images/tech/javascript-icon-2.png"
-              alt="JavaScript Icon"
-            />
+
+          <div class="tech-item reveal" data-index="03">
+            <img src="assets/images/tech/javascript-icon-2.png" alt="JavaScript Icon" />
             <div>
               <strong>JavaScript</strong>
-              <p>Programming Languages</p>
+              <p>Programming Language</p>
             </div>
           </div>
-          <div class="tech-item reveal">
-            <img
-              src="assets/images/tech/html&css.png"
-              alt="HTML & CSS Icon"
-            />
+
+          <div class="tech-item reveal" data-index="04">
+            <img src="assets/images/tech/html&css.png" alt="HTML &amp; CSS Icon" />
             <div>
-              <strong>HTML & CSS</strong>
-              <p>Web Structure & Styles</p>
+              <strong>HTML &amp; CSS</strong>
+              <p>Web Structure &amp; Styles</p>
             </div>
           </div>
 
-          <div class="tech-item reveal">
-            <img
-              src="assets/images/tech/devicon_redux.png"
-              alt="Redux Icon"
-
+          <div class="tech-item reveal" data-index="05">
+            <img src="assets/images/tech/devicon_redux.png" alt="Redux Icon" />
             <div>
               <strong>Redux</strong>
               <p>State Management</p>
             </div>
           </div>
 
-          <div class="tech-item reveal">
-            <img
-              src="assets/images/tech/git-icon.png"
-              alt="Git Icon"
-            />
+          <div class="tech-item reveal" data-index="06">
+            <img src="assets/images/tech/git-icon.png" alt="Git Icon" />
             <div>
               <strong>Git</strong>
               <p>Code Version Control</p>
@@ -155,31 +168,31 @@
         </div>
       </section>
 
+      <span id="projects-tabs"></span>
       <input type="radio" name="project-tabs" id="tab-web" checked>
       <input type="radio" name="project-tabs" id="tab-mobile">
+      <input type="radio" name="project-tabs" id="tab-design">
 
       <div class="project-category-buttons">
         <label for="tab-web" class="web_applications_btn">Web Applications</label>
         <label for="tab-mobile" class="mobile_applications_btn">Mobile Applications</label>
+        <label for="tab-design" class="design_applications_btn">Design</label>
       </div>
     
+      <!-- ── Web Projects ── -->
       <div class="web_applications">
-        <!-- Projects Section -->
         <section class="projects">
+          <div class="section-meta">
+            <span class="section-meta-label">03 / projects</span>
+            <span class="section-meta-line"></span>
+            <span class="section-meta-index">web/</span>
+          </div>
           <h2 class="projects-section-scroll">PROJECTS ↓</h2>
+
           <div class="project-grid">
-            <!-- Web Projects -->
-            <div class="project-item reveal">
-              <a
-                class="project-item-img-box"
-                href="projects/hclimate/index.html"
-                target="_blank"
-              >
-              <!-- src="projects/hclimate/assets/logo-6cfjRogb.png" -->
-                <img
-                  src="assets/images/projects/HClimate.png"
-                  alt="HClimate Dashboard"
-                />
+            <div class="project-item reveal" data-index="01">
+              <a class="project-item-img-box" href="projects/hclimate/index.html" target="_blank">
+                <img src="assets/images/projects/HClimate.png" alt="HClimate Dashboard" />
               </a>
               <div class="project-heading">
                 <p>An application for managing and visualizing building IoT datasets</p>
@@ -187,16 +200,9 @@
               </div>
             </div>
 
-            <div class="project-item reveal">
-              <a
-                class="project-item-img-box"
-                href="projects/g_notes_app/index.html"
-                target="_blank"
-              >
-                <img
-                  src="assets/images/projects/Note App.png"
-                  alt="Google Keep Clone Note App"
-                />
+            <div class="project-item reveal" data-index="02">
+              <a class="project-item-img-box" href="projects/g_notes_app/index.html" target="_blank">
+                <img src="assets/images/projects/Note App.png" alt="Google Keep Clone Note App" />
               </a>
               <div class="project-heading">
                 <p>A website that allows you to take notes</p>
@@ -204,16 +210,9 @@
               </div>
             </div>
 
-            <div class="project-item reveal">
-              <a
-                class="project-item-img-box"
-                href="projects/audio_synch/index.html"
-                target="_blank"
-              >
-                <img
-                  src="assets/images/projects/Audio App.png"
-                  alt="Audio Synchronizer Web App"
-                />
+            <div class="project-item reveal" data-index="03">
+              <a class="project-item-img-box" href="projects/audio_synch/index.html" target="_blank">
+                <img src="assets/images/projects/Audio App.png" alt="Audio Synchronizer Web App" />
               </a>
               <div class="project-heading">
                 <p>A website that allows you to synchronize your audio</p>
@@ -221,16 +220,9 @@
               </div>
             </div>
 
-            <div class="project-item reveal">
-              <a
-                class="project-item-img-box"
-                href="projects/color-flipper/index.html"
-                target="_blank"
-              >
-                <img
-                  src="assets/images/projects/Color App.png"
-                  alt="Color Flipper Web App"
-                />
+            <div class="project-item reveal" data-index="04">
+              <a class="project-item-img-box" href="projects/color-flipper/index.html" target="_blank">
+                <img src="assets/images/projects/Color App.png" alt="Color Flipper Web App" />
               </a>
               <div class="project-heading">
                 <p>A website that lets you change the background color</p>
@@ -238,16 +230,9 @@
               </div>
             </div>
 
-            <div class="project-item reveal">
-              <a
-                class="project-item-img-box"
-                href="projects/weather-app/index.html"
-                target="_blank"
-              >
-                <img
-                  src="assets/images/projects/Weather App.png"
-                  alt="Weather Dashboard API App"
-                />
+            <div class="project-item reveal" data-index="05">
+              <a class="project-item-img-box" href="projects/weather-app/index.html" target="_blank">
+                <img src="assets/images/projects/Weather App.png" alt="Weather Dashboard API App" />
               </a>
               <div class="project-heading">
                 <p>A website that allows you to check the weather</p>
@@ -255,16 +240,9 @@
               </div>
             </div>
 
-            <div class="project-item reveal">
-              <a
-                class="project-item-img-box"
-                href="projects/dark_mode/index.html"
-                target="_blank"
-              >
-                <img
-                  src="assets/images/projects/Dark Mode App.png"
-                  alt="Dark Mode Toggle Example"
-                />
+            <div class="project-item reveal" data-index="06">
+              <a class="project-item-img-box" href="projects/dark_mode/index.html" target="_blank">
+                <img src="assets/images/projects/Dark Mode App.png" alt="Dark Mode Toggle Example" />
               </a>
               <div class="project-heading">
                 <p>A website that allows you to change the homepage theme</p>
@@ -272,16 +250,9 @@
               </div>
             </div>
 
-            <div class="project-item reveal">
-              <a
-                class="project-item-img-box"
-                href="projects/stripe/index.html"
-                target="_blank"
-              >
-                <img
-                  src="assets/images/projects/Stripe Demo Homepage.png"
-                  alt="Stripe Homepage Clone"
-                />
+            <div class="project-item reveal" data-index="07">
+              <a class="project-item-img-box" href="projects/stripe/index.html" target="_blank">
+                <img src="assets/images/projects/Stripe Demo Homepage.png" alt="Stripe Homepage Clone" />
               </a>
               <div class="project-heading">
                 <p>Recreation of the Stripe Homepage</p>
@@ -292,46 +263,113 @@
         </section>
       </div>
 
+      <!-- ── Mobile Projects ── -->
       <div class="mobile_applications">
         <section class="projects">
-        <h2 class="projects-section-scroll">PROJECTS ↓</h2>
-        <div class="project-grid">
-          <!-- Mobile Projects -->
-          <div class="project-item project-mobile reveal">
-            <a
-              class="project-item-img-box"
-              href="https://apps.apple.com/us/app/zero-smoke/id6743452857"
-              target="_blank"
-            >
-              <img
-                src="assets/images/projects/zerosmoke.png"
-                alt="ZeroSmoke iOS App"
-              />
-            </a>
-            <div class="project-heading">
-              <p>An app that helps people stop smoking</p>
-              <h3>ZeroSmoke App</h3>
+          <div class="section-meta">
+            <span class="section-meta-label">03 / projects</span>
+            <span class="section-meta-line"></span>
+            <span class="section-meta-index">mobile/</span>
+          </div>
+          <h2 class="projects-section-scroll">PROJECTS ↓</h2>
+
+          <div class="project-grid">
+            <div class="project-item project-mobile reveal" data-index="01">
+              <a class="project-item-img-box" href="https://apps.apple.com/us/app/zero-smoke/id6743452857" target="_blank">
+                <img src="assets/images/projects/zerosmoke.png" alt="ZeroSmoke iOS App" />
+              </a>
+              <div class="project-heading">
+                <p>An app that helps people stop smoking</p>
+                <h3>ZeroSmoke App</h3>
+              </div>
+            </div>
+
+            <div class="project-item project-mobile reveal" data-index="02">
+              <a class="project-item-img-box" href="https://apps.apple.com/us/app/callitai/id6759469755" target="_blank">
+                <img src="assets/images/projects/callitai.png" alt="callitAI iOS App" />
+              </a>
+              <div class="project-heading">
+                <p>Community Based AI Detection</p>
+                <h3>callitAI App</h3>
+              </div>
             </div>
           </div>
-          <div class="project-item project-mobile reveal">
-            <a
-              class="project-item-img-box"
-              href="https://apps.apple.com/us/app/callitai/id6759469755"
-              target="_blank"
-            >
-              <img
-                src="assets/images/projects/callitai.png"
-                alt="callitAI iOS App"
-              />
-            </a>
-            <div class="project-heading">
-              <p>Community Based AI Detection</p>
-              <h3>callitAI App</h3>
+        </section>
+      </div>
+
+      <!-- ── Design Projects ── -->
+      <div class="design_applications">
+        <section class="projects">
+          <div class="section-meta">
+            <span class="section-meta-label">03 / projects</span>
+            <span class="section-meta-line"></span>
+            <span class="section-meta-index">design/</span>
+          </div>
+          <h2 class="projects-section-scroll">PROJECTS ↓</h2>
+
+          <div class="project-grid">
+            <div class="project-item reveal" data-index="01">
+              <a class="project-item-img-box" href="https://www.behance.net/gallery/207284503/Yasio-Finance-Web-Design" target="_blank">
+                <img src="assets/images/design/behance-1.png" alt="Yasio Finance Web Design" />
+              </a>
+              <div class="project-heading">
+                <p>Finance Web Design</p>
+                <h3>Yasio</h3>
+              </div>
+            </div>
+
+            <div class="project-item reveal" data-index="02">
+              <a class="project-item-img-box" href="https://www.figma.com/proto/HabFtmC8DGdITJztLss8O4/notero---saas-note-management?node-id=2-2&node-type=frame&t=pImPBaYEEZKcg9aG-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" target="_blank">
+                <img src="assets/images/design/logo-notero.png" alt="Notero Note Management Design" />
+              </a>
+              <div class="project-heading">
+                <p>Note Management Web Design</p>
+                <h3>Notero</h3>
+              </div>
+            </div>
+
+            <div class="project-item reveal" data-index="03">
+              <a class="project-item-img-box" href="https://www.figma.com/proto/cYgrHZ3vExulvVr766sF1G/NexWave-Communications---Web-Design?node-id=1-6&node-type=frame&t=i9ZsAFe40hFrWF1o-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A3" target="_blank">
+                <img src="assets/images/design/logo-nexwave.png" alt="NexWave Communications Design" />
+              </a>
+              <div class="project-heading">
+                <p>Telecommunications Company Web Design</p>
+                <h3>NexWave Communications</h3>
+              </div>
+            </div>
+
+            <div class="project-item reveal" data-index="04">
+              <a class="project-item-img-box" href="https://www.behance.net/gallery/188176459/Katoshi-BJJ-Web-Design" target="_blank">
+                <img src="assets/images/design/katoshi-logo.jpg" alt="Katoshi BJJ Web Design" />
+              </a>
+              <div class="project-heading">
+                <p>Brazilian Jiu-Jitsu Web Design</p>
+                <h3>Katoshi</h3>
+              </div>
+            </div>
+
+            <div class="project-item reveal" data-index="05">
+              <a class="project-item-img-box" href="https://www.behance.net/gallery/190607231/Primera-Marketing-Agency-Web-Design" target="_blank">
+                <img src="assets/images/design/primera-logo.png" alt="Primera Marketing Agency Design" />
+              </a>
+              <div class="project-heading">
+                <p>Marketing Agency Web Design</p>
+                <h3>Primera</h3>
+              </div>
+            </div>
+
+            <div class="project-item reveal" data-index="06">
+              <a class="project-item-img-box" href="https://www.behance.net/gallery/191831135/Mayshine-Skincare-Web-Design" target="_blank">
+                <img src="assets/images/design/logo-mayshine.png" alt="Mayshine Skincare Design" />
+              </a>
+              <div class="project-heading">
+                <p>Skincare Web Design</p>
+                <h3>Mayshine</h3>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      </div>    
+        </section>
+      </div>
     </main>
 
     <!-- Footer -->
@@ -339,13 +377,10 @@
       <p>&copy; 2026 Mario Ushev</p>
       <p>
         <a href="mailto:mario.p.ushev@gmail.com">mario.p.ushev@gmail.com</a>|
-        <a
-          href="https://www.linkedin.com/in/mario-ushev-5b7b8624a/"
-          target="_blank"
-          >LinkedIn</a
-        >
+        <a href="https://www.linkedin.com/in/mario-ushev-5b7b8624a/" target="_blank">LinkedIn</a>
       </p>
     </footer>
+
     <script src="assets/js/main.js"></script>
   </body>
 </html>

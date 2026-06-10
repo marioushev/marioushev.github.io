@@ -13,20 +13,26 @@
 
 /* ---------- Custom Properties ---------- */
 :root {
-  --bg:          #000000;
-  --surface:     #0a0a0a;
-  --surface-2:   #111111;
-  --border:      #1e1e1e;
-  --border-mid:  #272727;
-  --text:        #B3B99F;
-  --text-dim:    #5a5f52;
-  --text-muted:  #363b31;
-  --accent:      #B3B99F;
-  --accent-glow: rgba(179, 185, 159, 0.07);
-  --prompt:      #4a4f44;
+  --bg:          #0a0705;
+  --surface:     #120d09;
+  --surface-2:   #181109;
+  --border:      #221a12;
+  --border-mid:  #2e241a;
+  --text:        #d9d2b4;
+  --text-dim:    #7c7257;
+  --text-muted:  #4a4231;
+  --accent:      #d9d2b4;
+  --accent-glow: rgba(217, 210, 180, 0.07);
+  /* Desert-sunset warm accents */
+  --rust:        #c4622e;
+  --amber:       #e0913f;
+  --gold:        #d8a94b;
+  --rust-glow:   rgba(196, 98, 46, 0.18);
+  --prompt:      #c4622e;
   --line-h:      1px solid #1a1a1a;
   --font-mono:   'Space Mono', monospace;
   --font-sans:   'DM Sans', sans-serif;
+  --font-display:'Rye', 'Space Mono', serif;
   --radius:      2px;
   --transition:  0.25s ease;
 }
@@ -1081,4 +1087,334 @@ footer a:hover {
     font-size: 10px;
     padding: 14px 12px;
   }
+}
+
+/* ============================================================
+   SERVICES SECTION
+   ============================================================ */
+.services {
+  position: relative;
+  z-index: 1;
+  padding: 100px 60px;
+  max-width: 1300px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: 80px;
+}
+
+.services > h2 {
+  font-family: var(--font-sans);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.services > h2 span {
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  opacity: 0.5;
+}
+
+.services > p {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 48px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.service-card {
+  background: var(--bg);
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: background var(--transition);
+}
+
+.service-card:hover {
+  background: var(--surface);
+}
+
+.service-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+}
+
+.service-card h3 {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.service-card p {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-dim);
+  margin: 0;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* ============================================================
+   CONTACT / CTA SECTION
+   ============================================================ */
+.contact {
+  position: relative;
+  z-index: 1;
+  padding: 120px 60px;
+  max-width: 1300px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--border-mid);
+  scroll-margin-top: 80px;
+}
+
+.contact-inner {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.contact-inner h2 {
+  font-family: var(--font-sans);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.contact-inner h2 span {
+  color: var(--text);
+  opacity: 0.5;
+}
+
+.contact-inner > p {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  margin-bottom: 40px;
+}
+
+.contact-cta {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  text-decoration: none;
+  padding: 16px 28px;
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  transition: background var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.contact-cta:hover {
+  background: var(--surface);
+  border-color: var(--text-dim);
+  box-shadow: 0 0 24px rgba(179, 185, 159, 0.06);
+}
+
+/* ---------- Responsive: services + contact ---------- */
+@media (max-width: 900px) {
+  .services {
+    padding: 60px 24px;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact {
+    padding: 80px 24px;
+  }
+}
+
+/* ============================================================
+   ░░  WESTERN / DESERT / GATOR THEME LAYER  ░░
+   Hybrid: cowboy-desert-skeleton  ✕  terminal-dark-tech
+   ============================================================ */
+
+/* ---------- Warm grain over the grid (desert dust) ---------- */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 50% -10%, var(--rust-glow) 0%, transparent 45%),
+    radial-gradient(circle at 100% 120%, rgba(216, 169, 75, 0.05) 0%, transparent 40%);
+}
+
+::selection {
+  background: rgba(196, 98, 46, 0.28);
+  color: var(--text);
+}
+
+::-webkit-scrollbar-thumb { background: var(--rust); }
+
+/* ---------- Western display type ---------- */
+.logo a {
+  font-family: var(--font-display);
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  opacity: 0.95;
+}
+
+.intro-text h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: 0.005em;
+}
+
+.intro-text h1::before {
+  color: var(--rust);
+}
+
+.hero-accent {
+  font-style: normal;
+  color: var(--amber);
+  text-shadow: 0 0 26px var(--rust-glow);
+}
+
+.technologies > h2,
+.services > h2,
+.contact-inner h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.contact-inner h2 span,
+.services > h2 span,
+.technologies span {
+  color: var(--amber);
+  opacity: 0.85;
+}
+
+/* ---------- Terminal: rust prompt (campfire CLI) ---------- */
+.terminal-prompt,
+.project-category-buttons::before,
+footer::before {
+  color: var(--rust);
+}
+
+.terminal-title { color: var(--gold); }
+
+/* ---------- Hero stat numbers go gold ---------- */
+.hero-stat { border-left-color: var(--rust); }
+.hero-stat-num {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--gold);
+}
+
+/* ---------- Desert sun + gator fossil (hero backdrop) ---------- */
+.desert-sun {
+  position: absolute;
+  z-index: 0;
+  top: -220px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 1000px;
+  max-width: 130vw;
+  pointer-events: none;
+  background: radial-gradient(circle,
+      rgba(224, 145, 63, 0.16) 0%,
+      rgba(196, 98, 46, 0.07) 34%,
+      transparent 68%);
+}
+
+.gator-fossil {
+  position: absolute;
+  z-index: 0;
+  right: -3%;
+  bottom: 2%;
+  width: min(760px, 66vw);
+  aspect-ratio: 570 / 300;
+  pointer-events: none;
+  background: url('../images/gater-only.png') no-repeat center / contain;
+  opacity: 0.13;
+  filter: sepia(0.5) saturate(1.1) hue-rotate(-12deg) brightness(0.95);
+}
+
+.hero-section .intro { position: relative; z-index: 1; }
+
+/* ---------- Tabs: active underline burns amber ---------- */
+.web_applications_btn::after,
+.mobile_applications_btn::after,
+.design_applications_btn::after {
+  background: var(--rust);
+}
+
+#tab-web:checked ~ .project-category-buttons .web_applications_btn,
+#tab-mobile:checked ~ .project-category-buttons .mobile_applications_btn,
+#tab-design:checked ~ .project-category-buttons .design_applications_btn {
+  color: var(--gold);
+}
+
+/* ---------- Service cards: branded number + hover ---------- */
+.service-num { color: var(--rust); }
+.service-card { border-top: 2px solid transparent; transition: background var(--transition), border-color var(--transition); }
+.service-card:hover { border-top-color: var(--rust); }
+
+/* ---------- Project cards warm up on hover ---------- */
+.project-item:hover .project-item-img-box img {
+  filter: grayscale(0%) brightness(0.92) sepia(0.18) saturate(1.15);
+}
+.project-item h3 { font-family: var(--font-display); font-weight: 400; font-size: 18px; }
+
+/* ---------- Nav: lasso hover ---------- */
+.nav ul li a:hover { color: var(--amber); }
+.nav ul li a::before { content: '⟶ '; color: var(--rust); }
+.nav ul li a:hover::before { opacity: 1; }
+
+/* ---------- Contact emblem + CTA ---------- */
+.contact-emblem {
+  display: block;
+  width: clamp(180px, 26vw, 280px);
+  margin: 0 auto 28px;
+  filter: drop-shadow(0 0 40px var(--rust-glow));
+}
+
+.contact-cta {
+  color: var(--bg);
+  background: var(--rust);
+  border-color: var(--amber);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.contact-cta:hover {
+  background: var(--amber);
+  border-color: var(--gold);
+  box-shadow: 0 0 28px var(--rust-glow);
+  transform: translateY(-1px);
+}
+
+/* ---------- Footer link hover ---------- */
+footer a:hover { color: var(--amber); }
+
+@media (max-width: 900px) {
+  .gator-fossil { opacity: 0.09; bottom: auto; top: 8%; right: -10%; }
+  .contact-emblem { width: clamp(150px, 50vw, 220px); }
 }

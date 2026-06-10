@@ -15,25 +15,25 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://vertexdigital.dev/">
+  <meta property="og:url" content="https://goodstudio.dev/">
   <meta property="og:title" content="Good Studio | Web & Mobile Development Team">
   <meta property="og:description" content="A development team crafting digital products for web and mobile.">
-  <meta property="og:image" content="https://vertexdigital.dev/assets/images/logo.png">
+  <meta property="og:image" content="https://goodstudio.dev/assets/images/logo.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://vertexdigital.dev/">
+  <meta property="twitter:url" content="https://goodstudio.dev/">
   <meta property="twitter:title" content="Good Studio | Web & Mobile Development Team">
   <meta property="twitter:description" content="A development team crafting digital products for web and mobile.">
-  <meta property="twitter:image" content="https://vertexdigital.dev/assets/images/logo.png">
+  <meta property="twitter:image" content="https://goodstudio.dev/assets/images/logo.png">
 
   <link rel="stylesheet" href="assets/css/style-code.css" />
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="icon" type="image/png" href="assets/images/gator.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Rye&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet" />
 </head>
 
@@ -50,9 +50,9 @@
     </div>
     <nav class="nav">
       <ul>
-        <li><a href="#projects-tabs" data-tab="tab-design">design</a></li>
-        <li><a href="#projects-tabs" data-tab="tab-web">code</a></li>
-        <!-- <li><a href="#" data-link>about</a></li> -->
+        <li><a href="#services">services</a></li>
+        <li><a href="#projects-tabs" data-tab="tab-web">work</a></li>
+        <li><a href="#contact">contact</a></li>
       </ul>
     </nav>
   </header>
@@ -61,6 +61,8 @@
   <main>
     <!-- ── Hero / Introduction ── -->
     <section class="hero-section reveal">
+      <div class="desert-sun" aria-hidden="true"></div>
+      <div class="gator-fossil" aria-hidden="true"></div>
       <section class="intro">
         <div class="intro-content">
           <!-- Terminal Graphic — left side -->
@@ -69,14 +71,14 @@
               <span class="terminal-dot red"></span>
               <span class="terminal-dot yellow"></span>
               <span class="terminal-dot green"></span>
-              <span class="terminal-title">~/vertex-digital</span>
+              <span class="terminal-title">~/good-studio</span>
             </div>
             <div class="terminal-body">
               <p><span class="terminal-prompt">$</span> git status</p>
               <p>On branch main</p>
               <p>Your branch is up to date with 'origin/main'.</p>
               <p class="terminal-spacing"><span class="terminal-prompt">$</span> whoami</p>
-              <p>team@vertex-digital</p>
+              <p>team@good-studio</p>
               <p class="terminal-spacing"><span class="terminal-prompt">$</span> ls team/</p>
               <p>design/ development/ mobile/ strategy/</p>
               <p class="terminal-spacing"><span class="terminal-prompt">$</span> <span class="terminal-cursor">_</span>
@@ -92,12 +94,12 @@
             </div>
 
             <h1>
-              We build
-              <em style="font-weight: 700; font-size: 1em"><b>digital products</b></em>
-              <span class="wave-emoji">🚀</span>
+              We wrangle
+              <em class="hero-accent">digital products</em>
+              <span class="wave-emoji">🤠</span>
             </h1>
 
-            <p>Web & Mobile Development Team</p>
+            <p>Web &amp; Mobile Development Team — built in the dark</p>
 
             <div class="hero-stats">
               <div class="hero-stat">
@@ -118,10 +120,45 @@
       </section>
     </section>
 
-    <!-- ── Technologies ── -->
-    <section class="technologies reveal">
+    <!-- ── Services / What we do ── -->
+    <section class="services reveal" id="services">
       <div class="section-meta">
-        <span class="section-meta-label">02 / stack</span>
+        <span class="section-meta-label">02 / services</span>
+        <span class="section-meta-line"></span>
+        <span class="section-meta-index">.what_we_do[]</span>
+      </div>
+
+      <h2>What <span>we do</span></h2>
+      <p>one team, every layer of the product:</p>
+
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <span class="service-num">01</span>
+          <h3>Web Development</h3>
+          <p>Fast, accessible web apps built with React, TypeScript and modern tooling — from marketing sites to
+            data-heavy dashboards.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <span class="service-num">02</span>
+          <h3>Mobile Apps</h3>
+          <p>Native and cross-platform apps for iOS and Android, shipped to the App Store with the polish users expect.
+          </p>
+        </div>
+
+        <div class="service-card reveal">
+          <span class="service-num">03</span>
+          <h3>UI/UX Design</h3>
+          <p>Research-driven interfaces, design systems and prototypes that turn ideas into products people love to use.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Technologies ── -->
+    <!-- <section class="technologies reveal">
+      <div class="section-meta">
+        <span class="section-meta-label">03 / stack</span>
         <span class="section-meta-line"></span>
         <span class="section-meta-index">.technologies[]</span>
       </div>
@@ -178,7 +215,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <span id="projects-tabs"></span>
     <input type="radio" name="project-tabs" id="tab-web" checked>
@@ -195,7 +232,7 @@
     <div class="web_applications">
       <section class="projects">
         <div class="section-meta">
-          <span class="section-meta-label">03 / projects</span>
+          <span class="section-meta-label">04 / projects</span>
           <span class="section-meta-line"></span>
           <span class="section-meta-index">web/</span>
         </div>
@@ -224,7 +261,8 @@
 
           <div class="project-item reveal" data-index="03">
             <a class="project-item-img-box" href="projects/shar/prototype/index.html" target="_blank">
-              <img src="projects/shar/assets/shar-logo.png" alt="Shar Publishing" style="object-fit: contain; padding: 30px; box-sizing: border-box; background-color: #1a1a1a;" />
+              <img src="projects/shar/assets/shar-logo.png" alt="Shar Publishing"
+                style="object-fit: contain; padding: 30px; box-sizing: border-box; background-color: #1a1a1a;" />
             </a>
             <div class="project-heading">
               <p>Bespoke WordPress theme for a contemporary literature publisher.</p>
@@ -242,7 +280,7 @@
             </div>
           </div>
 
-          <div class="project-item reveal" data-index="05">
+          <!-- <div class="project-item reveal" data-index="05">
             <a class="project-item-img-box" href="projects/g_notes_app/index.html" target="_blank">
               <img src="assets/images/projects/Note App.png" alt="Google Keep Clone Note App" />
             </a>
@@ -250,9 +288,9 @@
               <p>A website that allows you to take notes</p>
               <h3>Note App</h3>
             </div>
-          </div>
+          </div> -->
 
-          <div class="project-item reveal" data-index="06">
+          <!-- <div class="project-item reveal" data-index="06">
             <a class="project-item-img-box" href="projects/audio_synch/index.html" target="_blank">
               <img src="assets/images/projects/Audio App.png" alt="Audio Synchronizer Web App" />
             </a>
@@ -260,9 +298,9 @@
               <p>A website that allows you to synchronize your audio</p>
               <h3>Audio Synchronizer</h3>
             </div>
-          </div>
+          </div> -->
 
-          <div class="project-item reveal" data-index="07">
+          <!-- <div class="project-item reveal" data-index="07">
             <a class="project-item-img-box" href="projects/color-flipper/index.html" target="_blank">
               <img src="assets/images/projects/Color App.png" alt="Color Flipper Web App" />
             </a>
@@ -270,9 +308,9 @@
               <p>A website that lets you change the background color</p>
               <h3>Color App</h3>
             </div>
-          </div>
+          </div> -->
 
-          <div class="project-item reveal" data-index="08">
+          <!-- <div class="project-item reveal" data-index="08">
             <a class="project-item-img-box" href="projects/weather-app/index.html" target="_blank">
               <img src="assets/images/projects/Weather App.png" alt="Weather Dashboard API App" />
             </a>
@@ -280,9 +318,9 @@
               <p>A website that allows you to check the weather</p>
               <h3>Weather App (API)</h3>
             </div>
-          </div>
+          </div> -->
 
-          <div class="project-item reveal" data-index="09">
+          <!-- <div class="project-item reveal" data-index="09">
             <a class="project-item-img-box" href="projects/dark_mode/index.html" target="_blank">
               <img src="assets/images/projects/Dark Mode App.png" alt="Dark Mode Toggle Example" />
             </a>
@@ -290,8 +328,8 @@
               <p>A website that allows you to change the homepage theme</p>
               <h3>Dark Mode</h3>
             </div>
-          </div>
-
+          </div> -->
+          <!-- 
           <div class="project-item reveal" data-index="10">
             <a class="project-item-img-box" href="projects/stripe/index.html" target="_blank">
               <img src="assets/images/projects/Stripe Demo Homepage.png" alt="Stripe Homepage Clone" />
@@ -301,7 +339,7 @@
               <h3>Stripe Demo Homepage</h3>
             </div>
           </div>
-        </div>
+        </div> -->
       </section>
     </div>
 
@@ -309,7 +347,7 @@
     <div class="mobile_applications">
       <section class="projects">
         <div class="section-meta">
-          <span class="section-meta-label">03 / projects</span>
+          <span class="section-meta-label">04 / projects</span>
           <span class="section-meta-line"></span>
           <span class="section-meta-index">mobile/</span>
         </div>
@@ -344,7 +382,7 @@
     <div class="design_applications">
       <section class="projects">
         <div class="section-meta">
-          <span class="section-meta-label">03 / projects</span>
+          <span class="section-meta-label">04 / projects</span>
           <span class="section-meta-line"></span>
           <span class="section-meta-index">design/</span>
         </div>
@@ -421,14 +459,31 @@
         </div>
       </section>
     </div>
+
+    <!-- ── Contact / CTA ── -->
+    <section class="contact reveal" id="contact">
+      <div class="section-meta">
+        <span class="section-meta-label">05 / contact</span>
+        <span class="section-meta-line"></span>
+        <span class="section-meta-index">./start</span>
+      </div>
+
+      <div class="contact-inner">
+        <img class="contact-emblem" src="assets/images/gator.png" alt="Good Studio gator skeleton emblem"
+          loading="lazy" />
+        <h2>Round up your next <span>project</span></h2>
+        <p>Have a product in mind? Tell us about it — we reply within one business day.</p>
+        <a class="contact-cta" href="mailto:mario.p.ushev@gmail.com">contact us →</a>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2026 Good Studio</p>
     <p>
-      <a href="mailto:hello@vertexdigital.dev">hello@vertexdigital.dev</a>|
-      <a href="https://linkedin.com/company/vertex-digital" target="_blank">LinkedIn</a>
+      <a href="mailto:mario.p.ushev@gmail.com">mario.p.ushev@gmail.com</a>|
+      <a href="https://www.linkedin.com/in/mario-ushev-5b7b8624a/" target="_blank">LinkedIn</a>
     </p>
   </footer>
 

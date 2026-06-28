@@ -1,0 +1,1163 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>VAK INVEST 86 — Строително проектиране и строителство</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --navy: #0F2748;
+    --navy-2: #0a1c36;
+    --teal: #1F7E98;
+    --teal-2: #186a82;
+    --white: #FEFFFF;
+    --ink: #0b1a2f;
+    --muted: #5b6b80;
+    --line: #e5e9ef;
+    --bg-1: #ffffff;
+    --bg-2: #f4f6f9;
+    --bg-3: #eef1f5;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--bg-1);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .container { max-width: 1320px; margin: 0 auto; padding: 0 32px; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--teal);
+    font-weight: 500;
+  }
+  h1, h2, h3, h4 { font-family: 'Inter', sans-serif; font-weight: 700; color: var(--navy); margin: 0; letter-spacing: -0.01em; }
+  h2.section-title {
+    font-size: clamp(28px, 3.4vw, 44px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 22px;
+    background: var(--teal);
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background .2s ease, transform .2s ease;
+  }
+  .btn:hover { background: var(--teal-2); transform: translateY(-1px); }
+  .btn.ghost { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,.4); }
+  .btn.ghost:hover { background: rgba(255,255,255,.1); }
+  .btn.dark { background: var(--navy); }
+  .btn.dark:hover { background: var(--navy-2); }
+  .btn-arrow { width: 14px; height: 14px; }
+
+  /* Top bar */
+  .topbar {
+    background: var(--navy);
+    color: rgba(255,255,255,.85);
+    font-size: 13px;
+  }
+  .topbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 42px;
+  }
+  .topbar-left { display: flex; align-items: center; gap: 18px; }
+  .topbar-left .sep { opacity: .35; }
+  .topbar a:hover { color: white; }
+  .topbar-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 16px; background: var(--teal); color: white;
+    font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase;
+    border-radius: 3px;
+  }
+  .topbar-cta:hover { background: var(--teal-2); color: white; }
+
+  /* Header */
+  header.main {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,255,255,.97);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  header.main .container {
+    display: flex; justify-content: space-between; align-items: center;
+    height: 84px;
+  }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo-mark {
+    width: 44px; height: 44px;
+    background: var(--navy);
+    color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 18px;
+    position: relative;
+    border-radius: 2px;
+  }
+  .logo-mark::after {
+    content: ''; position: absolute; right: -4px; bottom: -4px;
+    width: 14px; height: 14px; background: var(--teal);
+  }
+  .logo-text { line-height: 1; }
+  .logo-text .name { font-weight: 800; color: var(--navy); font-size: 16px; letter-spacing: 0.02em; }
+  .logo-text .tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.16em; text-transform: uppercase; margin-top: 3px; }
+
+  nav.primary { display: flex; align-items: center; gap: 4px; }
+  nav.primary > .nav-item {
+    position: relative;
+    padding: 10px 14px;
+    font-size: 13.5px; font-weight: 600;
+    color: var(--ink);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color .15s;
+  }
+  nav.primary > .nav-item:hover, nav.primary > .nav-item.active { color: var(--teal); }
+  nav.primary > .nav-item.active::after {
+    content: ''; position: absolute; left: 14px; right: 14px; bottom: -2px;
+    height: 2px; background: var(--teal);
+  }
+  .has-drop:hover .drop { opacity: 1; visibility: visible; transform: translateY(0); }
+  .drop {
+    position: absolute; top: 100%; left: 0;
+    min-width: 280px;
+    background: white;
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--teal);
+    padding: 8px 0;
+    box-shadow: 0 20px 40px rgba(15,39,72,.1);
+    opacity: 0; visibility: hidden; transform: translateY(8px);
+    transition: all .18s ease;
+  }
+  .drop a {
+    display: block;
+    padding: 10px 18px;
+    font-size: 13px; font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--ink);
+  }
+  .drop a:hover { background: var(--bg-2); color: var(--teal); }
+  .caret { display: inline-block; margin-left: 4px; font-size: 9px; opacity: .6; }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    height: calc(100vh - 126px);
+    min-height: 580px;
+    overflow: hidden;
+    background: var(--navy);
+  }
+  .hero-slide {
+    position: absolute; inset: 0;
+    opacity: 0; transition: opacity .9s ease;
+  }
+  .hero-slide.active { opacity: 1; }
+  .hero-slide .bg {
+    position: absolute; inset: 0;
+    background-size: cover; background-position: center;
+    transform: scale(1.05);
+    transition: transform 8s ease;
+  }
+  .hero-slide.active .bg { transform: scale(1); }
+  .hero-slide::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(15,39,72,.78) 0%, rgba(15,39,72,.45) 50%, rgba(31,126,152,.55) 100%);
+    z-index: 1;
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    height: 100%;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding-bottom: 88px;
+    color: white;
+  }
+  .hero-meta {
+    display: flex; align-items: center; gap: 14px;
+    font-family: 'JetBrains Mono', monospace; font-size: 12px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(255,255,255,.85);
+    margin-bottom: 22px;
+  }
+  .hero-meta .dot { width: 6px; height: 6px; background: var(--teal); border-radius: 50%; }
+  .hero-meta .bar { width: 40px; height: 1px; background: rgba(255,255,255,.5); }
+  .hero h1 {
+    color: white;
+    font-size: clamp(40px, 6.4vw, 84px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    max-width: 16ch;
+    text-wrap: balance;
+  }
+  .hero h1 em { font-style: normal; color: var(--teal); }
+  .hero p.lead {
+    margin-top: 24px;
+    font-size: clamp(16px, 1.4vw, 19px);
+    color: rgba(255,255,255,.85);
+    max-width: 56ch;
+    line-height: 1.55;
+  }
+  .hero-actions { margin-top: 36px; display: flex; gap: 14px; flex-wrap: wrap; }
+
+  .hero-nav {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    z-index: 3;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 32px;
+    border-top: 1px solid rgba(255,255,255,.15);
+    height: 76px;
+  }
+  .hero-nav .container {
+    width: 100%; max-width: 1320px;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0;
+  }
+  .slide-counter { font-family: 'JetBrains Mono', monospace; color: white; font-size: 13px; letter-spacing: 0.1em; }
+  .slide-counter .current { font-size: 22px; font-weight: 600; }
+  .slide-counter .sep { opacity: .4; margin: 0 8px; }
+  .slide-progress { flex: 1; max-width: 480px; margin: 0 36px; height: 1px; background: rgba(255,255,255,.2); position: relative; }
+  .slide-progress .fill { position: absolute; left: 0; top: 0; height: 100%; background: var(--teal); transition: width .2s linear; }
+  .slide-arrows { display: flex; gap: 8px; }
+  .arrow {
+    width: 48px; height: 48px;
+    border: 1px solid rgba(255,255,255,.3);
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all .2s;
+  }
+  .arrow:hover { background: var(--teal); border-color: var(--teal); }
+
+  /* Section base */
+  section.block { padding: 110px 0; position: relative; }
+  section.block.tight { padding: 70px 0; }
+  section.block.dark { background: var(--navy); color: white; }
+  section.block.dark h2.section-title { color: white; }
+  section.block.gray { background: var(--bg-2); }
+  .section-head {
+    display: flex; align-items: flex-end; justify-content: space-between; gap: 40px;
+    margin-bottom: 56px;
+  }
+  .section-head .left { max-width: 720px; }
+  .section-head .eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .section-head .eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--teal); }
+  .section-head .right { max-width: 380px; color: var(--muted); font-size: 15px; }
+  section.block.dark .section-head .right { color: rgba(255,255,255,.7); }
+
+  /* Services grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .service-card {
+    background: white;
+    display: flex; flex-direction: column;
+    transition: background .25s ease;
+    cursor: pointer;
+  }
+  .service-card:hover { background: var(--bg-2); }
+  .service-card .photo {
+    aspect-ratio: 4/5;
+    background-size: cover; background-position: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .service-card .photo::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(15,39,72,.5) 100%);
+  }
+  .service-card .num {
+    position: absolute; top: 16px; left: 16px;
+    z-index: 2;
+    font-family: 'JetBrains Mono', monospace;
+    color: white; font-size: 12px;
+    letter-spacing: 0.1em;
+  }
+  .service-card .body {
+    padding: 26px 24px 28px;
+    display: flex; flex-direction: column; flex: 1;
+  }
+  .service-card h3 {
+    font-size: 16px; font-weight: 700; line-height: 1.3;
+    text-transform: uppercase; letter-spacing: 0.02em;
+    margin-bottom: 14px;
+    min-height: 3em;
+  }
+  .service-card ul {
+    list-style: none; padding: 0; margin: 0 0 24px 0;
+    font-size: 13.5px; color: var(--muted); line-height: 1.6;
+    flex: 1;
+  }
+  .service-card ul li { padding: 4px 0; padding-left: 14px; position: relative; }
+  .service-card ul li::before {
+    content: ''; position: absolute; left: 0; top: 12px;
+    width: 6px; height: 1px; background: var(--teal);
+  }
+  .service-card .more {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--navy); font-weight: 600;
+    display: inline-flex; align-items: center; gap: 8px;
+    padding-top: 16px; border-top: 1px solid var(--line);
+  }
+  .service-card:hover .more { color: var(--teal); }
+  .service-card .more .arr { transition: transform .2s; }
+  .service-card:hover .more .arr { transform: translateX(4px); }
+
+  /* Values band */
+  .values {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: var(--navy);
+    color: white;
+  }
+  .value {
+    padding: 56px 36px;
+    border-right: 1px solid rgba(255,255,255,.08);
+    display: flex; flex-direction: column; gap: 22px;
+    position: relative;
+    transition: background .2s;
+  }
+  .value:last-child { border-right: none; }
+  .value:hover { background: var(--navy-2); }
+  .value .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; color: var(--teal); letter-spacing: 0.16em;
+  }
+  .value .icon {
+    width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--teal);
+  }
+  .value h4 {
+    color: white;
+    font-size: 17px; font-weight: 600;
+    line-height: 1.35;
+    text-wrap: balance;
+  }
+
+  /* About */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .about-copy h2 { margin-bottom: 28px; }
+  .about-copy p { color: var(--muted); font-size: 16px; line-height: 1.75; margin: 0 0 18px; }
+  .about-stats {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    margin-top: 40px; gap: 24px;
+    padding-top: 32px; border-top: 1px solid var(--line);
+  }
+  .stat .num {
+    font-size: 44px; font-weight: 800; color: var(--navy);
+    letter-spacing: -0.03em; line-height: 1;
+  }
+  .stat .num span { color: var(--teal); }
+  .stat .label {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--muted); margin-top: 10px;
+  }
+  .about-visual {
+    position: relative;
+    aspect-ratio: 5/6;
+  }
+  .about-visual .img-main, .about-visual .img-stack {
+    background-size: cover; background-position: center;
+    position: absolute;
+  }
+  .about-visual .img-main {
+    inset: 0;
+  }
+  .about-visual .frame-tag {
+    position: absolute; bottom: 24px; left: 24px;
+    background: var(--navy); color: white;
+    padding: 18px 22px;
+    z-index: 2;
+    max-width: 280px;
+  }
+  .frame-tag .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.18em; color: var(--teal);
+    text-transform: uppercase; margin-bottom: 6px;
+  }
+  .frame-tag .val { font-size: 14px; font-weight: 500; line-height: 1.45; }
+
+  /* Certificates */
+  .cert-row {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+  }
+  .cert {
+    background: white;
+    padding: 32px 24px;
+    text-align: center;
+    border: 1px solid var(--line);
+    transition: all .2s;
+  }
+  .cert:hover { border-color: var(--teal); transform: translateY(-3px); }
+  .cert .seal {
+    width: 88px; height: 88px;
+    margin: 0 auto 18px;
+    border: 2px solid var(--navy);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    color: var(--navy);
+  }
+  .cert .seal::before, .cert .seal::after {
+    content: ''; position: absolute; inset: 4px;
+    border: 1px dashed var(--navy); border-radius: 50%;
+    opacity: .3;
+  }
+  .cert .seal-name { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.05em; }
+  .cert h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--navy);
+    line-height: 1.4;
+  }
+  .cert .meta { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 6px; letter-spacing: 0.1em; }
+
+  /* Machinery */
+  .machinery-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+  }
+  .machine {
+    background: white;
+    border: 1px solid rgba(255,255,255,.1);
+  }
+  section.block.dark .machine { background: rgba(255,255,255,.04); border-color: rgba(255,255,255,.08); }
+  .machine .photo {
+    aspect-ratio: 4/3;
+    background-color: rgba(255,255,255,.05);
+    background-size: cover; background-position: center;
+    position: relative;
+  }
+  .machine .qty-badge {
+    position: absolute; top: 14px; right: 14px;
+    background: var(--teal); color: white;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600; font-size: 12px;
+    padding: 6px 10px;
+    letter-spacing: 0.04em;
+  }
+  .machine .body { padding: 20px 22px; }
+  .machine h4 {
+    color: white; font-size: 15px;
+    text-transform: uppercase; letter-spacing: 0.04em;
+    font-weight: 600;
+  }
+  .machine .id { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: rgba(255,255,255,.5); margin-bottom: 6px; letter-spacing: 0.12em; }
+
+  /* CTA banners */
+  .cta-pair {
+    display: grid; grid-template-columns: 1fr 1fr;
+    min-height: 360px;
+  }
+  .cta-banner {
+    position: relative;
+    padding: 80px 64px;
+    color: white;
+    overflow: hidden;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .cta-banner .bg {
+    position: absolute; inset: 0;
+    background-size: cover; background-position: center;
+    transition: transform .8s ease;
+  }
+  .cta-banner:hover .bg { transform: scale(1.04); }
+  .cta-banner::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(15,39,72,.92), rgba(15,39,72,.6));
+  }
+  .cta-banner.teal::after {
+    background: linear-gradient(135deg, rgba(31,126,152,.92), rgba(31,126,152,.55));
+  }
+  .cta-banner > * { position: relative; z-index: 2; }
+  .cta-banner .cta-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(255,255,255,.75); margin-bottom: 20px;
+  }
+  .cta-banner h3 {
+    color: white;
+    font-size: clamp(24px, 2.6vw, 34px);
+    font-weight: 700; line-height: 1.15;
+    letter-spacing: -0.01em;
+    max-width: 14ch;
+  }
+  .cta-banner .actions { margin-top: 28px; }
+
+  /* News */
+  .news-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 24px; align-items: stretch; }
+  .news-card { background: white; border: 1px solid var(--line); display: flex; flex-direction: column; transition: all .2s; }
+  .news-card:hover { border-color: var(--teal); transform: translateY(-3px); }
+  .news-card .photo { aspect-ratio: 16/9; background-size: cover; background-position: center; }
+  .news-card.feature .photo { aspect-ratio: 16/10; }
+  .news-card .body { padding: 26px 28px 28px; flex: 1; display: flex; flex-direction: column; }
+  .news-card .date { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--teal); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px; }
+  .news-card h3 { font-size: 18px; line-height: 1.35; margin-bottom: 14px; flex: 1; }
+  .news-card.feature h3 { font-size: 26px; }
+  .news-card .read { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--navy); font-weight: 600; }
+
+  /* Footer */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,.75);
+    padding: 80px 0 0;
+    font-size: 14px;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    gap: 48px;
+    padding-bottom: 56px;
+  }
+  .footer-brand .logo .logo-text .name { color: white; }
+  .footer-brand p { margin: 22px 0 0; color: rgba(255,255,255,.6); line-height: 1.7; max-width: 32ch; }
+  footer h5 {
+    color: white;
+    font-size: 13px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.16em;
+    margin: 0 0 22px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(255,255,255,.12);
+  }
+  footer ul { list-style: none; padding: 0; margin: 0; }
+  footer ul li { padding: 6px 0; }
+  footer a:hover { color: var(--teal); }
+  .footer-contact-row { display: flex; gap: 12px; padding: 7px 0; }
+  .footer-contact-row .lab { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: var(--teal); text-transform: uppercase; min-width: 56px; }
+  .footer-contact-row .val { color: rgba(255,255,255,.85); }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.12);
+    padding: 24px 0;
+    display: flex; justify-content: space-between; align-items: center;
+    color: rgba(255,255,255,.5);
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.06em;
+  }
+
+  /* Cookie banner */
+  .cookie {
+    position: fixed; bottom: 24px; left: 24px; right: 24px;
+    z-index: 100;
+    max-width: 640px;
+    background: var(--navy);
+    color: white;
+    padding: 22px 26px;
+    display: flex; align-items: center; gap: 22px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    border-left: 3px solid var(--teal);
+  }
+  .cookie p { margin: 0; font-size: 14px; line-height: 1.5; flex: 1; color: rgba(255,255,255,.85); }
+  .cookie a { color: var(--teal); text-decoration: underline; }
+  .cookie .btn { padding: 10px 20px; }
+
+  /* Helpers */
+  .placeholder-img {
+    background: repeating-linear-gradient(45deg, #cfd6df 0 8px, #d8dee5 8px 16px);
+    display: flex; align-items: center; justify-content: center;
+    color: #5b6b80;
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    text-align: center; padding: 20px;
+  }
+
+  @media (max-width: 1100px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .values { grid-template-columns: repeat(2, 1fr); }
+    .machinery-grid { grid-template-columns: repeat(2, 1fr); }
+    .cert-row { grid-template-columns: repeat(2, 1fr); }
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    .news-grid { grid-template-columns: 1fr; }
+    nav.primary { display: none; }
+    .cta-pair { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .container { padding: 0 20px; }
+    section.block { padding: 70px 0; }
+    .topbar-left .sep, .topbar-left .addr { display: none; }
+    .services-grid { grid-template-columns: 1fr; }
+    .values { grid-template-columns: 1fr; }
+    .machinery-grid { grid-template-columns: 1fr; }
+    .cert-row { grid-template-columns: repeat(2, 1fr); }
+    .footer-top { grid-template-columns: 1fr; gap: 32px; }
+    .about-stats { grid-template-columns: 1fr; }
+    .section-head { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .cta-banner { padding: 56px 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="tel:+359888000000">+359 888 000 000</a>
+      <span class="sep">/</span>
+      <span class="addr">9700 Шумен, ул. „Васил Левски" 55</span>
+    </div>
+    <a href="#kontakti" class="topbar-cta">Изпрати запитване →</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="main">
+  <div class="container">
+    <a href="/" class="logo">
+      <div class="logo-mark">V</div>
+      <div class="logo-text">
+        <div class="name">VAK INVEST 86</div>
+        <div class="tag">Building · Engineering</div>
+      </div>
+    </a>
+    <nav class="primary">
+      <a class="nav-item active">Начало</a>
+      <a class="nav-item">За нас</a>
+      <div class="nav-item has-drop">
+        Услуги <span class="caret">▼</span>
+        <div class="drop">
+          <a href="#">Проектиране и строителство</a>
+          <a href="#">Ел. и ВиК инсталации</a>
+          <a href="#">Довършителни работи</a>
+          <a href="#">Изолации</a>
+          <a href="#">Пътно строителство</a>
+        </div>
+      </div>
+      <a class="nav-item">Механизация</a>
+      <a class="nav-item">Изпълнени проекти</a>
+      <a class="nav-item">Сертификати</a>
+      <a class="nav-item">Клиенти</a>
+      <a class="nav-item">Контакти</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero slider -->
+<section class="hero" id="hero">
+  <div class="hero-slide active" data-slide="0">
+    <div class="bg" style="background-image: url('images/project-3.jpg')"></div>
+    <div class="hero-content container">
+      <div class="hero-meta">
+        <span class="dot"></span>
+        <span>Проект 01 / Жилищна сграда</span>
+        <span class="bar"></span>
+        <span>Завършен 2024</span>
+      </div>
+      <h1>Строителство, което <em>остава</em> поколения напред.</h1>
+      <p class="lead">VAK INVEST 86 — пълен цикъл на проектиране и строителство на жилищни, обществени и инфраструктурни обекти в Североизточна България от 1994 г.</p>
+      <div class="hero-actions">
+        <a href="#proekti" class="btn">Изпълнени проекти →</a>
+        <a href="#kontakti" class="btn ghost">Поискай оферта</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-slide" data-slide="1">
+    <div class="bg" style="background-image: url('images/project-4.jpg')"></div>
+    <div class="hero-content container">
+      <div class="hero-meta">
+        <span class="dot"></span>
+        <span>Проект 02 / Многофамилна сграда</span>
+        <span class="bar"></span>
+        <span>Реализация 2023</span>
+      </div>
+      <h1>Висококачествен <em>груб строеж</em> и довършителни работи.</h1>
+      <p class="lead">Проектиране, изграждане, изолации и инсталации — един екип, един отговорник, гарантирани срокове.</p>
+      <div class="hero-actions">
+        <a href="#uslugi" class="btn">Нашите услуги →</a>
+        <a href="#mehanizaciya" class="btn ghost">Механизация</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-slide" data-slide="2">
+    <div class="bg" style="background-image: url('images/project-2.jpg')"></div>
+    <div class="hero-content container">
+      <div class="hero-meta">
+        <span class="dot"></span>
+        <span>Проект 03 / Благоустрояване</span>
+        <span class="bar"></span>
+        <span>Завършен 2024</span>
+      </div>
+      <h1>От <em>идеята</em> до ключа — изцяло in-house.</h1>
+      <p class="lead">Собствена механизация, висококвалифициран екип от специалисти и сертифицирана система за качество ISO 9001 / 14001 / 45001.</p>
+      <div class="hero-actions">
+        <a href="#za-nas" class="btn">За компанията →</a>
+        <a href="#sertifikati" class="btn ghost">Сертификати</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-nav">
+    <div class="container">
+      <div class="slide-counter">
+        <span class="current">01</span><span class="sep">/</span><span class="total">03</span>
+      </div>
+      <div class="slide-progress"><div class="fill" style="width: 0%"></div></div>
+      <div class="slide-arrows">
+        <button class="arrow" id="prev" aria-label="Предишен">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="arrow" id="next" aria-label="Следващ">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="block" id="uslugi">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <div class="eyebrow">Какво правим / 01</div>
+        <h2 class="section-title">Нашите услуги</h2>
+      </div>
+      <div class="right">
+        Пълен цикъл строителство — от проектиране и груб строеж до инсталации, изолации и пътно строителство. Един изпълнител за целия Ви обект.
+      </div>
+    </div>
+    <div class="services-grid">
+
+      <a class="service-card" href="#">
+        <div class="photo" style="background-image: url('images/project-3.jpg')">
+          <span class="num">01</span>
+        </div>
+        <div class="body">
+          <h3>Проектиране и строителство</h3>
+          <ul>
+            <li>Изкопни работи</li>
+            <li>Груб строеж</li>
+            <li>Покривни конструкции</li>
+          </ul>
+          <span class="more">Напред <span class="arr">→</span></span>
+        </div>
+      </a>
+
+      <a class="service-card" href="#">
+        <div class="photo placeholder-img" style="aspect-ratio:4/5">Ел. &amp; ВиК работа</div>
+        <div class="body">
+          <h3>Ел. и ВиК инсталации</h3>
+          <ul>
+            <li>Електрически инсталации</li>
+            <li>ВиК инсталации</li>
+          </ul>
+          <span class="more">Напред <span class="arr">→</span></span>
+        </div>
+      </a>
+
+      <a class="service-card" href="#">
+        <div class="photo" style="background-image: url('images/project-4.jpg')">
+          <span class="num">03</span>
+        </div>
+        <div class="body">
+          <h3>Довършителни работи</h3>
+          <ul>
+            <li>Външна и вътрешна мазилка</li>
+            <li>Шпакловки</li>
+          </ul>
+          <span class="more">Напред <span class="arr">→</span></span>
+        </div>
+      </a>
+
+      <a class="service-card" href="#">
+        <div class="photo placeholder-img" style="aspect-ratio:4/5">Изолации детайл</div>
+        <div class="body">
+          <h3>Изолации</h3>
+          <ul>
+            <li>Топлоизолация</li>
+            <li>Хидроизолация</li>
+          </ul>
+          <span class="more">Напред <span class="arr">→</span></span>
+        </div>
+      </a>
+
+      <a class="service-card" href="#">
+        <div class="photo" style="background-image: url('images/project-2.jpg')">
+          <span class="num">05</span>
+        </div>
+        <div class="body">
+          <h3>Пътно строителство</h3>
+          <ul>
+            <li>Хидроизолация на мостове</li>
+            <li>Канавки и дерета</li>
+          </ul>
+          <span class="more">Напред <span class="arr">→</span></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- Values band -->
+<section class="block tight" style="padding: 0;">
+  <div class="values">
+    <div class="value">
+      <div class="num">01</div>
+      <div class="icon">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="20" cy="20" r="14"/><path d="M14 20l4 4 8-8"/></svg>
+      </div>
+      <h4>Високо качество в реални срокове</h4>
+    </div>
+    <div class="value">
+      <div class="num">02</div>
+      <div class="icon">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="14" width="28" height="20"/><path d="M12 14V8m16 6V8M6 22h28"/></svg>
+      </div>
+      <h4>Най-съвременни технологии в строителството</h4>
+    </div>
+    <div class="value">
+      <div class="num">03</div>
+      <div class="icon">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="14" cy="14" r="5"/><circle cx="28" cy="18" r="4"/><path d="M5 32c1-5 5-8 9-8s8 3 9 8M22 32c1-3 4-5 7-5s5 2 6 5"/></svg>
+      </div>
+      <h4>Висококвалифициран екип от специалисти</h4>
+    </div>
+    <div class="value">
+      <div class="num">04</div>
+      <div class="icon">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6c-6 0-10 4-10 10 0 4 2 6 4 8v4h12v-4c2-2 4-4 4-8 0-6-4-10-10-10zM16 32h8M18 36h4"/></svg>
+      </div>
+      <h4>Оригинални идеи и отлично изпълнение</h4>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="block" id="za-nas">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-copy">
+        <div class="eyebrow">Повече за нас / 02</div>
+        <h2 class="section-title" style="margin-top:14px">Тридесет години строителство в Североизточна България.</h2>
+        <p>Специализираме в областта на проектирането и строителството на жилищни, обществени и инфраструктурни обекти. Нашият стремеж е постигането на високо качество в реални срокове чрез прилагане на най-съвременни технологии.</p>
+        <p>Гарантираме професионално и отговорно отношение към работата и нашите клиенти, висококвалифициран екип от специалисти, оригинални проекти, висококачествени материали и отлично изпълнение.</p>
+        <a href="#" class="btn dark" style="margin-top:32px">Прочети повече →</a>
+
+        <div class="about-stats">
+          <div class="stat">
+            <div class="num">30<span>+</span></div>
+            <div class="label">Години опит</div>
+          </div>
+          <div class="stat">
+            <div class="num">240<span>+</span></div>
+            <div class="label">Завършени обекта</div>
+          </div>
+          <div class="stat">
+            <div class="num">17</div>
+            <div class="label">Машини в парка</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="img-main" style="background-image: url('images/project-3.jpg')"></div>
+        <div class="frame-tag">
+          <div class="label">Активен проект</div>
+          <div class="val">Многофамилна жилищна сграда — Шумен, 2024–2026</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certificates -->
+<section class="block gray" id="sertifikati">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <div class="eyebrow">Сертификати / 03</div>
+        <h2 class="section-title">Сертификати и удостоверения</h2>
+      </div>
+      <div class="right">
+        Системи за управление по ISO 9001, 14001 и 45001. Вписани в Камарата на строителите в България.
+      </div>
+    </div>
+    <div class="cert-row">
+      <div class="cert">
+        <div class="seal"><div class="seal-name">ISO<br/>9001</div></div>
+        <h4>Управление<br/>на качеството</h4>
+        <div class="meta">ISO 9001:2015</div>
+      </div>
+      <div class="cert">
+        <div class="seal"><div class="seal-name">ISO<br/>14001</div></div>
+        <h4>Околна<br/>среда</h4>
+        <div class="meta">ISO 14001:2015</div>
+      </div>
+      <div class="cert">
+        <div class="seal"><div class="seal-name">КСБ<br/>I гр.</div></div>
+        <h4>Удостоверение<br/>първа група</h4>
+        <div class="meta">Камара на строителите</div>
+      </div>
+      <div class="cert">
+        <div class="seal"><div class="seal-name">КСБ<br/>II гр.</div></div>
+        <h4>Удостоверение<br/>втора група</h4>
+        <div class="meta">Камара на строителите</div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top: 48px;">
+      <a href="#" class="btn dark">Виж всички сертификати →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Machinery -->
+<section class="block dark" id="mehanizaciya">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <div class="eyebrow">Парк / 04</div>
+        <h2 class="section-title">Налична механизация</h2>
+      </div>
+      <div class="right">
+        Собствен парк от 17 машини и съоръжения. Без подизпълнители за основната тежка механизация — гарантирани срокове и пълен контрол.
+      </div>
+    </div>
+    <div class="machinery-grid">
+      <div class="machine">
+        <div class="photo placeholder-img" style="background:rgba(255,255,255,.05); color:rgba(255,255,255,.4)">снимка / багер</div>
+        <div class="body">
+          <div class="id">M-01</div>
+          <h4>Багер товарач</h4>
+          <span style="color: var(--teal); font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em;">3 БР.</span>
+        </div>
+      </div>
+      <div class="machine">
+        <div class="photo placeholder-img" style="background:rgba(255,255,255,.05); color:rgba(255,255,255,.4)">снимка / самосвал</div>
+        <div class="body">
+          <div class="id">M-02</div>
+          <h4>Самосвал</h4>
+          <span style="color: var(--teal); font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em;">4 БР.</span>
+        </div>
+      </div>
+      <div class="machine">
+        <div class="photo placeholder-img" style="background:rgba(255,255,255,.05); color:rgba(255,255,255,.4)">снимка / бобкат</div>
+        <div class="body">
+          <div class="id">M-03</div>
+          <h4>Бобкат</h4>
+          <span style="color: var(--teal); font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em;">2 БР.</span>
+        </div>
+      </div>
+      <div class="machine">
+        <div class="photo placeholder-img" style="background:rgba(255,255,255,.05); color:rgba(255,255,255,.4)">снимка / валяк</div>
+        <div class="body">
+          <div class="id">M-04</div>
+          <h4>Валяк</h4>
+          <span style="color: var(--teal); font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em;">2 БР.</span>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top: 48px;">
+      <a href="#" class="btn">Виж цялата механизация →</a>
+    </div>
+  </div>
+</section>
+
+<!-- News -->
+<section class="block">
+  <div class="container">
+    <div class="section-head">
+      <div class="left">
+        <div class="eyebrow">Новини / 05</div>
+        <h2 class="section-title">Последно от обекта</h2>
+      </div>
+      <div class="right">
+        Текущи проекти, обновления на оборудването и новини от компанията.
+      </div>
+    </div>
+    <div class="news-grid">
+      <a class="news-card feature" href="#">
+        <div class="photo" style="background-image: url('images/project-4.jpg')"></div>
+        <div class="body">
+          <div class="date">15 април 2026 · Проект</div>
+          <h3>Стартира многофамилна жилищна сграда в кв. „Тракия", Шумен — РЗП 4 200 м²</h3>
+          <span class="read">Виж повече →</span>
+        </div>
+      </a>
+      <a class="news-card" href="#">
+        <div class="photo" style="background-image: url('images/project-2.jpg')"></div>
+        <div class="body">
+          <div class="date">02 март 2026 · Реализация</div>
+          <h3>Завършено благоустрояване и парково озеленяване на общинска сграда</h3>
+          <span class="read">Виж повече →</span>
+        </div>
+      </a>
+      <a class="news-card" href="#">
+        <div class="photo" style="background-image: url('images/project-1.jpg')"></div>
+        <div class="body">
+          <div class="date">12 февруари 2026 · Реновация</div>
+          <h3>Започва основен ремонт на читалищна сграда — пълна реконструкция</h3>
+          <span class="read">Виж повече →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA banners -->
+<section style="position:relative;">
+  <div class="cta-pair">
+    <a class="cta-banner" href="#proekti">
+      <div class="bg" style="background-image: url('images/project-4.jpg')"></div>
+      <div>
+        <div class="cta-eyebrow">Портфолио · 240+ обекта</div>
+        <h3>Разгледайте изпълнените ни проекти.</h3>
+      </div>
+      <div class="actions">
+        <span class="btn">Към проектите →</span>
+      </div>
+    </a>
+    <a class="cta-banner teal" href="#kontakti" id="kontakti">
+      <div class="bg" style="background-image: url('images/project-3.jpg')"></div>
+      <div>
+        <div class="cta-eyebrow">Безплатно запитване · отговор до 48ч</div>
+        <h3>Поискайте оферта и за вашия проект.</h3>
+      </div>
+      <div class="actions">
+        <span class="btn dark">Към контакти →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-mark">V</div>
+          <div class="logo-text">
+            <div class="name" style="color:white">VAK INVEST 86</div>
+            <div class="tag">Building · Engineering</div>
+          </div>
+        </div>
+        <p>Пълен цикъл строителство в Североизточна България от 1994 г. — проектиране, изпълнение, инсталации и инфраструктура.</p>
+      </div>
+
+      <div>
+        <h5>Услуги</h5>
+        <ul>
+          <li><a href="#">Проектиране и строителство</a></li>
+          <li><a href="#">Ел. и ВиК инсталации</a></li>
+          <li><a href="#">Довършителни работи</a></li>
+          <li><a href="#">Изолации</a></li>
+          <li><a href="#">Пътно строителство</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>За нас</h5>
+        <ul>
+          <li><a href="#">За компанията</a></li>
+          <li><a href="#">Механизация</a></li>
+          <li><a href="#">Изпълнени проекти</a></li>
+          <li><a href="#">Сертификати</a></li>
+          <li><a href="#">Клиенти</a></li>
+          <li><a href="#">Общи условия</a></li>
+          <li><a href="#">Политика за поверителност</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Контакти</h5>
+        <div class="footer-contact-row"><div class="lab">Адрес</div><div class="val">9700 Шумен,<br/>ул. „Васил Левски" 55</div></div>
+        <div class="footer-contact-row"><div class="lab">Тел.</div><div class="val">+359 888 000 000</div></div>
+        <div class="footer-contact-row"><div class="lab">E-mail</div><div class="val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="28474e4e414b4d685e494341465e4d5b5c101e064a4f">[email&#160;protected]</a></div></div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 ВСИЧКИ ПРАВА ЗАПАЗЕНИ — VAK INVEST 86</span>
+      <span>EIK / VAT BG · ISO 9001 / 14001 / 45001</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Cookie banner -->
+<div class="cookie" id="cookie">
+  <p>Този сайт използва бисквитки за подобряване на потребителското изживяване. <a href="#">Научи повече</a></p>
+  <button class="btn" onclick="document.getElementById('cookie').style.display='none'">Разбрах</button>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Hero slider
+  (function () {
+    const slides = document.querySelectorAll('.hero-slide');
+    const total = slides.length;
+    let idx = 0;
+    let timer;
+    const counter = document.querySelector('.slide-counter .current');
+    const fill = document.querySelector('.slide-progress .fill');
+    document.querySelector('.slide-counter .total').textContent = String(total).padStart(2, '0');
+
+    function go(n) {
+      slides[idx].classList.remove('active');
+      idx = (n + total) % total;
+      slides[idx].classList.add('active');
+      counter.textContent = String(idx + 1).padStart(2, '0');
+      restart();
+    }
+
+    function restart() {
+      clearInterval(timer);
+      let pct = 0;
+      const dur = 6500;
+      const step = 50;
+      timer = setInterval(() => {
+        pct += (step / dur) * 100;
+        if (pct >= 100) {
+          fill.style.width = '0%';
+          go(idx + 1);
+          return;
+        }
+        fill.style.width = pct + '%';
+      }, step);
+    }
+
+    document.getElementById('next').addEventListener('click', () => go(idx + 1));
+    document.getElementById('prev').addEventListener('click', () => go(idx - 1));
+    restart();
+  })();
+</script>
+
+</body>
+</html>

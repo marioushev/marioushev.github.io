@@ -25,12 +25,16 @@
   --text-muted: #4a4231;
   --accent: #d9d2b4;
   --accent-glow: rgba(217, 210, 180, 0.07);
-  /* Desert-sunset warm accents */
-  --rust: #c4622e;
+  /* ── Signature accent — the ONE loud color.
+     Use for links, CTAs, highlights, and active states. ── */
+  --signature: #c4622e;          /* rust */
+  --signature-hover: #e07a45;    /* lighter rust for hover/active */
+  --rust: var(--signature);      /* alias: kept so existing rules resolve */
+  --rust-glow: rgba(196, 98, 46, 0.18);
+  --prompt: var(--signature);
+  /* Legacy decorative tones — avoid; prefer --signature / --signature-hover */
   --amber: #e0913f;
   --gold: #d8a94b;
-  --rust-glow: rgba(196, 98, 46, 0.18);
-  --prompt: #c4622e;
   --line-h: 1px solid #1a1a1a;
   --font-mono: 'Space Mono', monospace;
   --font-sans: 'DM Sans', sans-serif;
@@ -46,6 +50,7 @@ html {
 
 body {
   font-family: var(--font-sans);
+  font-size: 17px;
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.65;
@@ -311,6 +316,25 @@ body::before {
   font-style: normal !important;
 }
 
+/* Header CTA chip */
+.nav ul li.nav-cta a {
+  color: var(--signature);
+  border: 1px solid var(--border-mid);
+  padding: 7px 14px;
+  border-radius: var(--radius);
+  text-transform: none;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.nav ul li.nav-cta a::before {
+  content: none;
+}
+
+.nav ul li.nav-cta a:hover {
+  color: var(--signature-hover);
+  border-color: var(--signature);
+}
+
 /* ============================================================
    HERO SECTION
    ============================================================ */
@@ -460,8 +484,9 @@ body::before {
 .intro-text h1 {
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  line-height: 1.2;
+  font-size: clamp(2.6rem, 8vw, 6rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   color: var(--text);
   margin-bottom: 24px;
   position: relative;
@@ -478,12 +503,53 @@ body::before {
 }
 
 .intro-text p {
-  font-family: var(--font-mono);
-  font-size: 12px;
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  line-height: 1.55;
   color: var(--text-dim);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
+  margin-bottom: 32px;
+  max-width: 46ch;
+}
+
+/* ---------- Hero CTA buttons ---------- */
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
   margin-bottom: 48px;
+}
+
+.btn-primary,
+.btn-ghost {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  padding: 13px 24px;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.btn-primary {
+  background: var(--signature);
+  color: var(--bg);
+}
+
+.btn-primary:hover {
+  background: var(--signature-hover);
+}
+
+.btn-ghost {
+  color: var(--text);
+  border-color: var(--border-mid);
+}
+
+.btn-ghost:hover {
+  border-color: var(--signature);
+  color: var(--signature);
 }
 
 /* Stat pills */
@@ -571,7 +637,8 @@ body::before {
 
 .technologies>h2 {
   font-family: var(--font-sans);
-  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  letter-spacing: -0.01em;
   font-weight: 600;
   color: var(--text);
   margin-bottom: 8px;
@@ -1071,6 +1138,13 @@ footer a:hover {
   }
 }
 
+/* On small screens keep the header clean: drop the text links, keep the CTA */
+@media (max-width: 600px) {
+  .nav ul li:not(.nav-cta) {
+    display: none;
+  }
+}
+
 
 /* ============================================================
    TERMINAL WINDOW (Team Hero Graphic)
@@ -1211,7 +1285,8 @@ footer a:hover {
 
 .services>h2 {
   font-family: var(--font-sans);
-  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  letter-spacing: -0.01em;
   font-weight: 600;
   color: var(--text);
   margin-bottom: 8px;
@@ -1279,6 +1354,162 @@ footer a:hover {
   letter-spacing: 0;
 }
 
+/* ---- pillar keyword tags ---- */
+.service-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+  padding: 0;
+}
+
+.service-tags li {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--text-dim);
+  border: 1px solid var(--border-mid);
+  border-radius: 999px;
+  padding: 4px 11px;
+}
+
+/* ============================================================
+   PROOF / SOCIAL PROOF SECTION  (Move 5)
+   ============================================================ */
+.proof {
+  position: relative;
+  z-index: 1;
+  padding: 100px 60px;
+  max-width: 1300px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: 80px;
+}
+
+.proof>h2 {
+  font-family: var(--font-sans);
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  letter-spacing: -0.01em;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.proof>h2 span {
+  color: var(--signature);
+  opacity: 0.85;
+}
+
+.proof>p {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 48px;
+}
+
+/* ---- stat row ---- */
+.proof-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 48px;
+}
+
+.proof-stat {
+  background: var(--bg);
+  padding: 36px 28px;
+  text-align: center;
+}
+
+.proof-stat-num {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--signature);
+}
+
+.proof-stat-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  margin-top: 12px;
+}
+
+/* ---- testimonials ---- */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.testimonial {
+  margin: 0;
+  border: 1px solid var(--border-mid);
+  border-left: 2px solid var(--signature);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: 28px 26px;
+}
+
+.testimonial p {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 18px;
+}
+
+.testimonial footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.testimonial .t-name {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text);
+}
+
+.testimonial .t-role {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* placeholder testimonial — replace with a real quote */
+.testimonial.is-placeholder {
+  border-left-style: dashed;
+}
+
+.testimonial.is-placeholder p,
+.testimonial.is-placeholder .t-name,
+.testimonial.is-placeholder .t-role {
+  color: var(--text-muted);
+}
+
+@media (max-width: 760px) {
+  .proof {
+    padding: 64px 24px;
+  }
+
+  .proof-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ============================================================
    CONTACT / CTA SECTION
    ============================================================ */
@@ -1300,11 +1531,12 @@ footer a:hover {
 
 .contact-inner h2 {
   font-family: var(--font-sans);
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-size: clamp(2rem, 5vw, 3.25rem);
   font-weight: 700;
   color: var(--text);
   margin-bottom: 16px;
-  line-height: 1.2;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
 }
 
 .contact-inner h2 span {
@@ -1402,7 +1634,7 @@ body::after {
 
 .hero-accent {
   font-style: normal;
-  color: var(--amber);
+  color: var(--signature);
   text-shadow: 0 0 26px var(--rust-glow);
 }
 
@@ -1417,7 +1649,7 @@ body::after {
 .contact-inner h2 span,
 .services>h2 span,
 .technologies span {
-  color: var(--amber);
+  color: var(--signature);
   opacity: 0.85;
 }
 
@@ -1429,7 +1661,7 @@ footer::before {
 }
 
 .terminal-title {
-  color: var(--gold);
+  color: var(--signature);
 }
 
 /* ---------- Hero stat numbers go gold ---------- */
@@ -1440,7 +1672,7 @@ footer::before {
 .hero-stat-num {
   font-family: var(--font-display);
   font-size: 22px;
-  color: var(--gold);
+  color: var(--signature);
 }
 
 /* ---------- Desert sun + gator fossil (hero backdrop) ---------- */
@@ -1489,7 +1721,7 @@ footer::before {
 #tab-web:checked~.project-category-buttons .web_applications_btn,
 #tab-mobile:checked~.project-category-buttons .mobile_applications_btn,
 #tab-design:checked~.project-category-buttons .design_applications_btn {
-  color: var(--gold);
+  color: var(--signature);
 }
 
 /* ---------- Service cards: branded number + hover ---------- */
@@ -1519,7 +1751,7 @@ footer::before {
 
 /* ---------- Nav: lasso hover ---------- */
 .nav ul li a:hover {
-  color: var(--amber);
+  color: var(--signature-hover);
 }
 
 .nav ul li a::before {
@@ -1542,23 +1774,23 @@ footer::before {
 
 .contact-cta {
   color: var(--bg);
-  background: var(--rust);
-  border-color: var(--amber);
+  background: var(--signature);
+  border-color: var(--signature-hover);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
 }
 
 .contact-cta:hover {
-  background: var(--amber);
-  border-color: var(--gold);
+  background: var(--signature-hover);
+  border-color: var(--signature-hover);
   box-shadow: 0 0 28px var(--rust-glow);
   transform: translateY(-1px);
 }
 
 /* ---------- Footer link hover ---------- */
 footer a:hover {
-  color: var(--amber);
+  color: var(--signature-hover);
 }
 
 @media (max-width: 900px) {
@@ -1571,5 +1803,328 @@ footer a:hover {
 
   .contact-emblem {
     width: clamp(150px, 50vw, 220px);
+  }
+}
+
+/* case-study cue on a homepage project tile */
+.project-case-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--rust);
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity var(--transition), color var(--transition);
+}
+
+.project-case-link:hover {
+  opacity: 1;
+  color: var(--signature-hover);
+}
+
+/* ============================================================
+   CASE STUDY PAGES  (Move 2 — reusable case-study template)
+   ============================================================ */
+.cs-main {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 32px 96px;
+}
+
+/* back link */
+.cs-back {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  text-decoration: none;
+  margin: 40px 0 0;
+  transition: color var(--transition);
+}
+
+.cs-back:hover {
+  color: var(--rust);
+}
+
+/* ---- hero ---- */
+.cs-hero {
+  padding: 36px 0 48px;
+  border-bottom: 1px solid var(--border-mid);
+}
+
+.cs-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  margin: 18px 0 16px;
+}
+
+.cs-title em {
+  color: var(--rust);
+  font-style: normal;
+}
+
+.cs-lead {
+  font-size: 1.15rem;
+  color: var(--text);
+  max-width: 60ch;
+}
+
+.cs-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 36px;
+}
+
+.cs-meta-item .cs-meta-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.cs-meta-item .cs-meta-value {
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* ---- generic section ---- */
+.cs-section {
+  padding: 52px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.cs-kicker {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--rust);
+}
+
+.cs-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+  margin: 10px 0 20px;
+}
+
+.cs-section p {
+  color: var(--text-dim);
+  max-width: 66ch;
+  margin-bottom: 1rem;
+}
+
+.cs-section p strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ---- role list ---- */
+.cs-role-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 40px;
+  margin-top: 8px;
+}
+
+.cs-role-list li {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text);
+  padding-left: 22px;
+  position: relative;
+}
+
+.cs-role-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--rust);
+}
+
+/* ---- gallery ---- */
+.cs-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.cs-gallery figure {
+  margin: 0;
+}
+
+.cs-gallery img {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.cs-gallery figcaption {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.cs-gallery .cs-gallery-wide {
+  grid-column: 1 / -1;
+}
+
+/* ---- code / API snippet (for backend-heavy projects) ---- */
+.cs-code {
+  margin-top: 16px;
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius);
+  background: #0d0a07;
+  overflow-x: auto;
+}
+
+.cs-code-head {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.cs-code pre {
+  margin: 0;
+  padding: 16px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--text);
+  white-space: pre;
+}
+
+.cs-code .tok {
+  color: var(--rust);
+}
+
+/* ---- outcome metrics ---- */
+.cs-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.cs-metric {
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  background: var(--surface);
+}
+
+.cs-metric-num {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--rust);
+}
+
+.cs-metric-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  margin-top: 10px;
+}
+
+/* placeholder metric — fill with a real number */
+.cs-metric.is-placeholder {
+  border-style: dashed;
+  background: transparent;
+}
+
+.cs-metric.is-placeholder .cs-metric-num {
+  color: var(--text-muted);
+}
+
+/* ---- tags ---- */
+.cs-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.cs-tag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  border: 1px solid var(--border-mid);
+  border-radius: 999px;
+  padding: 6px 14px;
+  background: var(--surface);
+}
+
+/* ---- closing CTA ---- */
+.cs-cta {
+  text-align: center;
+  padding: 64px 0 0;
+}
+
+.cs-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.cs-cta h2 span {
+  color: var(--rust);
+}
+
+.cs-cta-btn {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: var(--bg);
+  background: var(--rust);
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  transition: background var(--transition);
+}
+
+.cs-cta-btn:hover {
+  background: var(--signature-hover);
+}
+
+@media (max-width: 760px) {
+  .cs-main {
+    padding: 0 20px 64px;
+  }
+
+  .cs-role-list,
+  .cs-gallery,
+  .cs-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-meta-row {
+    gap: 24px;
   }
 }

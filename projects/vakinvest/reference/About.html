@@ -1,0 +1,1598 @@
+<!doctype html>
+<html lang="bg">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>За нас — VAK INVEST 86</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0F2748;
+      --navy-2: #0a1c36;
+      --teal: #1F7E98;
+      --teal-2: #186a82;
+      --white: #FEFFFF;
+      --ink: #0b1a2f;
+      --muted: #5b6b80;
+      --line: #e5e9ef;
+      --bg-1: #ffffff;
+      --bg-2: #f4f6f9;
+      --bg-3: #eef1f5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--ink);
+      background: var(--bg-1);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .container-narrow {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .eyebrow.line::before {
+      content: '';
+      width: 28px;
+      height: 1px;
+      background: var(--teal);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 22px;
+      background: var(--teal);
+      color: white;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      transition: background .2s;
+    }
+
+    .btn:hover {
+      background: var(--teal-2);
+    }
+
+    .btn.dark {
+      background: var(--navy);
+    }
+
+    .btn.dark:hover {
+      background: var(--navy-2);
+    }
+
+    .btn.ghost {
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, .4);
+    }
+
+    .btn.ghost:hover {
+      background: rgba(255, 255, 255, .1);
+    }
+
+    /* Top bar */
+    .topbar {
+      background: var(--navy);
+      color: rgba(255, 255, 255, .85);
+      font-size: 13px;
+    }
+
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 42px;
+    }
+
+    .topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .topbar-left .sep {
+      opacity: .35;
+    }
+
+    .topbar a:hover {
+      color: white;
+    }
+
+    .topbar-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--teal);
+      color: white;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border-radius: 3px;
+    }
+
+    .topbar-cta:hover {
+      background: var(--teal-2);
+      color: white;
+    }
+
+    header.main {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, .97);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    header.main .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 84px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      background: var(--navy);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+      position: relative;
+      border-radius: 2px;
+    }
+
+    .logo-mark::after {
+      content: '';
+      position: absolute;
+      right: -4px;
+      bottom: -4px;
+      width: 14px;
+      height: 14px;
+      background: var(--teal);
+    }
+
+    .logo-text {
+      line-height: 1;
+    }
+
+    .logo-text .name {
+      font-weight: 800;
+      color: var(--navy);
+      font-size: 16px;
+      letter-spacing: 0.02em;
+    }
+
+    .logo-text .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    nav.primary {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    nav.primary>.nav-item {
+      position: relative;
+      padding: 10px 14px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color .15s;
+    }
+
+    nav.primary>.nav-item:hover,
+    nav.primary>.nav-item.active {
+      color: var(--teal);
+    }
+
+    nav.primary>.nav-item.active::after {
+      content: '';
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: -2px;
+      height: 2px;
+      background: var(--teal);
+    }
+
+    .has-drop:hover .drop {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .drop {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 280px;
+      background: white;
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--teal);
+      padding: 8px 0;
+      box-shadow: 0 20px 40px rgba(15, 39, 72, .1);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition: all .18s ease;
+    }
+
+    .drop a {
+      display: block;
+      padding: 10px 18px;
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: none;
+      letter-spacing: 0;
+      color: var(--ink);
+    }
+
+    .drop a:hover {
+      background: var(--bg-2);
+      color: var(--teal);
+    }
+
+    .caret {
+      display: inline-block;
+      margin-left: 4px;
+      font-size: 9px;
+      opacity: .6;
+    }
+
+    /* Page title banner */
+    .page-banner {
+      position: relative;
+      height: 360px;
+      overflow: hidden;
+      background: var(--navy);
+      color: white;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .page-banner .bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/project-3.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .page-banner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15, 39, 72, .65) 0%, rgba(15, 39, 72, .85) 100%);
+    }
+
+    .page-banner .container {
+      position: relative;
+      z-index: 2;
+      padding-bottom: 56px;
+      width: 100%;
+    }
+
+    .page-banner .crumb {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      color: rgba(255, 255, 255, .6);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .page-banner .crumb a {
+      color: rgba(255, 255, 255, .85);
+    }
+
+    .page-banner .crumb a:hover {
+      color: var(--teal);
+    }
+
+    .page-banner .crumb .sep {
+      opacity: .4;
+    }
+
+    .page-banner h1 {
+      color: white;
+      font-size: clamp(48px, 6vw, 80px);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 0.95;
+    }
+
+    .page-banner .meta-row {
+      margin-top: 28px;
+      display: flex;
+      gap: 36px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .7);
+    }
+
+    .page-banner .meta-row .v {
+      color: var(--teal);
+      margin-right: 8px;
+    }
+
+    /* Layout: main + sidebar */
+    section.block {
+      padding: 96px 0;
+    }
+
+    section.block.tight {
+      padding: 72px 0;
+    }
+
+    section.block.gray {
+      background: var(--bg-2);
+    }
+
+    section.block.dark {
+      background: var(--navy);
+      color: white;
+    }
+
+    section.block.dark h2,
+    section.block.dark h3,
+    section.block.dark h4 {
+      color: white;
+    }
+
+    .with-aside {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 80px;
+      align-items: flex-start;
+    }
+
+    .with-aside .main-col {
+      min-width: 0;
+    }
+
+    .intro {
+      margin-bottom: 56px;
+    }
+
+    .intro h2 {
+      font-size: clamp(28px, 3.2vw, 40px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin: 14px 0 28px;
+      line-height: 1.1;
+      text-wrap: balance;
+    }
+
+    .intro p {
+      font-size: 17px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin: 0 0 18px;
+      max-width: 64ch;
+    }
+
+    .intro p strong,
+    .intro p b {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* Wide image */
+    .wide-image {
+      position: relative;
+      aspect-ratio: 21/9;
+      background-size: cover;
+      background-position: center;
+      margin: 56px 0;
+      overflow: hidden;
+    }
+
+    .wide-image .frame-tag {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      background: var(--navy);
+      color: white;
+      padding: 16px 20px;
+      max-width: 320px;
+    }
+
+    .wide-image .frame-tag .label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      color: var(--teal);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .wide-image .frame-tag .val {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    /* Body copy block */
+    .body-copy p {
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.85;
+      margin: 0 0 18px;
+      max-width: 64ch;
+    }
+
+    .body-copy p strong {
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    /* Specialties bullet list */
+    .specialty-list {
+      margin: 36px 0 0;
+      padding: 36px 0 0;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px 36px;
+    }
+
+    .specialty-list .item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 12px 0;
+    }
+
+    .specialty-list .item .num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--teal);
+      letter-spacing: 0.1em;
+      min-width: 32px;
+      padding-top: 4px;
+    }
+
+    .specialty-list .item .name {
+      font-size: 15px;
+      color: var(--ink);
+      line-height: 1.45;
+      flex: 1;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 12px;
+    }
+
+    /* Notes (asterisk) */
+    .notes {
+      margin-top: 56px;
+      padding: 36px;
+      background: var(--bg-2);
+      border-left: 3px solid var(--teal);
+    }
+
+    .notes p {
+      margin: 0 0 12px;
+      color: var(--ink);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .notes p:last-child {
+      margin: 0;
+    }
+
+    .notes .star {
+      color: var(--teal);
+      font-weight: 700;
+      margin-right: 4px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .notes p strong {
+      color: var(--navy);
+    }
+
+    /* Aside (services widget) */
+    aside.services-aside {
+      position: sticky;
+      top: 116px;
+    }
+
+    aside.services-aside .panel {
+      background: white;
+      border: 1px solid var(--line);
+    }
+
+    aside.services-aside .panel-head {
+      background: var(--navy);
+      color: white;
+      padding: 22px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    aside.services-aside .panel-head h5 {
+      color: white;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: 700;
+    }
+
+    aside.services-aside .panel-head .count {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--teal);
+      letter-spacing: 0.14em;
+    }
+
+    aside.services-aside .panel a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink);
+      transition: all .15s;
+    }
+
+    aside.services-aside .panel a:first-of-type {
+      border-top: none;
+    }
+
+    aside.services-aside .panel a:hover {
+      background: var(--bg-2);
+      color: var(--teal);
+      padding-left: 28px;
+    }
+
+    aside.services-aside .panel a .arr {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    aside.services-aside .panel a:hover .arr {
+      color: var(--teal);
+    }
+
+    aside.services-aside .panel a .num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--teal);
+      letter-spacing: 0.1em;
+      margin-right: 14px;
+    }
+
+    aside .info-card {
+      margin-top: 24px;
+      background: var(--navy);
+      color: white;
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    aside .info-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80px;
+      height: 80px;
+      background: var(--teal);
+      transform: translate(40%, -40%) rotate(45deg);
+    }
+
+    aside .info-card .eyebrow {
+      color: var(--teal);
+      margin-bottom: 14px;
+    }
+
+    aside .info-card h4 {
+      color: white;
+      font-size: 20px;
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    aside .info-card p {
+      color: rgba(255, 255, 255, .75);
+      font-size: 14px;
+      margin: 0 0 22px;
+      line-height: 1.6;
+    }
+
+    /* Team section */
+    .team-block {
+      padding: 110px 0;
+      background: var(--bg-2);
+    }
+
+    .team-block+.team-block {
+      padding-top: 0;
+    }
+
+    .team-head {
+      margin-bottom: 56px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .team-head h2 {
+      font-size: clamp(28px, 3.4vw, 44px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .team-head .right {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 360px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .team-grid.cols-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .person {
+      background: white;
+      padding: 32px 28px;
+      display: flex;
+      gap: 22px;
+      align-items: flex-start;
+      transition: background .2s;
+    }
+
+    .person:hover {
+      background: var(--bg-2);
+    }
+
+    .person .avatar {
+      width: 88px;
+      height: 88px;
+      flex-shrink: 0;
+      background: var(--navy);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .person .avatar::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(45deg, rgba(255, 255, 255, .04) 0 6px, transparent 6px 12px);
+    }
+
+    .person .avatar .initials {
+      position: relative;
+      z-index: 1;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .person .avatar .badge {
+      position: absolute;
+      bottom: -4px;
+      right: -4px;
+      width: 20px;
+      height: 20px;
+      background: var(--teal);
+      z-index: 2;
+    }
+
+    .person .info {
+      flex: 1;
+      min-width: 0;
+      padding-top: 4px;
+    }
+
+    .person .role-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: var(--teal);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .person h4 {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 6px;
+      color: var(--navy);
+    }
+
+    .person .title {
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.5;
+    }
+
+    .person .extra {
+      display: block;
+      margin-top: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--teal);
+      letter-spacing: 0.06em;
+    }
+
+    /* Mission band */
+    .mission-band {
+      background: var(--navy);
+      padding: 110px 0;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mission-band::before {
+      content: '';
+      position: absolute;
+      right: -100px;
+      top: -100px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(31, 126, 152, .25), transparent 70%);
+    }
+
+    .mission-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 80px;
+      align-items: flex-start;
+      position: relative;
+      z-index: 2;
+    }
+
+    .mission-band h2 {
+      color: white;
+      font-size: clamp(32px, 3.6vw, 48px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+    }
+
+    .mission-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .mission-card {
+      background: var(--navy);
+      padding: 36px 32px;
+    }
+
+    .mission-card .num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      color: var(--teal);
+      letter-spacing: 0.16em;
+      margin-bottom: 16px;
+    }
+
+    .mission-card h4 {
+      color: white;
+      font-size: 18px;
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+
+    .mission-card p {
+      color: rgba(255, 255, 255, .7);
+      font-size: 14px;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Timeline */
+    .timeline-wrap {
+      margin: 64px 0 0;
+      padding-top: 56px;
+      border-top: 1px solid var(--line);
+    }
+
+    .timeline-head {
+      margin-bottom: 48px;
+    }
+
+    .timeline-head h3 {
+      font-size: 26px;
+      margin: 12px 0 0;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .tl-item {
+      padding: 32px 28px;
+      border-right: 1px solid var(--line);
+      position: relative;
+    }
+
+    .tl-item:last-child {
+      border-right: none;
+    }
+
+    .tl-item .year {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--teal);
+      letter-spacing: 0.14em;
+      margin-bottom: 14px;
+    }
+
+    .tl-item h5 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .tl-item p {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 28px;
+      width: 32px;
+      height: 2px;
+      background: var(--teal);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navy);
+      color: rgba(255, 255, 255, .75);
+      padding: 80px 0 0;
+      font-size: 14px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 48px;
+      padding-bottom: 56px;
+    }
+
+    .footer-brand .logo .logo-text .name {
+      color: white;
+    }
+
+    .footer-brand p {
+      margin: 22px 0 0;
+      color: rgba(255, 255, 255, .6);
+      line-height: 1.7;
+      max-width: 32ch;
+    }
+
+    footer h5 {
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin: 0 0 22px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    footer ul li {
+      padding: 6px 0;
+    }
+
+    footer a:hover {
+      color: var(--teal);
+    }
+
+    .footer-contact-row {
+      display: flex;
+      gap: 12px;
+      padding: 7px 0;
+    }
+
+    .footer-contact-row .lab {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      color: var(--teal);
+      text-transform: uppercase;
+      min-width: 56px;
+    }
+
+    .footer-contact-row .val {
+      color: rgba(255, 255, 255, .85);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, .12);
+      padding: 24px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: rgba(255, 255, 255, .5);
+      font-size: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.06em;
+    }
+
+    @media (max-width: 1100px) {
+      .with-aside {
+        grid-template-columns: 1fr;
+        gap: 56px;
+      }
+
+      aside.services-aside {
+        position: static;
+      }
+
+      .team-grid,
+      .team-grid.cols-2 {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .specialty-list {
+        grid-template-columns: 1fr;
+      }
+
+      .mission-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .timeline {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .tl-item:nth-child(2) {
+        border-right: none;
+      }
+
+      .tl-item {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .tl-item:nth-last-child(-n+2) {
+        border-bottom: none;
+      }
+
+      nav.primary {
+        display: none;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+
+      .container,
+      .container-narrow {
+        padding: 0 20px;
+      }
+
+      section.block {
+        padding: 64px 0;
+      }
+
+      .team-grid,
+      .team-grid.cols-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .tl-item {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .tl-item:last-child {
+        border-bottom: none;
+      }
+
+      .mission-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .topbar-left .sep,
+      .topbar-left .addr {
+        display: none;
+      }
+
+      .team-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .person {
+        padding: 24px 20px;
+        gap: 16px;
+      }
+
+      .person .avatar {
+        width: 64px;
+        height: 64px;
+        font-size: 18px;
+      }
+
+      .page-banner {
+        height: 280px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <a href="tel:+359888000000">+359 888 000 000</a>
+        <span class="sep">/</span>
+        <span class="addr">9700 Шумен, ул. „Васил Левски" 55</span>
+      </div>
+      <a href="#kontakti" class="topbar-cta">Изпрати запитване →</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="main">
+    <div class="container">
+      <a href="Homepage.html" class="logo">
+        <div class="logo-mark">V</div>
+        <div class="logo-text">
+          <div class="name">VAK INVEST 86</div>
+          <div class="tag">Building · Engineering</div>
+        </div>
+      </a>
+      <nav class="primary">
+        <a class="nav-item" href="Homepage.html">Начало</a>
+        <a class="nav-item active">За нас</a>
+        <div class="nav-item has-drop">
+          Услуги <span class="caret">▼</span>
+          <div class="drop">
+            <a href="#">Проектиране и строителство</a>
+            <a href="#">Ел. и ВиК инсталации</a>
+            <a href="#">Довършителни работи</a>
+            <a href="#">Изолации</a>
+            <a href="#">Пътно строителство</a>
+          </div>
+        </div>
+        <a class="nav-item">Механизация</a>
+        <a class="nav-item">Изпълнени проекти</a>
+        <a class="nav-item">Сертификати</a>
+        <a class="nav-item">Клиенти</a>
+        <a class="nav-item">Контакти</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page banner -->
+  <section class="page-banner">
+    <div class="bg"></div>
+    <div class="container">
+      <div class="crumb">
+        <a href="Homepage.html">НАЧАЛО</a>
+        <span class="sep">/</span>
+        <span>ЗА НАС</span>
+      </div>
+      <h1>За нас.</h1>
+      <div class="meta-row">
+        <div><span class="v">/01</span> ОСНОВАНА 2016</div>
+        <div><span class="v">/02</span> САМОКОВ, БЪЛГАРИЯ</div>
+        <div><span class="v">/03</span> ISO 9001 / 14001 / 45001</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main content + sidebar -->
+  <section class="block">
+    <div class="container">
+      <div class="with-aside">
+
+        <div class="main-col">
+
+          <!-- Intro -->
+          <div class="intro">
+            <div class="eyebrow line">Кои сме ние / 01</div>
+            <h2>Тридесет години строителство в Североизточна България — без прекъсване, без подизпълнители за основното.
+            </h2>
+            <p>Ние специализираме в областта на <strong>проектирането и строителството</strong>. Нашият стремеж е
+              постигането на високо качество в реални срокове чрез прилагане на най-съвременни технологии.</p>
+            <p>Гарантираме <strong>професионално и отговорно отношение</strong> към работата и нашите клиенти,
+              висококвалифициран екип от специалисти, оригинални проекти, висококачествени материали и отлично
+              изпълнение.</p>
+          </div>
+
+          <!-- Wide image -->
+          <div class="wide-image" style="background-image: url('images/project-4.jpg')">
+            <div class="frame-tag">
+              <div class="label">Активен обект</div>
+              <div class="val">Многофамилна жилищна сграда — Шумен, фаза груб строеж</div>
+            </div>
+          </div>
+
+          <!-- Body copy -->
+          <div class="body-copy">
+            <p>Основана през <strong>2016 г.</strong>, ВАК ИНВЕСТ 86 ООД специализира в проектиране и строителство на
+              административни, жилищни и промишлени сгради; ремонт и саниране на съществуващи промишлени сгради; монтаж
+              на сглобяеми метални и стоманобетонови конструкции; направа на специални промишлени подове от бетон;
+              инсталационни оборудвания.</p>
+            <p>Фирмата е регистрирана в „<strong>Камара на строителите в България</strong>" и сертифицирана по ISO
+              9001:2015, ISO 14001:2015 и ISO 45001:2018.</p>
+            <p>Екипът на ВАК ИНВЕСТ 86 ООД се състои от <strong>50+ човека</strong>, специализирани в следните области:
+            </p>
+
+            <div class="specialty-list">
+              <div class="item">
+                <div class="num">/ 01</div>
+                <div class="name">Специалисти хидро и топлоизолации</div>
+              </div>
+              <div class="item">
+                <div class="num">/ 02</div>
+                <div class="name">Специалисти вътрешни и външни мазилки и шпакловки</div>
+              </div>
+              <div class="item">
+                <div class="num">/ 03</div>
+                <div class="name">Специалисти бояджии</div>
+              </div>
+              <div class="item">
+                <div class="num">/ 04</div>
+                <div class="name">Специалисти тенекеджии</div>
+              </div>
+              <div class="item">
+                <div class="num">/ 05</div>
+                <div class="name">Специалисти покривни майстори</div>
+              </div>
+              <div class="item">
+                <div class="num">/ 06</div>
+                <div class="name">Специалисти фаянс и теракот</div>
+              </div>
+              <div class="item">
+                <div class="num">/ 07</div>
+                <div class="name">Електро- и ВиК инсталатори</div>
+              </div>
+              <div class="item">
+                <div class="num">/ 08</div>
+                <div class="name">Оператори тежка механизация</div>
+              </div>
+            </div>
+
+            <div class="notes">
+              <p><span class="star">*</span> Всички обекти са възложени на <strong>конкурсни начала</strong> по Закона
+                за обществените поръчки и са въведени в експлоатация в договорирания срок.</p>
+              <p><span class="star">*</span> Инвеститорите и Строителните надзори, и инвеститорските контроли оценяват
+                като <strong>много добро качеството</strong> на изпълнените от фирмата обекти.</p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline-wrap">
+              <div class="timeline-head">
+                <div class="eyebrow line">Хронология</div>
+                <h3>Нашите три десетилетия.</h3>
+              </div>
+              <div class="timeline">
+                <div class="tl-item">
+                  <div class="year">1994</div>
+                  <h5>Основаване</h5>
+                  <p>ВАК ИНВЕСТ 86 ООД стартира дейност в Шумен с фокус върху груб строеж и инсталации.</p>
+                </div>
+                <div class="tl-item">
+                  <div class="year">2008</div>
+                  <h5>Първи ISO</h5>
+                  <p>Внедрена система за управление на качеството ISO 9001 и регистрация в Камарата на строителите.</p>
+                </div>
+                <div class="tl-item">
+                  <div class="year">2016</div>
+                  <h5>Разширяване</h5>
+                  <p>Собствен парк от 17 машини; екип от 50+ специалисти. Първа група строежи.</p>
+                </div>
+                <div class="tl-item">
+                  <div class="year">2024</div>
+                  <h5>Третото десетилетие</h5>
+                  <p>240+ завършени обекта. Активни жилищни и инфраструктурни проекти в региона.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="services-aside">
+          <div class="panel">
+            <div class="panel-head">
+              <h5>Услуги</h5>
+              <span class="count">05 / 05</span>
+            </div>
+            <a href="#"><span><span class="num">/ 01</span>Проектиране и строителство</span><span
+                class="arr">→</span></a>
+            <a href="#"><span><span class="num">/ 02</span>Ел. и ВиК инсталации</span><span class="arr">→</span></a>
+            <a href="#"><span><span class="num">/ 03</span>Довършителни работи</span><span class="arr">→</span></a>
+            <a href="#"><span><span class="num">/ 04</span>Изолации</span><span class="arr">→</span></a>
+            <a href="#"><span><span class="num">/ 05</span>Пътно строителство</span><span class="arr">→</span></a>
+          </div>
+
+          <div class="info-card">
+            <div class="eyebrow">Запитване</div>
+            <h4>Имате нужда от оферта за вашия обект?</h4>
+            <p>Изпратете ни запитване — отговор до 48 часа, безплатен оглед и предварителна количествено-стойностна
+              сметка.</p>
+            <a href="#" class="btn ghost">Контакти →</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission band -->
+  <section class="mission-band">
+    <div class="container">
+      <div class="mission-grid">
+        <div>
+          <div class="eyebrow line" style="color: var(--teal);">Нашите принципи / 02</div>
+          <h2 style="margin-top: 14px;">Това, в което вярваме на обекта.</h2>
+        </div>
+        <div class="mission-cards">
+          <div class="mission-card">
+            <div class="num">/ 01</div>
+            <h4>Срокът е дума, не пожелание.</h4>
+            <p>Договорираният срок е въведен в експлоатация — без изключения. Собственият ни парк гарантира, че графикът
+              не зависи от подизпълнители.</p>
+          </div>
+          <div class="mission-card">
+            <div class="num">/ 02</div>
+            <h4>Един отговорник на обект.</h4>
+            <p>Технически ръководител, който знае всеки детайл — от арматурата до фугата. Без размяна на топката.</p>
+          </div>
+          <div class="mission-card">
+            <div class="num">/ 03</div>
+            <h4>Материалите си казват името.</h4>
+            <p>Сертифицирани доставчици, документиран произход, проверка на партида. Никаква импровизация при изолациите
+              и бетоните.</p>
+          </div>
+          <div class="mission-card">
+            <div class="num">/ 04</div>
+            <h4>Безопасността не е разход.</h4>
+            <p>ISO 45001 не е стикер — лични предпазни средства, инструктаж и строг контрол на скелетата на всеки обект.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team: Management -->
+  <section class="team-block">
+    <div class="container">
+      <div class="team-head">
+        <div>
+          <div class="eyebrow line">Екип / 03</div>
+          <h2 style="margin-top: 14px;">Мениджърски екип</h2>
+        </div>
+        <div class="right">Мениджърският екип на ВАК ИНВЕСТ 86 ООД, гр. Шумен, се състои от висококвалифицирани
+          специалисти с богат опит в областта на строителството.</div>
+      </div>
+      <div class="team-grid cols-2" style="grid-template-columns: 1fr;">
+        <div class="person" style="max-width: 720px;">
+          <div class="avatar"><span class="initials">АО</span><span class="badge"></span></div>
+          <div class="info">
+            <div class="role-tag">Управител · 01</div>
+            <h4>инж. Антоанета Огнянова</h4>
+            <div class="title">Управител и съосновател — над 25 години опит в проектирането и управлението на строителни
+              обекти.</div>
+            <span class="extra">Специалност: Промишлено и гражданско строителство</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team: Administration -->
+  <section class="team-block" style="padding-top: 0;">
+    <div class="container">
+      <div class="team-head">
+        <div>
+          <div class="eyebrow line">Екип / 04</div>
+          <h2 style="margin-top: 14px;">Администрация</h2>
+        </div>
+        <div class="right">Финансово управление, документооборот и техническа организация на обектите.</div>
+      </div>
+      <div class="team-grid">
+        <div class="person">
+          <div class="avatar"><span class="initials">ЕК</span><span class="badge"></span></div>
+          <div class="info">
+            <div class="role-tag">Администрация</div>
+            <h4>Емилия Константинова</h4>
+            <div class="title">Счетоводител</div>
+          </div>
+        </div>
+        <div class="person">
+          <div class="avatar"><span class="initials">НС</span><span class="badge"></span></div>
+          <div class="info">
+            <div class="role-tag">Администрация</div>
+            <h4>Наталия Сергеевна Супрунова</h4>
+            <div class="title">Технически организатор</div>
+          </div>
+        </div>
+        <div class="person">
+          <div class="avatar"><span class="initials">КС</span><span class="badge"></span></div>
+          <div class="info">
+            <div class="role-tag">Администрация</div>
+            <h4>Катерина Стоянова Пунзарова</h4>
+            <div class="title">Технически изпълнител</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team: Specialists -->
+  <section class="team-block" style="padding-top: 0;">
+    <div class="container">
+      <div class="team-head">
+        <div>
+          <div class="eyebrow line">Екип / 05</div>
+          <h2 style="margin-top: 14px;">Специалисти</h2>
+        </div>
+        <div class="right">Инженерният състав, който отговаря за качеството и техническото изпълнение на всеки обект.
+        </div>
+      </div>
+      <div class="team-grid">
+        <div class="person">
+          <div class="avatar"><span class="initials">СИ</span><span class="badge"></span></div>
+          <div class="info">
+            <div class="role-tag">Инженер</div>
+            <h4>Силвия Симеонова Иванова</h4>
+            <div class="title">Управител за Р. България на Транспасифик Сертификейшън България ЕООД</div>
+            <span class="extra">www.tclbg.com</span>
+          </div>
+        </div>
+        <div class="person">
+          <div class="avatar"><span class="initials">ЗР</span><span class="badge"></span></div>
+          <div class="info">
+            <div class="role-tag">Инженер</div>
+            <h4>Зия Рефкъ Мехмед</h4>
+            <div class="title">Инженер промишлено и гражданско строителство</div>
+          </div>
+        </div>
+        <div class="person">
+          <div class="avatar"><span class="initials">ХЯ</span><span class="badge"></span></div>
+          <div class="info">
+            <div class="role-tag">Инженер</div>
+            <h4>Христо Янков</h4>
+            <div class="title">Инженер хидромелиоративно строителство</div>
+          </div>
+        </div>
+        <div class="person">
+          <div class="avatar"><span class="initials">НЛ</span><span class="badge"></span></div>
+          <div class="info">
+            <div class="role-tag">Инженер</div>
+            <h4>Николай Любенов Рачински</h4>
+            <div class="title">ВиК инженер</div>
+          </div>
+        </div>
+        <div class="person">
+          <div class="avatar"><span class="initials">ПТ</span><span class="badge"></span></div>
+          <div class="info">
+            <div class="role-tag">Технически</div>
+            <h4>Петко Тодоров Иванов</h4>
+            <div class="title">Технически ръководител</div>
+          </div>
+        </div>
+        <div class="person">
+          <div class="avatar"><span class="initials">РК</span><span class="badge"></span></div>
+          <div class="info">
+            <div class="role-tag">Технически</div>
+            <h4>Радко Костадинов Радков</h4>
+            <div class="title">Технически ръководител</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-mark">V</div>
+            <div class="logo-text">
+              <div class="name" style="color:white">VAK INVEST 86</div>
+              <div class="tag">Building · Engineering</div>
+            </div>
+          </div>
+          <p>Пълен цикъл строителство в Североизточна България от 1994 г. — проектиране, изпълнение, инсталации и
+            инфраструктура.</p>
+        </div>
+        <div>
+          <h5>Услуги</h5>
+          <ul>
+            <li><a href="#">Проектиране и строителство</a></li>
+            <li><a href="#">Ел. и ВиК инсталации</a></li>
+            <li><a href="#">Довършителни работи</a></li>
+            <li><a href="#">Изолации</a></li>
+            <li><a href="#">Пътно строителство</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>За нас</h5>
+          <ul>
+            <li><a href="#">За компанията</a></li>
+            <li><a href="#">Механизация</a></li>
+            <li><a href="#">Изпълнени проекти</a></li>
+            <li><a href="#">Сертификати</a></li>
+            <li><a href="#">Клиенти</a></li>
+            <li><a href="#">Общи условия</a></li>
+            <li><a href="#">Политика за поверителност</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Контакти</h5>
+          <div class="footer-contact-row">
+            <div class="lab">Адрес</div>
+            <div class="val">9700 Шумен,<br />ул. „Васил Левски" 55</div>
+          </div>
+          <div class="footer-contact-row">
+            <div class="lab">Тел.</div>
+            <div class="val">+359 888 000 000</div>
+          </div>
+          <div class="footer-contact-row">
+            <div class="lab">E-mail</div>
+            <div class="val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                data-cfemail="b5dad3d3dcd6d0f5c3d4dedcdbc3d0c6c18d839bd7d2">[email&#160;protected]</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 ВСИЧКИ ПРАВА ЗАПАЗЕНИ — VAK INVEST 86</span>
+        <span>EIK / VAT BG · ISO 9001 / 14001 / 45001</span>
+      </div>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+</body>
+
+</html>

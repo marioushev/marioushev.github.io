@@ -1,0 +1,996 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Контакти — VAK INVEST 86</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --navy: #0F2748;
+    --navy-2: #0a1c36;
+    --teal: #1F7E98;
+    --teal-2: #186a82;
+    --white: #FEFFFF;
+    --ink: #0b1a2f;
+    --muted: #5b6b80;
+    --line: #e5e9ef;
+    --bg-1: #ffffff;
+    --bg-2: #f4f6f9;
+    --bg-3: #eef1f5;
+    --error: #c8443a;
+    --success: #2f7a4f;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; color: var(--ink); background: var(--bg-1); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .container { max-width: 1320px; margin: 0 auto; padding: 0 32px; }
+  h1, h2, h3, h4, h5 { font-family: 'Inter', sans-serif; font-weight: 700; color: var(--navy); margin: 0; letter-spacing: -0.01em; }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); font-weight: 500; display: inline-flex; align-items: center; gap: 12px; }
+  .eyebrow.line::before { content: ''; width: 28px; height: 1px; background: var(--teal); }
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 24px; background: var(--teal); color: white; font-weight: 600; font-size: 14px; letter-spacing: 0.02em; border-radius: 4px; border: none; cursor: pointer; transition: background .2s; font-family: inherit; }
+  .btn:hover { background: var(--teal-2); }
+  .btn:disabled { background: #aab4c2; cursor: not-allowed; }
+  .btn.dark { background: var(--navy); }
+  .btn.dark:hover { background: var(--navy-2); }
+  .btn.ghost { background: transparent; color: white; border: 1px solid rgba(255,255,255,.4); }
+  .btn.ghost:hover { background: rgba(255,255,255,.1); }
+  .btn.lg { padding: 18px 32px; font-size: 15px; }
+
+  /* Top bar / Header */
+  .topbar { background: var(--navy); color: rgba(255,255,255,.85); font-size: 13px; }
+  .topbar .container { display: flex; justify-content: space-between; align-items: center; height: 42px; }
+  .topbar-left { display: flex; align-items: center; gap: 18px; }
+  .topbar-left .sep { opacity: .35; }
+  .topbar a:hover { color: white; }
+  .topbar-cta { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: var(--teal); color: white; font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; border-radius: 3px; }
+  .topbar-cta:hover { background: var(--teal-2); color: white; }
+
+  header.main { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.97); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  header.main .container { display: flex; justify-content: space-between; align-items: center; height: 84px; }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo-mark { width: 44px; height: 44px; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; position: relative; border-radius: 2px; }
+  .logo-mark::after { content: ''; position: absolute; right: -4px; bottom: -4px; width: 14px; height: 14px; background: var(--teal); }
+  .logo-text { line-height: 1; }
+  .logo-text .name { font-weight: 800; color: var(--navy); font-size: 16px; letter-spacing: 0.02em; }
+  .logo-text .tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.16em; text-transform: uppercase; margin-top: 3px; }
+  nav.primary { display: flex; align-items: center; gap: 4px; }
+  nav.primary > .nav-item { position: relative; padding: 10px 14px; font-size: 13.5px; font-weight: 600; color: var(--ink); letter-spacing: 0.04em; text-transform: uppercase; cursor: pointer; transition: color .15s; }
+  nav.primary > .nav-item:hover, nav.primary > .nav-item.active { color: var(--teal); }
+  nav.primary > .nav-item.active::after { content: ''; position: absolute; left: 14px; right: 14px; bottom: -2px; height: 2px; background: var(--teal); }
+  .has-drop:hover .drop { opacity: 1; visibility: visible; transform: translateY(0); }
+  .drop { position: absolute; top: 100%; left: 0; min-width: 280px; background: white; border: 1px solid var(--line); border-top: 3px solid var(--teal); padding: 8px 0; box-shadow: 0 20px 40px rgba(15,39,72,.1); opacity: 0; visibility: hidden; transform: translateY(8px); transition: all .18s ease; }
+  .drop a { display: block; padding: 10px 18px; font-size: 13px; font-weight: 500; text-transform: none; letter-spacing: 0; color: var(--ink); }
+  .drop a:hover { background: var(--bg-2); color: var(--teal); }
+  .caret { display: inline-block; margin-left: 4px; font-size: 9px; opacity: .6; }
+
+  /* Page banner */
+  .page-banner { position: relative; height: 320px; overflow: hidden; background: var(--navy); color: white; display: flex; align-items: flex-end; }
+  .page-banner .bg { position: absolute; inset: 0; background-image: url('images/project-2.jpg'); background-size: cover; background-position: center; }
+  .page-banner::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,39,72,.65) 0%, rgba(15,39,72,.85) 100%); }
+  .page-banner .container { position: relative; z-index: 2; padding-bottom: 56px; width: 100%; }
+  .page-banner .crumb { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; color: rgba(255,255,255,.6); margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
+  .page-banner .crumb a { color: rgba(255,255,255,.85); }
+  .page-banner .crumb a:hover { color: var(--teal); }
+  .page-banner .crumb .sep { opacity: .4; }
+  .page-banner h1 { color: white; font-size: clamp(48px, 6vw, 80px); font-weight: 800; letter-spacing: -0.025em; line-height: 0.95; }
+  .page-banner .meta-row { margin-top: 24px; display: flex; gap: 36px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,.7); }
+  .page-banner .meta-row .v { color: var(--teal); margin-right: 8px; }
+
+  /* Contact main grid */
+  section.block { padding: 110px 0; }
+  section.block.tight { padding: 0; }
+  section.block.gray { background: var(--bg-2); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.4fr;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .contact-info-col {
+    background: var(--navy);
+    color: white;
+    padding: 56px 52px;
+    position: relative;
+    overflow: hidden;
+  }
+  .contact-info-col::before {
+    content: '';
+    position: absolute;
+    bottom: -120px; right: -120px;
+    width: 320px; height: 320px;
+    background: radial-gradient(circle, rgba(31,126,152,.4), transparent 70%);
+  }
+  .contact-info-col > * { position: relative; z-index: 1; }
+  .contact-info-col h2 {
+    color: white;
+    font-size: clamp(24px, 2.6vw, 32px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin: 14px 0 18px;
+    text-wrap: balance;
+  }
+  .contact-info-col .lead { color: rgba(255,255,255,.75); font-size: 15px; line-height: 1.65; margin-bottom: 40px; }
+  .contact-info-col .eyebrow { color: var(--teal); }
+  .contact-info-col .eyebrow.line::before { background: var(--teal); }
+
+  .info-list { display: flex; flex-direction: column; gap: 0; margin-top: 32px; }
+  .info-row {
+    display: grid;
+    grid-template-columns: 32px 96px 1fr;
+    gap: 16px;
+    padding: 22px 0;
+    border-top: 1px solid rgba(255,255,255,.1);
+    align-items: flex-start;
+  }
+  .info-row:last-child { border-bottom: 1px solid rgba(255,255,255,.1); }
+  .info-row .icon { color: var(--teal); display: flex; align-items: center; justify-content: center; padding-top: 2px; }
+  .info-row .lab {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.16em;
+    color: rgba(255,255,255,.55);
+    text-transform: uppercase;
+    padding-top: 4px;
+  }
+  .info-row .val { color: white; font-size: 15px; line-height: 1.55; }
+  .info-row .val a:hover { color: var(--teal); }
+  .info-row .val .sub { display: block; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: rgba(255,255,255,.55); letter-spacing: 0.06em; margin-top: 2px; text-transform: uppercase; }
+
+  .quick-links {
+    margin-top: 36px;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.08);
+  }
+  .quick-link {
+    background: var(--navy);
+    padding: 22px 20px;
+    color: white;
+    cursor: pointer;
+    transition: background .2s;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .quick-link:hover { background: var(--navy-2); }
+  .quick-link .num { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--teal); letter-spacing: 0.14em; }
+  .quick-link .label { font-size: 14px; font-weight: 600; }
+  .quick-link .arr { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: rgba(255,255,255,.6); margin-top: 4px; letter-spacing: 0.1em; }
+
+  /* Form column */
+  .form-col {
+    background: white;
+    padding: 56px 52px;
+  }
+  .form-col h3 {
+    font-size: clamp(22px, 2.4vw, 28px);
+    margin: 14px 0 8px;
+    letter-spacing: -0.02em;
+  }
+  .form-col .sub { color: var(--muted); font-size: 14px; margin: 0 0 32px; }
+
+  form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px; }
+  form .field { display: flex; flex-direction: column; gap: 8px; }
+  form .field.full { grid-column: 1 / -1; }
+  form label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  form label .req { color: var(--teal); font-weight: 600; }
+  form input[type="text"],
+  form input[type="tel"],
+  form input[type="email"],
+  form input[type="number"],
+  form textarea {
+    width: 100%;
+    border: 1px solid var(--line);
+    background: white;
+    padding: 14px 16px;
+    font-size: 15px;
+    font-family: inherit;
+    color: var(--ink);
+    border-radius: 3px;
+    transition: border-color .15s, box-shadow .15s;
+    outline: none;
+  }
+  form input:focus, form textarea:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(31,126,152,.12);
+  }
+  form input.error, form textarea.error { border-color: var(--error); }
+  form textarea { resize: vertical; min-height: 130px; line-height: 1.5; }
+  form .err-msg { color: var(--error); font-size: 12px; min-height: 14px; font-weight: 500; }
+  form .hint { color: var(--muted); font-size: 12px; }
+
+  .gdpr {
+    display: flex; gap: 14px;
+    margin: 24px 0;
+    align-items: flex-start;
+    padding: 20px;
+    background: var(--bg-2);
+    border-left: 3px solid var(--teal);
+    cursor: pointer;
+    user-select: none;
+  }
+  .gdpr .check {
+    width: 22px; height: 22px;
+    border: 1.5px solid var(--muted);
+    background: white;
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    transition: all .15s;
+    margin-top: 2px;
+  }
+  .gdpr.checked .check {
+    background: var(--teal);
+    border-color: var(--teal);
+  }
+  .gdpr.checked .check svg { opacity: 1; }
+  .gdpr .check svg { opacity: 0; transition: opacity .15s; color: white; }
+  .gdpr .text { font-size: 13px; line-height: 1.55; color: var(--ink); }
+  .gdpr .text a { color: var(--teal); text-decoration: underline; }
+  .gdpr.error { border-left-color: var(--error); background: #fdf3f2; }
+
+  .submit-row {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    flex-wrap: wrap;
+  }
+  .captcha {
+    display: flex; align-items: center; gap: 14px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .captcha .label { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+  .captcha .eq {
+    background: var(--bg-2);
+    padding: 10px 14px;
+    font-size: 14px; font-weight: 600;
+    color: var(--navy);
+    border: 1px solid var(--line);
+    letter-spacing: 0.05em;
+  }
+  .captcha input {
+    width: 70px;
+    text-align: center;
+    border: 1px solid var(--line);
+    background: white;
+    padding: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    outline: none;
+  }
+  .captcha input:focus { border-color: var(--teal); }
+  .captcha input.error { border-color: var(--error); }
+  .captcha .ok { color: var(--success); font-size: 14px; }
+  .captcha .bad { color: var(--error); font-size: 14px; }
+
+  /* Success state */
+  .success-card {
+    padding: 56px 40px;
+    text-align: center;
+    border: 1px solid var(--line);
+    background: var(--bg-2);
+    border-left: 4px solid var(--success);
+  }
+  .success-card .icon {
+    width: 64px; height: 64px;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    background: var(--success);
+    color: white;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .success-card h3 { font-size: 24px; margin-bottom: 12px; }
+  .success-card p { color: var(--muted); margin: 0 0 24px; max-width: 44ch; margin-left: auto; margin-right: auto; }
+  .success-card .ref { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--teal); letter-spacing: 0.12em; }
+
+  /* Map section */
+  .map-wrap {
+    position: relative;
+    height: 480px;
+    background: var(--bg-3);
+    overflow: hidden;
+  }
+  .map-canvas {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, rgba(15,39,72,.04) 0%, transparent 30%),
+      #e8edf3;
+  }
+  .map-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(15,39,72,.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(15,39,72,.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .map-roads { position: absolute; inset: 0; }
+  .map-roads svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .map-pin {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 4;
+  }
+  .map-pin .dot {
+    width: 28px; height: 28px;
+    background: var(--teal);
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: 0 6px 16px rgba(31,126,152,.4);
+    position: relative;
+  }
+  .map-pin .dot::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid var(--teal);
+  }
+  .map-pin .pulse {
+    position: absolute;
+    inset: -8px;
+    border: 2px solid var(--teal);
+    border-radius: 50%;
+    opacity: 0;
+    animation: pulse 2.4s ease-out infinite;
+  }
+  .map-pin .pulse:nth-child(2) { animation-delay: .8s; }
+  @keyframes pulse {
+    0% { transform: scale(.8); opacity: .8; }
+    100% { transform: scale(2.6); opacity: 0; }
+  }
+  .map-info {
+    position: absolute;
+    left: calc(50% + 30px);
+    top: calc(50% - 80px);
+    background: white;
+    padding: 18px 22px;
+    border-left: 3px solid var(--teal);
+    box-shadow: 0 12px 32px rgba(15,39,72,.15);
+    min-width: 240px;
+    z-index: 5;
+  }
+  .map-info .label { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--teal); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 6px; }
+  .map-info h4 { font-size: 16px; margin-bottom: 4px; }
+  .map-info p { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.5; }
+  .map-info .open-btn {
+    margin-top: 14px;
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--navy); font-weight: 700;
+  }
+  .map-info .open-btn:hover { color: var(--teal); }
+
+  .map-controls {
+    position: absolute;
+    top: 24px; right: 24px;
+    background: white;
+    border: 1px solid var(--line);
+    z-index: 6;
+  }
+  .map-controls button {
+    width: 44px; height: 44px;
+    background: white; border: none;
+    border-bottom: 1px solid var(--line);
+    cursor: pointer;
+    color: var(--navy);
+    font-size: 18px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .map-controls button:last-child { border-bottom: none; }
+  .map-controls button:hover { background: var(--bg-2); color: var(--teal); }
+
+  .map-tag {
+    position: absolute; bottom: 24px; left: 24px;
+    z-index: 6;
+    background: var(--navy);
+    color: white;
+    padding: 14px 18px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .map-tag .dot { width: 8px; height: 8px; background: var(--teal); border-radius: 50%; }
+  .map-tag .text { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; }
+  .map-tag .coords { color: rgba(255,255,255,.6); margin-left: 8px; }
+
+  /* Hours / Office */
+  .hours-strip {
+    background: var(--bg-2);
+    padding: 56px 0;
+  }
+  .hours-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .hours-grid h3 { font-size: 24px; line-height: 1.2; }
+  .hours-table { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .hours-cell { background: white; padding: 22px 24px; }
+  .hours-cell .day { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: var(--teal); text-transform: uppercase; margin-bottom: 6px; }
+  .hours-cell .time { font-size: 16px; font-weight: 600; color: var(--navy); }
+  .hours-cell.closed .time { color: var(--muted); }
+
+  /* Footer */
+  footer { background: var(--navy); color: rgba(255,255,255,.75); padding: 80px 0 0; font-size: 14px; }
+  .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 48px; padding-bottom: 56px; }
+  .footer-brand .logo .logo-text .name { color: white; }
+  .footer-brand p { margin: 22px 0 0; color: rgba(255,255,255,.6); line-height: 1.7; max-width: 32ch; }
+  footer h5 { color: white; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; margin: 0 0 22px; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,.12); }
+  footer ul { list-style: none; padding: 0; margin: 0; }
+  footer ul li { padding: 6px 0; }
+  footer a:hover { color: var(--teal); }
+  .footer-contact-row { display: flex; gap: 12px; padding: 7px 0; }
+  .footer-contact-row .lab { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: var(--teal); text-transform: uppercase; min-width: 56px; }
+  .footer-contact-row .val { color: rgba(255,255,255,.85); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,.12); padding: 24px 0; display: flex; justify-content: space-between; align-items: center; color: rgba(255,255,255,.5); font-size: 12px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.06em; }
+
+  @media (max-width: 1100px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .contact-info-col, .form-col { padding: 48px 32px; }
+    .hours-grid { grid-template-columns: 1fr; gap: 32px; }
+    .hours-table { grid-template-columns: 1fr; }
+    nav.primary { display: none; }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 640px) {
+    .container { padding: 0 20px; }
+    section.block { padding: 64px 0; }
+    .form .row, form .row { grid-template-columns: 1fr; }
+    form .row { grid-template-columns: 1fr; }
+    .quick-links { grid-template-columns: 1fr; }
+    .info-row { grid-template-columns: 24px 1fr; }
+    .info-row .lab { grid-column: 2; padding-top: 0; }
+    .info-row .val { grid-column: 2; }
+    .footer-top { grid-template-columns: 1fr; gap: 32px; }
+    .topbar-left .sep, .topbar-left .addr { display: none; }
+    .submit-row { flex-direction: column; align-items: stretch; }
+    .submit-row .btn { width: 100%; justify-content: center; }
+    .map-info { left: 16px; right: 16px; min-width: 0; top: auto; bottom: 80px; }
+    .map-controls { right: 16px; top: 16px; }
+    .map-tag { left: 16px; bottom: 16px; }
+    .page-banner { height: 240px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a href="tel:+359888000000">+359 888 000 000</a>
+      <span class="sep">/</span>
+      <span class="addr">9700 Шумен, ул. „Васил Левски" 55</span>
+    </div>
+    <a href="#kontakti" class="topbar-cta">Изпрати запитване →</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="main">
+  <div class="container">
+    <a href="Homepage.html" class="logo">
+      <div class="logo-mark">V</div>
+      <div class="logo-text">
+        <div class="name">VAK INVEST 86</div>
+        <div class="tag">Building · Engineering</div>
+      </div>
+    </a>
+    <nav class="primary">
+      <a class="nav-item" href="Homepage.html">Начало</a>
+      <a class="nav-item" href="About.html">За нас</a>
+      <div class="nav-item has-drop">
+        Услуги <span class="caret">▼</span>
+        <div class="drop">
+          <a href="#">Проектиране и строителство</a>
+          <a href="#">Ел. и ВиК инсталации</a>
+          <a href="#">Довършителни работи</a>
+          <a href="#">Изолации</a>
+          <a href="#">Пътно строителство</a>
+        </div>
+      </div>
+      <a class="nav-item">Механизация</a>
+      <a class="nav-item">Изпълнени проекти</a>
+      <a class="nav-item">Сертификати</a>
+      <a class="nav-item">Клиенти</a>
+      <a class="nav-item active">Контакти</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Page banner -->
+<section class="page-banner">
+  <div class="bg"></div>
+  <div class="container">
+    <div class="crumb">
+      <a href="Homepage.html">НАЧАЛО</a>
+      <span class="sep">/</span>
+      <span>КОНТАКТИ</span>
+    </div>
+    <h1>Контакти.</h1>
+    <div class="meta-row">
+      <div><span class="v">/01</span> ОТГОВОР ДО 48Ч</div>
+      <div><span class="v">/02</span> БЕЗПЛАТЕН ОГЛЕД</div>
+      <div><span class="v">/03</span> ПРЕДВАРИТЕЛНА КСС</div>
+    </div>
+  </div>
+</section>
+
+<!-- Main contact grid -->
+<section class="block">
+  <div class="container">
+
+    <div style="margin-bottom: 56px;">
+      <div class="eyebrow line">Свържете се с нас / 01</div>
+      <h2 style="font-size: clamp(28px, 3.4vw, 44px); font-weight: 800; letter-spacing: -0.02em; margin-top: 14px; max-width: 22ch;">Изпратете ни запитване — отговор до 48 часа.</h2>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Info column (dark) -->
+      <div class="contact-info-col">
+        <div class="eyebrow line">Офис · Шумен</div>
+        <h2>Един отговорник, един телефон, един срок.</h2>
+        <p class="lead">Можете да ни намерите в офиса в центъра на Шумен или директно на обекта. За оферти използвайте формата вдясно или ни се обадете.</p>
+
+        <div class="info-list">
+          <div class="info-row">
+            <div class="icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="lab">Адрес</div>
+            <div class="val">
+              9700 Шумен<br/>
+              ул. „Васил Левски" 55
+              <span class="sub">Североизточна България</span>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7a2 2 0 011.72 2.03z"/></svg>
+            </div>
+            <div class="lab">Телефон</div>
+            <div class="val">
+              <a href="tel:+35954802211">+359 54 80 22 11</a>
+              <span class="sub">Централа</span>
+              <a href="tel:+35954802815" style="display:block;margin-top:8px">+359 54 80 28 15</a>
+              <span class="sub">Счетоводство</span>
+              <a href="tel:+359888501710" style="display:block;margin-top:8px">+359 888 50 17 10</a>
+              <span class="sub">Мобилен / 24ч</span>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="14" rx="1"/><path d="M3 8l9 6 9-6"/></svg>
+            </div>
+            <div class="lab">E-mail</div>
+            <div class="val">
+              <a href="/cdn-cgi/l/email-protection#563930303f35331620373d3f38203325226e60783431"><span class="__cf_email__" data-cfemail="513e37373832341127303a383f2734222569677f3336">[email&#160;protected]</span></a>
+              <span class="sub">Общи запитвания</span>
+              <a href="/cdn-cgi/l/email-protection#ef80898a9d9b86af998e848681998a9c9bd7d9c18d88" style="display:block;margin-top:8px"><span class="__cf_email__" data-cfemail="cfa0a9aabdbba68fb9aea4a6a1b9aabcbbf7f9e1ada8">[email&#160;protected]</span></a>
+              <span class="sub">Офертен отдел</span>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="9" width="12" height="9"/><path d="M6 18v3h12v-3M6 9V3h12v6"/><circle cx="9" cy="13" r="0.5" fill="currentColor"/></svg>
+            </div>
+            <div class="lab">Факс</div>
+            <div class="val">+359 54 80 15 10</div>
+          </div>
+
+          <div class="info-row">
+            <div class="icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>
+            </div>
+            <div class="lab">Web</div>
+            <div class="val"><a href="#">www.vakinvest86.bg</a></div>
+          </div>
+        </div>
+
+        <div class="quick-links">
+          <a class="quick-link" href="tel:+35954802211">
+            <span class="num">/ 01</span>
+            <span class="label">Обади се сега</span>
+            <span class="arr">CALL →</span>
+          </a>
+          <a class="quick-link" href="https://maps.google.com" target="_blank">
+            <span class="num">/ 02</span>
+            <span class="label">Маршрут до офиса</span>
+            <span class="arr">MAPS →</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Form column -->
+      <div class="form-col" id="form-col">
+        <div class="eyebrow line">Форма за запитване / 02</div>
+        <h3>Опишете ни вашия проект.</h3>
+        <p class="sub">Полетата отбелязани с <span style="color:var(--teal);font-weight:600">*</span> са задължителни. Ще се свържем с вас в рамките на 48 работни часа.</p>
+
+        <form id="contact-form" novalidate>
+          <div class="row">
+            <div class="field">
+              <label for="name">Вашето име <span class="req">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Иван Петров" />
+              <div class="err-msg" data-for="name"></div>
+            </div>
+            <div class="field">
+              <label for="phone">Телефон <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="+359 888 000 000" />
+              <div class="err-msg" data-for="phone"></div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="email">E-mail <span class="req">*</span></label>
+              <input type="email" id="email" name="email" placeholder="ivan@example.com" />
+              <div class="err-msg" data-for="email"></div>
+            </div>
+            <div class="field">
+              <label for="city">Населено място</label>
+              <input type="text" id="city" name="city" placeholder="Шумен" />
+              <div class="err-msg" data-for="city"></div>
+            </div>
+          </div>
+
+          <div class="row" style="grid-template-columns: 1fr;">
+            <div class="field full">
+              <label for="message">Вашето съобщение <span class="req">*</span></label>
+              <textarea id="message" name="message" placeholder="Опишете обекта, желания обхват на услугите и срок на реализация…"></textarea>
+              <div class="err-msg" data-for="message"></div>
+            </div>
+          </div>
+
+          <div class="gdpr" id="gdpr">
+            <div class="check">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>
+            </div>
+            <div class="text">
+              Съгласен/на съм личните ми данни да бъдат обработени за целите на запитването, съгласно <a href="#">Политиката за поверителност</a>. <span class="req" style="color:var(--teal)">*</span>
+            </div>
+          </div>
+
+          <div class="submit-row">
+            <div class="captcha">
+              <span class="label">Потвърждение</span>
+              <span class="eq" id="captcha-eq">— + — =</span>
+              <input type="number" id="captcha" name="captcha" placeholder="?" />
+              <span id="captcha-status"></span>
+            </div>
+            <button type="submit" class="btn lg" id="submit-btn">
+              Изпращане
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </form>
+
+        <!-- Success state (hidden by default) -->
+        <div class="success-card" id="success" style="display: none;">
+          <div class="icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 7"/></svg>
+          </div>
+          <h3>Запитването е изпратено!</h3>
+          <p>Благодарим Ви. Наш представител ще се свърже с Вас до 48 работни часа на посочените от Вас данни.</p>
+          <div class="ref">REF: <span id="ref-id">VAK-2026-0000</span></div>
+          <button class="btn dark" style="margin-top: 24px;" onclick="resetForm()">Изпрати ново →</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Map -->
+<section class="block tight" id="map-section">
+  <div class="container" style="padding: 0 32px; margin-bottom: 0;">
+    <div style="padding: 0 0 36px;">
+      <div class="eyebrow line">Локация / 03</div>
+      <h3 style="font-size: clamp(24px, 2.6vw, 32px); margin-top: 14px; letter-spacing: -0.02em;">Намерете ни в Шумен.</h3>
+    </div>
+  </div>
+  <div class="map-wrap">
+    <div class="map-canvas"></div>
+    <div class="map-grid"></div>
+    <div class="map-roads">
+      <svg viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <pattern id="dash" patternUnits="userSpaceOnUse" width="20" height="2">
+            <rect width="10" height="2" fill="rgba(15,39,72,.2)"/>
+          </pattern>
+        </defs>
+        <!-- main horizontal road -->
+        <path d="M 0 240 L 1200 220" stroke="rgba(15,39,72,.5)" stroke-width="14" fill="none"/>
+        <path d="M 0 240 L 1200 220" stroke="white" stroke-width="9" fill="none"/>
+        <path d="M 0 240 L 1200 220" stroke="rgba(15,39,72,.3)" stroke-width="0.5" fill="none" stroke-dasharray="14 14"/>
+        <!-- vertical roads -->
+        <path d="M 200 0 L 220 480" stroke="rgba(15,39,72,.5)" stroke-width="10" fill="none"/>
+        <path d="M 200 0 L 220 480" stroke="white" stroke-width="6" fill="none"/>
+        <path d="M 800 0 L 780 480" stroke="rgba(15,39,72,.5)" stroke-width="10" fill="none"/>
+        <path d="M 800 0 L 780 480" stroke="white" stroke-width="6" fill="none"/>
+        <!-- secondary -->
+        <path d="M 0 100 Q 600 130 1200 90" stroke="rgba(15,39,72,.35)" stroke-width="6" fill="none"/>
+        <path d="M 0 100 Q 600 130 1200 90" stroke="white" stroke-width="3" fill="none"/>
+        <path d="M 0 380 Q 600 410 1200 370" stroke="rgba(15,39,72,.35)" stroke-width="6" fill="none"/>
+        <path d="M 0 380 Q 600 410 1200 370" stroke="white" stroke-width="3" fill="none"/>
+        <!-- small roads -->
+        <path d="M 220 240 L 380 100" stroke="rgba(15,39,72,.3)" stroke-width="4" fill="none"/>
+        <path d="M 220 240 L 380 100" stroke="white" stroke-width="2" fill="none"/>
+        <path d="M 600 230 L 720 380" stroke="rgba(15,39,72,.3)" stroke-width="4" fill="none"/>
+        <path d="M 600 230 L 720 380" stroke="white" stroke-width="2" fill="none"/>
+        <!-- buildings/blocks -->
+        <rect x="240" y="120" width="60" height="80" fill="rgba(15,39,72,.08)"/>
+        <rect x="320" y="140" width="80" height="60" fill="rgba(15,39,72,.08)"/>
+        <rect x="240" y="280" width="60" height="60" fill="rgba(15,39,72,.08)"/>
+        <rect x="320" y="280" width="100" height="80" fill="rgba(15,39,72,.08)"/>
+        <rect x="850" y="140" width="80" height="60" fill="rgba(15,39,72,.08)"/>
+        <rect x="950" y="120" width="100" height="80" fill="rgba(15,39,72,.08)"/>
+        <rect x="850" y="280" width="120" height="60" fill="rgba(15,39,72,.08)"/>
+        <rect x="990" y="280" width="60" height="80" fill="rgba(15,39,72,.08)"/>
+        <rect x="540" y="280" width="80" height="60" fill="rgba(15,39,72,.08)"/>
+        <rect x="640" y="280" width="60" height="60" fill="rgba(15,39,72,.08)"/>
+        <rect x="540" y="120" width="60" height="80" fill="rgba(15,39,72,.08)"/>
+        <!-- park -->
+        <rect x="60" y="280" width="120" height="120" fill="rgba(47,122,79,.12)"/>
+        <text x="120" y="345" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="rgba(47,122,79,.6)" letter-spacing="1.5">ПАРК</text>
+        <!-- river -->
+        <path d="M 0 60 Q 400 90 800 50 T 1200 40" stroke="rgba(31,126,152,.3)" stroke-width="14" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div class="map-pin">
+      <span class="pulse"></span>
+      <span class="pulse"></span>
+      <span class="dot"></span>
+    </div>
+
+    <div class="map-info">
+      <div class="label">Адрес</div>
+      <h4>VAK INVEST 86</h4>
+      <p>9700 Шумен<br/>ул. „Васил Левски" 55</p>
+      <a href="https://maps.google.com" target="_blank" class="open-btn">
+        Отвори в Google Maps
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+      </a>
+    </div>
+
+    <div class="map-controls">
+      <button title="Zoom in" id="zoom-in">+</button>
+      <button title="Zoom out" id="zoom-out">−</button>
+      <button title="Reset" id="reset-map">⊙</button>
+    </div>
+
+    <div class="map-tag">
+      <span class="dot"></span>
+      <span class="text">43.2706° N · 26.9230° E</span>
+    </div>
+  </div>
+</section>
+
+<!-- Hours -->
+<section class="hours-strip">
+  <div class="container">
+    <div class="hours-grid">
+      <div>
+        <div class="eyebrow line">Работно време / 04</div>
+        <h3 style="margin-top: 14px;">Кога сме на разположение.</h3>
+        <p style="color: var(--muted); font-size: 14px; margin-top: 12px; max-width: 32ch;">Извън работно време оставете съобщение на мобилния номер — отговаряме до 24ч.</p>
+      </div>
+      <div class="hours-table">
+        <div class="hours-cell">
+          <div class="day">Пон — Пет</div>
+          <div class="time">08:30 — 17:30</div>
+        </div>
+        <div class="hours-cell">
+          <div class="day">Събота</div>
+          <div class="time">09:00 — 13:00</div>
+        </div>
+        <div class="hours-cell closed">
+          <div class="day">Неделя</div>
+          <div class="time">Затворено</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-mark">V</div>
+          <div class="logo-text">
+            <div class="name" style="color:white">VAK INVEST 86</div>
+            <div class="tag">Building · Engineering</div>
+          </div>
+        </div>
+        <p>Пълен цикъл строителство в Североизточна България от 1994 г. — проектиране, изпълнение, инсталации и инфраструктура.</p>
+      </div>
+      <div>
+        <h5>Услуги</h5>
+        <ul>
+          <li><a href="#">Проектиране и строителство</a></li>
+          <li><a href="#">Ел. и ВиК инсталации</a></li>
+          <li><a href="#">Довършителни работи</a></li>
+          <li><a href="#">Изолации</a></li>
+          <li><a href="#">Пътно строителство</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>За нас</h5>
+        <ul>
+          <li><a href="About.html">За компанията</a></li>
+          <li><a href="#">Механизация</a></li>
+          <li><a href="#">Изпълнени проекти</a></li>
+          <li><a href="#">Сертификати</a></li>
+          <li><a href="#">Клиенти</a></li>
+          <li><a href="#">Общи условия</a></li>
+          <li><a href="#">Политика за поверителност</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Контакти</h5>
+        <div class="footer-contact-row"><div class="lab">Адрес</div><div class="val">9700 Шумен,<br/>ул. „Васил Левски" 55</div></div>
+        <div class="footer-contact-row"><div class="lab">Тел.</div><div class="val">+359 888 000 000</div></div>
+        <div class="footer-contact-row"><div class="lab">E-mail</div><div class="val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bbd4ddddd2d8defbcddad0d2d5cddec8cf838d95d9dc">[email&#160;protected]</a></div></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ВСИЧКИ ПРАВА ЗАПАЗЕНИ — VAK INVEST 86</span>
+      <span>EIK / VAT BG · ISO 9001 / 14001 / 45001</span>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Captcha
+  let captchaA, captchaB;
+  function newCaptcha() {
+    captchaA = Math.floor(Math.random() * 12) + 3;
+    captchaB = Math.floor(Math.random() * 12) + 2;
+    document.getElementById('captcha-eq').textContent = `${captchaA} + ${captchaB} =`;
+    document.getElementById('captcha').value = '';
+    document.getElementById('captcha-status').textContent = '';
+  }
+  newCaptcha();
+
+  // GDPR toggle
+  const gdpr = document.getElementById('gdpr');
+  gdpr.addEventListener('click', () => {
+    gdpr.classList.toggle('checked');
+    gdpr.classList.remove('error');
+  });
+
+  // Validation helpers
+  function setError(name, msg) {
+    const input = document.getElementById(name);
+    const err = document.querySelector(`.err-msg[data-for="${name}"]`);
+    if (msg) { input.classList.add('error'); err.textContent = msg; }
+    else { input.classList.remove('error'); err.textContent = ''; }
+  }
+
+  // Live validation
+  ['name','phone','email','message'].forEach(id => {
+    const el = document.getElementById(id);
+    el.addEventListener('blur', () => validateField(id));
+    el.addEventListener('input', () => {
+      if (el.classList.contains('error')) validateField(id);
+    });
+  });
+
+  function validateField(id) {
+    const v = document.getElementById(id).value.trim();
+    if (id === 'name') {
+      if (!v) return setError('name', 'Моля, въведете името си'), false;
+      if (v.length < 2) return setError('name', 'Името е твърде кратко'), false;
+      setError('name', ''); return true;
+    }
+    if (id === 'phone') {
+      if (!v) return setError('phone', 'Моля, въведете телефон'), false;
+      if (!/^[\d\s+\-()]{6,}$/.test(v)) return setError('phone', 'Невалиден телефонен номер'), false;
+      setError('phone', ''); return true;
+    }
+    if (id === 'email') {
+      if (!v) return setError('email', 'Моля, въведете e-mail'), false;
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) return setError('email', 'Невалиден e-mail адрес'), false;
+      setError('email', ''); return true;
+    }
+    if (id === 'message') {
+      if (!v) return setError('message', 'Моля, опишете запитването си'), false;
+      if (v.length < 10) return setError('message', 'Моля, добавете повече детайли (мин. 10 знака)'), false;
+      setError('message', ''); return true;
+    }
+    return true;
+  }
+
+  // Captcha live check
+  document.getElementById('captcha').addEventListener('input', (e) => {
+    const v = parseInt(e.target.value, 10);
+    const s = document.getElementById('captcha-status');
+    e.target.classList.remove('error');
+    if (isNaN(v)) { s.textContent = ''; return; }
+    if (v === captchaA + captchaB) {
+      s.innerHTML = '<span class="ok">✓</span>';
+    } else {
+      s.innerHTML = '<span class="bad">✗</span>';
+    }
+  });
+
+  // Form submit
+  document.getElementById('contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    let ok = true;
+    ['name','phone','email','message'].forEach(id => { if (!validateField(id)) ok = false; });
+
+    if (!gdpr.classList.contains('checked')) {
+      gdpr.classList.add('error');
+      ok = false;
+    }
+
+    const cap = parseInt(document.getElementById('captcha').value, 10);
+    if (cap !== captchaA + captchaB) {
+      document.getElementById('captcha').classList.add('error');
+      document.getElementById('captcha-status').innerHTML = '<span class="bad">✗ грешка</span>';
+      ok = false;
+    }
+
+    if (!ok) return;
+
+    // Success
+    const ref = 'VAK-2026-' + String(Math.floor(Math.random()*9000)+1000);
+    document.getElementById('ref-id').textContent = ref;
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('success').style.display = 'block';
+  });
+
+  function resetForm() {
+    document.getElementById('contact-form').reset();
+    document.getElementById('contact-form').style.display = 'block';
+    document.getElementById('success').style.display = 'none';
+    gdpr.classList.remove('checked');
+    gdpr.classList.remove('error');
+    ['name','phone','email','message'].forEach(id => setError(id, ''));
+    newCaptcha();
+  }
+
+  // Map zoom (visual only)
+  let mapZoom = 1;
+  const roads = document.querySelector('.map-roads');
+  const grid = document.querySelector('.map-grid');
+  function applyZoom() {
+    roads.style.transform = `scale(${mapZoom})`;
+    grid.style.transform = `scale(${mapZoom})`;
+    roads.style.transition = grid.style.transition = 'transform .35s ease';
+    roads.style.transformOrigin = grid.style.transformOrigin = '50% 50%';
+  }
+  document.getElementById('zoom-in').addEventListener('click', () => { mapZoom = Math.min(mapZoom + 0.2, 1.8); applyZoom(); });
+  document.getElementById('zoom-out').addEventListener('click', () => { mapZoom = Math.max(mapZoom - 0.2, 0.6); applyZoom(); });
+  document.getElementById('reset-map').addEventListener('click', () => { mapZoom = 1; applyZoom(); });
+</script>
+
+</body>
+</html>

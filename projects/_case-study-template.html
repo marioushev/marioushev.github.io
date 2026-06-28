@@ -1,0 +1,206 @@
+<!--
+  ============================================================
+  CASE STUDY TEMPLATE  (Move 2)
+  ------------------------------------------------------------
+  HOW TO USE:
+  1. Copy this file to  projects/<project-slug>/case-study.html
+  2. The relative paths below (../../) assume that 2-levels-deep location.
+     If you place it elsewhere, fix the ../../ prefixes.
+  3. Replace every {{TOKEN}} and the [ bracketed placeholders ].
+  4. Keep the 6 blocks in order: summary → challenge → role → work → outcome → stack.
+  5. Outcome metrics: put REAL numbers in .cs-metric; leave unknowns as
+     .cs-metric.is-placeholder until you have measured figures. Never invent results.
+  6. Link the matching project tile on index.html to this file.
+  ============================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>{{PROJECT_NAME}} — Case Study | Good Studio</title>
+  <meta name="description" content="{{SHORT_DESCRIPTION}}">
+  <meta name="author" content="Good Studio">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{PROJECT_NAME}} — Case Study | Good Studio">
+  <meta property="og:description" content="{{SHORT_DESCRIPTION}}">
+  <meta property="og:image" content="https://goodstudio.dev/assets/images/logo.png">
+
+  <link rel="stylesheet" href="../../assets/css/style-code.css" />
+  <link rel="icon" type="image/png" href="../../assets/images/gator-only.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <div class="logo-img">
+        <img src="../../assets/images/logo.png" alt="Good Studio Logo" />
+      </div>
+      <div class="logo-name">
+        <a href="../../index.html">Good Studio</a>
+      </div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="../../index.html#projects-tabs">work</a></li>
+        <li><a href="../../index.html#services">services</a></li>
+        <li><a href="../../index.html#contact">contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="cs-main">
+    <a class="cs-back" href="../../index.html#projects-tabs">← back to work</a>
+
+    <!-- 1 · Client / project + summary + meta -->
+    <section class="cs-hero">
+      <div class="section-meta">
+        <span class="section-meta-label">case study</span>
+        <span class="section-meta-line"></span>
+        <span class="section-meta-index">{{CATEGORY}}/{{SLUG}}</span>
+      </div>
+
+      <h1 class="cs-title">{{PROJECT_NAME}} — <em>{{ONE_LINE_HOOK}}</em></h1>
+      <p class="cs-lead">{{LEAD_SENTENCE — who it's for and what we delivered, plain language}}</p>
+
+      <div class="cs-meta-row">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Client</span>
+          <span class="cs-meta-value">{{CLIENT}}</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Industry</span>
+          <span class="cs-meta-value">{{INDUSTRY}}</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Our role</span>
+          <span class="cs-meta-value">{{ROLE}}</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Year</span>
+          <span class="cs-meta-value">{{YEAR}}</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Platform</span>
+          <span class="cs-meta-value">{{PLATFORM}}</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · The challenge -->
+    <section class="cs-section">
+      <span class="cs-kicker">01 / the challenge</span>
+      <h2>{{CHALLENGE_HEADLINE}}</h2>
+      <p>{{CHALLENGE_PARAGRAPH_1 — the problem in the client's words. Use <strong>…</strong> to emphasise the key
+        constraint.}}</p>
+      <p>{{CHALLENGE_PARAGRAPH_2 — why the obvious solution wasn't good enough.}}</p>
+    </section>
+
+    <!-- 3 · Our role -->
+    <section class="cs-section">
+      <span class="cs-kicker">02 / our role</span>
+      <h2>{{ROLE_HEADLINE}}</h2>
+      <p>{{ROLE_PARAGRAPH — one or two sentences on scope and approach.}}</p>
+      <ul class="cs-role-list">
+        <li>{{ROLE_ITEM_1}}</li>
+        <li>{{ROLE_ITEM_2}}</li>
+        <li>{{ROLE_ITEM_3}}</li>
+        <li>{{ROLE_ITEM_4}}</li>
+        <li>{{ROLE_ITEM_5}}</li>
+        <li>{{ROLE_ITEM_6}}</li>
+      </ul>
+    </section>
+
+    <!-- 4 · The work -->
+    <section class="cs-section">
+      <span class="cs-kicker">03 / the work</span>
+      <h2>{{WORK_HEADLINE}}</h2>
+      <p>{{WORK_PARAGRAPH — what you actually built and the design decisions behind it.}}</p>
+      <div class="cs-gallery">
+        <figure>
+          <img src="{{IMAGE_1}}" alt="{{ALT_1}}" loading="lazy" />
+          <figcaption>{{CAPTION_1}}</figcaption>
+        </figure>
+        <figure>
+          <img src="{{IMAGE_2}}" alt="{{ALT_2}}" loading="lazy" />
+          <figcaption>{{CAPTION_2}}</figcaption>
+        </figure>
+        <figure>
+          <img src="{{IMAGE_3}}" alt="{{ALT_3}}" loading="lazy" />
+          <figcaption>{{CAPTION_3}}</figcaption>
+        </figure>
+        <figure>
+          <img src="{{IMAGE_4}}" alt="{{ALT_4}}" loading="lazy" />
+          <figcaption>{{CAPTION_4}}</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 5 · The outcome -->
+    <section class="cs-section">
+      <span class="cs-kicker">04 / the outcome</span>
+      <h2>{{OUTCOME_HEADLINE}}</h2>
+      <p>{{OUTCOME_PARAGRAPH — the result. Lead with the strongest real number you have.}}</p>
+      <div class="cs-metrics">
+        <!-- REAL metrics: -->
+        <div class="cs-metric">
+          <div class="cs-metric-num">{{NUM_1}}</div>
+          <div class="cs-metric-label">{{LABEL_1}}</div>
+        </div>
+        <div class="cs-metric">
+          <div class="cs-metric-num">{{NUM_2}}</div>
+          <div class="cs-metric-label">{{LABEL_2}}</div>
+        </div>
+        <div class="cs-metric">
+          <div class="cs-metric-num">{{NUM_3}}</div>
+          <div class="cs-metric-label">{{LABEL_3}}</div>
+        </div>
+        <!-- PLACEHOLDER metrics — delete or fill once measured: -->
+        <div class="cs-metric is-placeholder">
+          <div class="cs-metric-num">—</div>
+          <div class="cs-metric-label">[ metric to add ]</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · Stack / tags -->
+    <section class="cs-section">
+      <span class="cs-kicker">05 / stack</span>
+      <h2>Built with</h2>
+      <div class="cs-tags">
+        <span class="cs-tag">{{TAG_1}}</span>
+        <span class="cs-tag">{{TAG_2}}</span>
+        <span class="cs-tag">{{TAG_3}}</span>
+        <span class="cs-tag">{{TAG_4}}</span>
+      </div>
+    </section>
+
+    <!-- closing CTA -->
+    <section class="cs-cta">
+      <h2>Have a project like <span>this</span>?</h2>
+      <a class="cs-cta-btn" href="../../index.html#contact">start a project →</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Good Studio</p>
+    <p>
+      <a href="mailto:mario.p.ushev@gmail.com">mario.p.ushev@gmail.com</a>|
+      <a href="https://www.linkedin.com/in/mario-ushev-5b7b8624a/" target="_blank">LinkedIn</a>
+    </p>
+  </footer>
+</body>
+
+</html>

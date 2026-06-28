@@ -1,0 +1,432 @@
+{
+  "/Users/mario/Desktop/repos/marioushev.github.io/assets/js/main.js": {
+    "mtime": 1773762082.0,
+    "ast_hash": "ece27f6b4d61c7275be107a8ad95a184",
+    "semantic_hash": "ece27f6b4d61c7275be107a8ad95a184"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/audio_synch/audio-sync.js": {
+    "mtime": 1773762082.0,
+    "ast_hash": "6e6f3a2fb51a7c0a43b1bba1456bf8fc",
+    "semantic_hash": "6e6f3a2fb51a7c0a43b1bba1456bf8fc"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/audio_synch/index-font.js": {
+    "mtime": 1773762082.0,
+    "ast_hash": "35d2d9598a0b825e5882f32c4131549e",
+    "semantic_hash": "35d2d9598a0b825e5882f32c4131549e"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/audio_synch/package.json": {
+    "mtime": 1773762082.0,
+    "ast_hash": "435c1c5f497d25c21f982a72238eccc8",
+    "semantic_hash": "435c1c5f497d25c21f982a72238eccc8"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/color-flipper/app.js": {
+    "mtime": 1773762082.0,
+    "ast_hash": "66f6e4fb59d669053f786f936c357d8c",
+    "semantic_hash": "66f6e4fb59d669053f786f936c357d8c"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/color-flipper/hex.js": {
+    "mtime": 1773762082.0,
+    "ast_hash": "a1f8b3c8dd175380087d99449fb6da1f",
+    "semantic_hash": "a1f8b3c8dd175380087d99449fb6da1f"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/counter/app.js": {
+    "mtime": 1773762082.0,
+    "ast_hash": "597f87cf693d30bc1d60a56a42ed2aed",
+    "semantic_hash": "597f87cf693d30bc1d60a56a42ed2aed"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/dark_mode/app.js": {
+    "mtime": 1773762082.0,
+    "ast_hash": "3eef6721f72af0af1efb31128b75e7ee",
+    "semantic_hash": "3eef6721f72af0af1efb31128b75e7ee"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/dark_mode/data.js": {
+    "mtime": 1773762082.0,
+    "ast_hash": "1bb73aaf8e081c4f3eb81b7231b91ac7",
+    "semantic_hash": "1bb73aaf8e081c4f3eb81b7231b91ac7"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/g_notes_app/App.js": {
+    "mtime": 1773762082.0,
+    "ast_hash": "d75af0c7a968c64d9b76e7ffc2fd542c",
+    "semantic_hash": "d75af0c7a968c64d9b76e7ffc2fd542c"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/g_notes_app/main.js": {
+    "mtime": 1773762082.0,
+    "ast_hash": "2111fbb879cc5c7eafc0b9162f967aee",
+    "semantic_hash": "2111fbb879cc5c7eafc0b9162f967aee"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/g_notes_app/notesAPI.js": {
+    "mtime": 1773762082.0,
+    "ast_hash": "f6696269b0612e4b4e275f763baec7c8",
+    "semantic_hash": "f6696269b0612e4b4e275f763baec7c8"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/g_notes_app/notesView.js": {
+    "mtime": 1773762082.0,
+    "ast_hash": "61e8ad5b9bdeae2e9dd6d94221c6ec46",
+    "semantic_hash": "61e8ad5b9bdeae2e9dd6d94221c6ec46"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/makros/.claude/settings.local.json": {
+    "mtime": 1780956906.4496195,
+    "ast_hash": "08f905265ea3bc3128647e747296e69e",
+    "semantic_hash": "08f905265ea3bc3128647e747296e69e"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/makros/app.jsx": {
+    "mtime": 1780956858.411206,
+    "ast_hash": "81fa88757b0cba7f484c87efbd3fefbe",
+    "semantic_hash": "81fa88757b0cba7f484c87efbd3fefbe"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/makros/backend/makros-core/includes/seed.php": {
+    "mtime": 1780956829.3689861,
+    "ast_hash": "b8c3caeb0506089309f6de02a9adc2a5",
+    "semantic_hash": "b8c3caeb0506089309f6de02a9adc2a5"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/makros/backend/makros-core/includes/settings.php": {
+    "mtime": 1780998526.1649363,
+    "ast_hash": "5eba9fefb1b1214e79b35e3568cd7a83",
+    "semantic_hash": "5eba9fefb1b1214e79b35e3568cd7a83"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/makros/backend/makros-core/includes/woocommerce.php": {
+    "mtime": 1780956915.3230038,
+    "ast_hash": "f6fa74babf3d3d9c16d61c8b61946a7c",
+    "semantic_hash": "f6fa74babf3d3d9c16d61c8b61946a7c"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/makros/backend/makros-core/makros-core.php": {
+    "mtime": 1780998535.8548462,
+    "ast_hash": "a6316be64c3dbcaa703bb8410e1075bf",
+    "semantic_hash": "a6316be64c3dbcaa703bb8410e1075bf"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/makros/components.jsx": {
+    "mtime": 1780988190.304599,
+    "ast_hash": "8842a8db437ae61d0af6db792db8e0c6",
+    "semantic_hash": "8842a8db437ae61d0af6db792db8e0c6"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/makros/data.jsx": {
+    "mtime": 1780998543.3877692,
+    "ast_hash": "d496a0a1511f0e69d3b3ac6b41494d56",
+    "semantic_hash": "d496a0a1511f0e69d3b3ac6b41494d56"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/makros/function-referrence.php": {
+    "mtime": 1780727512.0072331,
+    "ast_hash": "fce8d4fd2c364b2659e4c6451b49b07c",
+    "semantic_hash": "fce8d4fd2c364b2659e4c6451b49b07c"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/makros/i18n.jsx": {
+    "mtime": 1780948882.2392926,
+    "ast_hash": "b4f09f894c43baf74135f1ffb10084c1",
+    "semantic_hash": "b4f09f894c43baf74135f1ffb10084c1"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/stripe/app.js": {
+    "mtime": 1773762082.0,
+    "ast_hash": "faf2579b502ea834db71eccdc5b51c20",
+    "semantic_hash": "faf2579b502ea834db71eccdc5b51c20"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/stripe/data.js": {
+    "mtime": 1773762082.0,
+    "ast_hash": "dda3d0d8b243d19657238a4299a3d395",
+    "semantic_hash": "dda3d0d8b243d19657238a4299a3d395"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/url_shortener/models/url.js": {
+    "mtime": 1773762082.0,
+    "ast_hash": "f036a707650ec09355871db778424105",
+    "semantic_hash": "f036a707650ec09355871db778424105"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/url_shortener/package.json": {
+    "mtime": 1773762082.0,
+    "ast_hash": "0f62e56bf324a34dad8563fe52799355",
+    "semantic_hash": "0f62e56bf324a34dad8563fe52799355"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/url_shortener/public/main.js": {
+    "mtime": 1773762082.0,
+    "ast_hash": "7873718d9e38ff799d0e1ffda9d743bf",
+    "semantic_hash": "7873718d9e38ff799d0e1ffda9d743bf"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/url_shortener/routes/urlRoutes.js": {
+    "mtime": 1773762082.0,
+    "ast_hash": "de0b238fa05984a2fe39a7c25b6378b4",
+    "semantic_hash": "de0b238fa05984a2fe39a7c25b6378b4"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/url_shortener/server/app.js": {
+    "mtime": 1773762082.0,
+    "ast_hash": "7ea4afd85cc8a1c69c47aa8a9872d7ab",
+    "semantic_hash": "7ea4afd85cc8a1c69c47aa8a9872d7ab"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/url_shortener/server/firebase.js": {
+    "mtime": 1773762082.0,
+    "ast_hash": "0cf94040afd342e6d0685889601c5139",
+    "semantic_hash": "0cf94040afd342e6d0685889601c5139"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/404.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "99c387c3d4afe404422d032714a0f304",
+    "semantic_hash": "99c387c3d4afe404422d032714a0f304"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/archive-project.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "920fe4f573054ecf76adaee14ad9d31e",
+    "semantic_hash": "920fe4f573054ecf76adaee14ad9d31e"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/assets/js/main.js": {
+    "mtime": 1779195486.0,
+    "ast_hash": "40b7864f7dc4fcc79c2ed3357143a24f",
+    "semantic_hash": "40b7864f7dc4fcc79c2ed3357143a24f"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/assets/js/portfolio-filter.js": {
+    "mtime": 1779195486.0,
+    "ast_hash": "4b2438a306ede8a696726a523ac70700",
+    "semantic_hash": "4b2438a306ede8a696726a523ac70700"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/footer.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "233e0ae498595d50455e815ec996bb62",
+    "semantic_hash": "233e0ae498595d50455e815ec996bb62"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/front-page.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "eaee24ac0ff01ab9968ce5d2436a691c",
+    "semantic_hash": "eaee24ac0ff01ab9968ce5d2436a691c"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/functions.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "e106dc99c290c8097830932bc0781266",
+    "semantic_hash": "e106dc99c290c8097830932bc0781266"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/header.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "127fb25f9ee7a2bcc84207cae38ef278",
+    "semantic_hash": "127fb25f9ee7a2bcc84207cae38ef278"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/inc/contact-form-handler.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "512325d9c5c65dd0faef2076ee4eeeed",
+    "semantic_hash": "512325d9c5c65dd0faef2076ee4eeeed"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/inc/cpt-projects.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "bba337bbf5e89aa53c8edf6321db6ca7",
+    "semantic_hash": "bba337bbf5e89aa53c8edf6321db6ca7"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/inc/enqueue.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "16bfec58d39322579661731b19c1769b",
+    "semantic_hash": "16bfec58d39322579661731b19c1769b"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/inc/setup-pages.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "c14ec2470703399030c497e301cc394c",
+    "semantic_hash": "c14ec2470703399030c497e301cc394c"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/inc/theme-setup.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "1b5cbbe6fffaeec16becf3d3d2a0a241",
+    "semantic_hash": "1b5cbbe6fffaeec16becf3d3d2a0a241"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/inc/walker-nav.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "92be3c761b8c3f54ad015e42722425bd",
+    "semantic_hash": "92be3c761b8c3f54ad015e42722425bd"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/index.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "40cc8a0e70c27dbc736e50a4b30047cb",
+    "semantic_hash": "40cc8a0e70c27dbc736e50a4b30047cb"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/page.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "e6f0c4b592eb75e8a15047d061764fdf",
+    "semantic_hash": "e6f0c4b592eb75e8a15047d061764fdf"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/single-project.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "58c16a717fb72edc7895388e8f35bfb2",
+    "semantic_hash": "58c16a717fb72edc7895388e8f35bfb2"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/templates/page-dovarshitelni.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "bf8109a2720d2e5fa3d070177261cdc5",
+    "semantic_hash": "bf8109a2720d2e5fa3d070177261cdc5"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/templates/page-el-vik.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "d528b180613f164e843445cafd47e3ff",
+    "semantic_hash": "d528b180613f164e843445cafd47e3ff"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/templates/page-izolacii.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "692be14143f52827a14bfed0215091c6",
+    "semantic_hash": "692be14143f52827a14bfed0215091c6"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/templates/page-klienti.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "fe427121b721bea2bae4ae6958dfd396",
+    "semantic_hash": "fe427121b721bea2bae4ae6958dfd396"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/templates/page-kontakti.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "58067d038304d2c7a6bb6188d9bb40d5",
+    "semantic_hash": "58067d038304d2c7a6bb6188d9bb40d5"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/templates/page-mehanizaciya.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "abaf18e626c5fe23a63347f69e47a30b",
+    "semantic_hash": "abaf18e626c5fe23a63347f69e47a30b"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/templates/page-obshti-uslovia.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "c70e70c3f8fa05e4ce4997757222b446",
+    "semantic_hash": "c70e70c3f8fa05e4ce4997757222b446"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/templates/page-patno.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "3d7c8da5b780520cfcccdafb7eef6fbf",
+    "semantic_hash": "3d7c8da5b780520cfcccdafb7eef6fbf"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/templates/page-politika.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "541d66754f0ab52a52b8effb3336086d",
+    "semantic_hash": "541d66754f0ab52a52b8effb3336086d"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/templates/page-proekti.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "f89a6a5e581be98220b7186627b8fc10",
+    "semantic_hash": "f89a6a5e581be98220b7186627b8fc10"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/templates/page-proektirane.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "d56beda039152a1e06f6990f90285700",
+    "semantic_hash": "d56beda039152a1e06f6990f90285700"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/templates/page-sertifikati.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "c5f97eff6c3cdc5c4b2b397b9ea459ad",
+    "semantic_hash": "c5f97eff6c3cdc5c4b2b397b9ea459ad"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/templates/page-uslugi.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "8744526617350e4398eb93b49e980067",
+    "semantic_hash": "8744526617350e4398eb93b49e980067"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/vakinvest-theme/templates/page-za-nas.php": {
+    "mtime": 1779195486.0,
+    "ast_hash": "18060b2b15b36a268ae5c871b3eb9358",
+    "semantic_hash": "18060b2b15b36a268ae5c871b3eb9358"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/weather-app/app.js": {
+    "mtime": 1773762082.0,
+    "ast_hash": "f49e601b54bc43cb5742f08dfe5b6479",
+    "semantic_hash": "f49e601b54bc43cb5742f08dfe5b6479"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/README.md": {
+    "mtime": 1781089869.523511,
+    "ast_hash": "2787f081a9171e65cafbae761147d84e",
+    "semantic_hash": "2787f081a9171e65cafbae761147d84e"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/index.html": {
+    "mtime": 1781516594.7130458,
+    "ast_hash": "12c7528f1be59139d9d8a1c05d2ee142",
+    "semantic_hash": "12c7528f1be59139d9d8a1c05d2ee142"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/audio_synch/index.html": {
+    "mtime": 1773762082.0,
+    "ast_hash": "f3d18782e461b92345bbcc438a914755",
+    "semantic_hash": "f3d18782e461b92345bbcc438a914755"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/color-flipper/hex.html": {
+    "mtime": 1773762082.0,
+    "ast_hash": "c728ba5468d96ff0dfb6ce93d4e2de08",
+    "semantic_hash": "c728ba5468d96ff0dfb6ce93d4e2de08"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/color-flipper/index.html": {
+    "mtime": 1773762082.0,
+    "ast_hash": "564f95640bb2701f37eb1cc2df5bbc1a",
+    "semantic_hash": "564f95640bb2701f37eb1cc2df5bbc1a"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/counter/index.html": {
+    "mtime": 1773762082.0,
+    "ast_hash": "7a39896ed8fc63508968c0d98376daae",
+    "semantic_hash": "7a39896ed8fc63508968c0d98376daae"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/dark_mode/README.MD": {
+    "mtime": 1773762082.0,
+    "ast_hash": "2cd92480725f3a35110e65de40982647",
+    "semantic_hash": "2cd92480725f3a35110e65de40982647"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/dark_mode/index.html": {
+    "mtime": 1773762082.0,
+    "ast_hash": "c020ffa3c0535df07929ad0da84bb588",
+    "semantic_hash": "c020ffa3c0535df07929ad0da84bb588"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/g_notes_app/index.html": {
+    "mtime": 1773762082.0,
+    "ast_hash": "721294ce4a8847987210fe231098c446",
+    "semantic_hash": "721294ce4a8847987210fe231098c446"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/hclimate/index.html": {
+    "mtime": 1773762082.0,
+    "ast_hash": "6505d3c06680ddd82d5e1a321e89cb77",
+    "semantic_hash": "6505d3c06680ddd82d5e1a321e89cb77"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/makros/TECH_DEBT_AUDIT.md": {
+    "mtime": 1780940587.1015038,
+    "ast_hash": "2fd4fc9f664730f383396b260860446e",
+    "semantic_hash": "2fd4fc9f664730f383396b260860446e"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/makros/backend/makros-core/README.md": {
+    "mtime": 1780956950.4581928,
+    "ast_hash": "821fbb05ca7847902fdaf9e3fcfe0c41",
+    "semantic_hash": "821fbb05ca7847902fdaf9e3fcfe0c41"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/makros/index.html": {
+    "mtime": 1780941566.6378207,
+    "ast_hash": "841c42cba3480153162085de214d3e2e",
+    "semantic_hash": "841c42cba3480153162085de214d3e2e"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/stripe/index.html": {
+    "mtime": 1773762082.0,
+    "ast_hash": "cda13c2e65dc4859b24bcdd75323aacd",
+    "semantic_hash": "cda13c2e65dc4859b24bcdd75323aacd"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/url_shortener/public/index.html": {
+    "mtime": 1773762082.0,
+    "ast_hash": "cf5a7cd2c1d173f72f5759aa609e3d9a",
+    "semantic_hash": "cf5a7cd2c1d173f72f5759aa609e3d9a"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/url_shortener/server/firebase.txt": {
+    "mtime": 1773762082.0,
+    "ast_hash": "eb4f393a865720ec240851b266991530",
+    "semantic_hash": "eb4f393a865720ec240851b266991530"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/PROJECT.md": {
+    "mtime": 1779195486.0,
+    "ast_hash": "5a536acd8b7d19e412c455ac017da6e7",
+    "semantic_hash": "5a536acd8b7d19e412c455ac017da6e7"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/reference/About.html": {
+    "mtime": 1779195486.0,
+    "ast_hash": "2c75b31a15f3ae36767417835366b3f1",
+    "semantic_hash": "2c75b31a15f3ae36767417835366b3f1"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/reference/Contacts.html": {
+    "mtime": 1779195486.0,
+    "ast_hash": "4757b81cdecd5a5f154105b30e8788ec",
+    "semantic_hash": "4757b81cdecd5a5f154105b30e8788ec"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/vakinvest/reference/Homepage.html": {
+    "mtime": 1779195486.0,
+    "ast_hash": "56a7d38c6a9e68794d4ad467a540f68b",
+    "semantic_hash": "56a7d38c6a9e68794d4ad467a540f68b"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/projects/weather-app/index.html": {
+    "mtime": 1773762082.0,
+    "ast_hash": "ae153e8bc9b1552d20eca9c6f66f90b6",
+    "semantic_hash": "ae153e8bc9b1552d20eca9c6f66f90b6"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/assets/docs/Mario CV.pdf": {
+    "mtime": 1773762082.0,
+    "ast_hash": "5d234c5511bc5d01dfa40270a414e1ed",
+    "semantic_hash": "5d234c5511bc5d01dfa40270a414e1ed"
+  },
+  "/Users/mario/Desktop/repos/marioushev.github.io/assets/docs/resume.pdf": {
+    "mtime": 1773762082.0,
+    "ast_hash": "da0930eb9d84098e4603214239125236",
+    "semantic_hash": "da0930eb9d84098e4603214239125236"
+  }
+}

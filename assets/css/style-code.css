@@ -37,8 +37,8 @@
   --gold: #d8a94b;
   --line-h: 1px solid #1a1a1a;
   --font-mono: 'Space Mono', monospace;
-  --font-sans: 'DM Sans', sans-serif;
-  --font-display: 'DM Sans', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --radius: 2px;
   --transition: 0.25s ease;
 }
@@ -482,7 +482,7 @@ body::before {
 
 /* CLI prompt prefix on heading */
 .intro-text h1 {
-  font-family: var(--font-sans);
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: clamp(2.6rem, 8vw, 6rem);
   line-height: 1.05;
@@ -636,7 +636,7 @@ body::before {
 }
 
 .technologies>h2 {
-  font-family: var(--font-sans);
+  font-family: var(--font-display);
   font-size: clamp(1.9rem, 4.5vw, 3rem);
   letter-spacing: -0.01em;
   font-weight: 600;
@@ -723,7 +723,7 @@ body::before {
 
 .tech-item strong {
   display: block;
-  font-family: var(--font-sans);
+  font-family: var(--font-display);
   font-size: 14px;
   font-weight: 600;
   color: var(--text);
@@ -956,7 +956,7 @@ input[name="project-tabs"] {
 }
 
 .project-item h3 {
-  font-family: var(--font-sans);
+  font-family: var(--font-display);
   font-size: 16px;
   font-weight: 600;
   color: var(--text);
@@ -1284,7 +1284,7 @@ footer a:hover {
 }
 
 .services>h2 {
-  font-family: var(--font-sans);
+  font-family: var(--font-display);
   font-size: clamp(1.9rem, 4.5vw, 3rem);
   letter-spacing: -0.01em;
   font-weight: 600;
@@ -1337,7 +1337,7 @@ footer a:hover {
 }
 
 .service-card h3 {
-  font-family: var(--font-sans);
+  font-family: var(--font-display);
   font-size: 18px;
   font-weight: 600;
   color: var(--text);
@@ -1388,7 +1388,7 @@ footer a:hover {
 }
 
 .proof>h2 {
-  font-family: var(--font-sans);
+  font-family: var(--font-display);
   font-size: clamp(1.9rem, 4.5vw, 3rem);
   letter-spacing: -0.01em;
   font-weight: 600;
@@ -1530,7 +1530,7 @@ footer a:hover {
 }
 
 .contact-inner h2 {
-  font-family: var(--font-sans);
+  font-family: var(--font-display);
   font-size: clamp(2rem, 5vw, 3.25rem);
   font-weight: 700;
   color: var(--text);
@@ -1895,6 +1895,11 @@ footer a:hover {
 .cs-meta-item .cs-meta-value {
   font-size: 14px;
   color: var(--text);
+}
+
+/* visit-live-site action under the hero meta */
+.cs-hero-actions {
+  margin-top: 28px;
 }
 
 /* ---- generic section ---- */

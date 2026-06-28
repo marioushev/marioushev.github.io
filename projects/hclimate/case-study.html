@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO Meta Tags -->
+  <title>HClimate Dashboard — Case Study | Good Studio</title>
+  <meta name="description"
+    content="Case study: a React dashboard Good Studio built for HClimate — turning thousands of raw building IoT sensor readings into fast, filterable views, with heavy data work offloaded to a Web Worker.">
+  <meta name="author" content="Good Studio">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="HClimate Dashboard — Case Study | Good Studio">
+  <meta property="og:description" content="Building sensor data, made legible — a fast React dashboard.">
+  <meta property="og:image" content="https://goodstudio.dev/assets/images/logo.png">
+
+  <link rel="stylesheet" href="../../assets/css/style-code.css" />
+  <link rel="icon" type="image/png" href="../../assets/images/gator-only.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <div class="logo-img">
+        <img src="../../assets/images/logo.png" alt="Good Studio Logo" />
+      </div>
+      <div class="logo-name">
+        <a href="../../index.html">Good Studio</a>
+      </div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="../../index.html#projects-tabs">work</a></li>
+        <li><a href="../../index.html#services">services</a></li>
+        <li><a href="../../index.html#contact">contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="cs-main">
+    <a class="cs-back" href="../../index.html#projects-tabs">← back to work</a>
+
+    <!-- 1 · Client / project + summary + meta -->
+    <section class="cs-hero">
+      <div class="section-meta">
+        <span class="section-meta-label">case study</span>
+        <span class="section-meta-line"></span>
+        <span class="section-meta-index">web/hclimate</span>
+      </div>
+
+      <h1 class="cs-title">HClimate — building sensor data, <em>made legible</em></h1>
+      <p class="cs-lead">A dashboard for managing and visualising building IoT datasets — turning thousands of raw sensor
+        readings into views a facilities team can actually act on, without the browser grinding to a halt.</p>
+
+      <div class="cs-meta-row">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Client</span>
+          <span class="cs-meta-value">HClimate</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Industry</span>
+          <span class="cs-meta-value">PropTech / IoT</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Our role</span>
+          <span class="cs-meta-value">Frontend development</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Year</span>
+          <span class="cs-meta-value">2026</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Platform</span>
+          <span class="cs-meta-value">React (Vite) SPA</span>
+        </div>
+      </div>
+
+      <div class="cs-hero-actions">
+        <a class="btn-ghost" href="index.html" target="_blank" rel="noopener">visit live site →</a>
+      </div>
+    </section>
+
+    <!-- 2 · The challenge -->
+    <section class="cs-section">
+      <span class="cs-kicker">01 / the challenge</span>
+      <h2>Too much data, not enough signal</h2>
+      <p>Connected buildings emit a constant stream of sensor readings — temperature, humidity, and the state of devices
+        across many buildings. On their own the raw numbers are <strong>noise</strong>; a facilities team needs to see
+        what matters at a glance and drill in when something looks off.</p>
+      <p>The hard part is volume: rendering and filtering thousands of readings the naive way freezes the UI. The
+        dashboard had to stay <strong>responsive while crunching large datasets</strong> in the browser.</p>
+    </section>
+
+    <!-- 3 · Our role -->
+    <section class="cs-section">
+      <span class="cs-kicker">02 / our role</span>
+      <h2>A fast front-end with the heavy lifting moved off-thread</h2>
+      <p>We built the React single-page app and its two core views, and moved the expensive data work into a background
+        Web Worker so the interface never stutters.</p>
+      <ul class="cs-role-list">
+        <li>React SPA (Vite)</li>
+        <li>Buildings overview</li>
+        <li>All-devices view</li>
+        <li>Web Worker data pipeline</li>
+        <li>Charts &amp; visualisation</li>
+        <li>Performance tuning</li>
+      </ul>
+    </section>
+
+    <!-- 4 · The work -->
+    <section class="cs-section">
+      <span class="cs-kicker">03 / the work</span>
+      <h2>Two views, one off-thread data pipeline</h2>
+      <p>The app centres on two views — a <strong>Buildings overview</strong> and an <strong>All-devices</strong>
+        breakdown — backed by a dedicated Web Worker that parses and aggregates the raw dataset off the main thread. The
+        UI only ever receives ready-to-render results, so scrolling and filtering stay instant even on large datasets.</p>
+      <div class="cs-gallery">
+        <figure class="cs-gallery-wide">
+          <img src="assets/logo-6cfjRogb.png" alt="HClimate dashboard logo" loading="lazy"
+            style="object-fit: contain; padding: 48px; background: var(--surface);" />
+          <figcaption>HClimate — building climate dashboard</figcaption>
+        </figure>
+      </div>
+      <div class="cs-code">
+        <div class="cs-code-head">data flow — heavy work stays off the main thread</div>
+        <pre>main thread (React UI)
+   │  postMessage(rawDataset)
+   ▼
+<span class="tok">dataWorker</span>  ──  parse → aggregate → bucket by building / device
+   │  postMessage(viewModel)
+   ▼
+render  <span class="tok">&lt;BuildingsView /&gt;</span>   ·   <span class="tok">&lt;AllDevicesView /&gt;</span>
+        // UI receives ready-to-render results only → no jank</pre>
+      </div>
+    </section>
+
+    <!-- 5 · The outcome -->
+    <section class="cs-section">
+      <span class="cs-kicker">04 / the outcome</span>
+      <h2>Large datasets, smooth UI</h2>
+      <p>The dashboard handles big sensor datasets without freezing, and a facilities team can move between buildings and
+        devices instantly. The build-scope numbers below are exact; the impact numbers are placeholders — replace them
+        with real figures once the app has been measured in production.</p>
+      <div class="cs-metrics">
+        <div class="cs-metric">
+          <div class="cs-metric-num">2</div>
+          <div class="cs-metric-label">primary views</div>
+        </div>
+        <div class="cs-metric">
+          <div class="cs-metric-num">1</div>
+          <div class="cs-metric-label">Web Worker (off-main-thread)</div>
+        </div>
+        <div class="cs-metric">
+          <div class="cs-metric-num">0</div>
+          <div class="cs-metric-label">UI-blocking data passes</div>
+        </div>
+        <div class="cs-metric is-placeholder">
+          <div class="cs-metric-num">—</div>
+          <div class="cs-metric-label">[ rows handled ]</div>
+        </div>
+        <div class="cs-metric is-placeholder">
+          <div class="cs-metric-num">—</div>
+          <div class="cs-metric-label">[ time-to-interactive ]</div>
+        </div>
+        <div class="cs-metric is-placeholder">
+          <div class="cs-metric-num">—</div>
+          <div class="cs-metric-label">[ buildings monitored ]</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · Stack / tags -->
+    <section class="cs-section">
+      <span class="cs-kicker">05 / stack</span>
+      <h2>Built with</h2>
+      <div class="cs-tags">
+        <span class="cs-tag">React</span>
+        <span class="cs-tag">Vite</span>
+        <span class="cs-tag">Web Workers</span>
+        <span class="cs-tag">JavaScript</span>
+        <span class="cs-tag">CSS</span>
+      </div>
+    </section>
+
+    <!-- closing CTA -->
+    <section class="cs-cta">
+      <h2>Have a project like <span>this</span>?</h2>
+      <a class="cs-cta-btn" href="../../index.html#contact">start a project →</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Good Studio</p>
+    <p>
+      <a href="mailto:mario.p.ushev@gmail.com">mario.p.ushev@gmail.com</a>|
+      <a href="https://www.linkedin.com/in/mario-ushev-5b7b8624a/" target="_blank">LinkedIn</a>
+    </p>
+  </footer>
+</body>
+
+</html>

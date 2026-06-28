@@ -13,6 +13,11 @@
   box-sizing: border-box;
 }
 
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
 /* ---------- Custom Properties ---------- */
 :root {
   --bg: #0a0705;
@@ -202,21 +207,8 @@ body.fade-out {
 }
 
 /* ============================================================
-   GRID OVERLAY (decorative background grid)
+   GRID OVERLAY (removed for minimal UI)
    ============================================================ */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image:
-    linear-gradient(var(--border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border) 1px, transparent 1px);
-  background-size: 60px 60px;
-  opacity: 0.35;
-  pointer-events: none;
-  z-index: 0;
-}
-
 /* ============================================================
    HEADER
    ============================================================ */
@@ -227,24 +219,10 @@ body::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 60px;
-  height: 64px;
-  background: rgba(0, 0, 0, 0.88);
+  padding: 0 max(4vw, 24px);
+  height: 72px;
+  background: rgba(10, 7, 5, 0.88);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-mid);
-}
-
-/* Prompt symbol before logo */
-.header::before {
-  content: '//';
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--text-dim);
-  position: absolute;
-  left: 24px;
-  top: 50%;
-  transform: translateY(-50%);
-  letter-spacing: 1px;
 }
 
 .logo {
@@ -292,22 +270,10 @@ body::before {
   position: relative;
 }
 
-.nav ul li a::before {
-  content: '~/';
-  opacity: 0;
-  transition: opacity var(--transition);
-  margin-right: 2px;
-  color: var(--text-muted);
-}
-
 .nav ul li a:hover,
 .nav ul li a[style*="italic"] {
   color: var(--text);
   font-style: normal !important;
-}
-
-.nav ul li a:hover::before {
-  opacity: 1;
 }
 
 /* Remove the inline italic style override cleanly */
@@ -319,7 +285,6 @@ body::before {
 /* Header CTA chip */
 .nav ul li.nav-cta a {
   color: var(--signature);
-  border: 1px solid var(--border-mid);
   padding: 7px 14px;
   border-radius: var(--radius);
   text-transform: none;
@@ -344,34 +309,17 @@ body::before {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--border-mid);
   overflow: hidden;
 }
 
-/* Vertical rule between photo and text */
-.hero-section::after {
-  content: '';
-  position: absolute;
-  left: 46%;
-  top: 10%;
-  bottom: 10%;
-  width: 1px;
-  background: linear-gradient(to bottom, transparent, var(--border-mid) 30%, var(--border-mid) 70%, transparent);
-  pointer-events: none;
-}
-
 .intro {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  width: 100%;
-  max-width: 1300px;
+  display: block;
+  width: min(92%, 1680px);
   margin: 0 auto;
-  padding: 80px 60px;
+  padding: 120px 0;
   background: none;
   border: none;
   border-radius: 0;
-  gap: 0;
 }
 
 .intro-content {
@@ -397,7 +345,6 @@ body::before {
   position: absolute;
   width: 24px;
   height: 24px;
-  border-color: var(--border-mid);
   border-style: solid;
   pointer-events: none;
   z-index: 2;
@@ -428,7 +375,6 @@ body::before {
   position: absolute;
   width: 24px;
   height: 24px;
-  border-color: var(--border-mid);
   border-style: solid;
   pointer-events: none;
   z-index: 2;
@@ -473,33 +419,21 @@ body::before {
   letter-spacing: 0.1em;
 }
 
-/* ---------- Text (right) ---------- */
+/* ---------- Text ---------- */
 .intro-text {
-  padding-left: 60px;
-  flex: unset;
-  margin-right: 0;
+  padding-left: 0;
 }
 
-/* CLI prompt prefix on heading */
 .intro-text h1 {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(2.6rem, 8vw, 6rem);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  font-size: clamp(3.5rem, 11vw, 10rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
   color: var(--text);
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   position: relative;
-}
-
-.intro-text h1::before {
-  content: '>';
-  font-family: var(--font-mono);
-  font-size: 0.55em;
-  color: var(--text-muted);
-  position: absolute;
-  left: -28px;
-  top: 8px;
+  max-width: 16ch;
 }
 
 .intro-text p {
@@ -544,7 +478,6 @@ body::before {
 
 .btn-ghost {
   color: var(--text);
-  border-color: var(--border-mid);
 }
 
 .btn-ghost:hover {
@@ -560,7 +493,6 @@ body::before {
 }
 
 .hero-stat {
-  border-left: 1px solid var(--border-mid);
   padding-left: 16px;
 }
 
@@ -632,7 +564,6 @@ body::before {
   padding: 100px 60px;
   max-width: 1300px;
   margin: 0 auto;
-  border-bottom: 1px solid var(--border);
 }
 
 .technologies>h2 {
@@ -665,7 +596,6 @@ body::before {
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
   background: var(--border);
-  border: 1px solid var(--border);
 }
 
 .tech-item {
@@ -707,7 +637,6 @@ body::before {
   width: 36px;
   height: 36px;
   margin-right: 0;
-  border: 1px solid var(--border-mid);
   background: var(--surface-2);
   padding: 4px;
   object-fit: contain;
@@ -765,21 +694,9 @@ input[name="project-tabs"] {
   display: flex;
   align-items: center;
   gap: 0;
-  padding: 0 60px;
-  border-bottom: 1px solid var(--border);
-  border-top: 1px solid var(--border);
+  width: min(92%, 1680px);
+  margin: 0 auto;
   background: var(--bg);
-}
-
-/* Left annotation */
-.project-category-buttons::before {
-  content: '$ ls projects/';
-  font-family: var(--font-mono);
-  font-size: 10px;
-  color: var(--text-muted);
-  letter-spacing: 0.1em;
-  margin-right: 24px;
-  white-space: nowrap;
 }
 
 .web_applications_btn,
@@ -799,7 +716,6 @@ input[name="project-tabs"] {
   padding: 20px 24px;
   position: relative;
   transition: color var(--transition);
-  border-right: 1px solid var(--border);
 }
 
 .web_applications_btn::after,
@@ -842,8 +758,8 @@ input[name="project-tabs"] {
   position: relative;
   z-index: 1;
   text-align: left;
-  padding: 80px 60px;
-  max-width: 1300px;
+  padding: 80px 0;
+  width: min(92%, 1680px);
   margin: 0 auto;
 }
 
@@ -859,39 +775,38 @@ input[name="project-tabs"] {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
+  grid-template-columns: 1fr;
+  gap: 140px;
   width: 100%;
-  max-width: 1200px;
 }
 
 /* Dynamic columns based on number of items */
-.project-grid:has(> .project-item:last-child:nth-child(4)),
+/* .project-grid:has(> .project-item:last-child:nth-child(4)),
 .project-grid:has(> .project-item:last-child:nth-child(2)) {
   grid-template-columns: repeat(2, 1fr);
-}
+} */
 
-.project-grid:has(> .project-item:last-child:nth-child(1)) {
+/* .project-grid:has(> .project-item:last-child:nth-child(1)) {
   grid-template-columns: 1fr;
-}
+} */
 
 /* ---------- Project Card ---------- */
 .project-item {
-  background: var(--bg);
+  background: transparent;
   text-align: left;
   position: relative;
   overflow: hidden;
   transition: background var(--transition);
+  min-width: 0;
 }
 
 .project-item:hover {
-  background: var(--surface);
+  background: transparent;
 }
 
 /* Row index */
 .project-item::before {
+  display: none;
   content: attr(data-index);
   position: absolute;
   top: 12px;
@@ -907,7 +822,7 @@ input[name="project-tabs"] {
   position: relative;
   display: block;
   width: 100%;
-  aspect-ratio: 500 / 340;
+  aspect-ratio: 16 / 9;
   height: auto;
   overflow: hidden;
   margin-bottom: 0;
@@ -918,14 +833,14 @@ input[name="project-tabs"] {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(60%) brightness(0.75);
+  filter: brightness(0.95);
   transition: filter 0.35s ease, transform 0.35s ease;
   border-radius: 0;
 }
 
 .project-item:hover .project-item-img-box img {
-  filter: grayscale(0%) brightness(0.9);
-  transform: scale(1.03);
+  filter: brightness(1.0);
+  transform: scale(1.01);
 }
 
 .project-item-img-box::after {
@@ -938,12 +853,11 @@ input[name="project-tabs"] {
 
 /* ---------- Project heading ---------- */
 .project-heading {
-  padding: 20px 20px 24px;
-  border-top: 1px solid var(--border);
+  padding: 32px 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 6px;
+  gap: 12px;
 }
 
 .project-item p {
@@ -957,7 +871,7 @@ input[name="project-tabs"] {
 
 .project-item h3 {
   font-family: var(--font-display);
-  font-size: 16px;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
   font-weight: 600;
   color: var(--text);
   margin: 0;
@@ -965,10 +879,10 @@ input[name="project-tabs"] {
 
 /* ---------- Mobile project overrides ---------- */
 .mobile_applications .project-grid {
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  max-width: 800px;
-  margin: 0;
-  gap: 1px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 140px;
+  width: 100%;
 }
 
 .project-mobile .project-item-img-box {
@@ -1008,19 +922,11 @@ footer {
   justify-content: space-between;
   align-items: center;
   background: var(--bg);
-  border-top: 1px solid var(--border-mid);
   color: var(--text-dim);
-  padding: 24px 60px;
-  margin-top: 0;
+  width: min(92%, 1680px);
+  margin: 0 auto;
+  padding: 32px 0;
   height: auto;
-}
-
-footer::before {
-  content: '>';
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--text-muted);
-  margin-right: 12px;
 }
 
 footer p {
@@ -1063,27 +969,11 @@ footer a:hover {
   }
 
   .intro {
-    grid-template-columns: 1fr;
-    padding: 60px 24px 80px;
-    gap: 48px;
-  }
-
-  .hero-section::after {
-    display: none;
-  }
-
-  .intro-image {
-    max-width: 300px;
-    aspect-ratio: 3/4;
-    margin: 0 auto;
+    padding: 100px 0 60px;
   }
 
   .intro-text {
     padding-left: 0;
-  }
-
-  .intro-text h1::before {
-    display: none;
   }
 
   .technologies {
@@ -1091,27 +981,18 @@ footer a:hover {
   }
 
   .project-category-buttons {
-    padding: 0 24px;
     flex-wrap: wrap;
   }
 
-  .project-category-buttons::before {
-    display: none;
-  }
-
   .projects {
-    padding: 60px 24px;
+    padding: 70px 0;
   }
 
   footer {
-    padding: 20px 24px;
+    padding: 28px 0;
     flex-direction: column;
     gap: 10px;
     text-align: center;
-  }
-
-  footer::before {
-    display: none;
   }
 }
 
@@ -1130,12 +1011,18 @@ footer a:hover {
   }
 
   .project-grid {
-    grid-template-columns: 1fr;
-  }
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 140px;
+  width: 100%;
+}
 
   .mobile_applications .project-grid {
-    grid-template-columns: 1fr;
-  }
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 140px;
+  width: 100%;
+}
 }
 
 /* On small screens keep the header clean: drop the text links, keep the CTA */
@@ -1151,7 +1038,6 @@ footer a:hover {
    ============================================================ */
 .terminal-window {
   background: var(--surface-2);
-  border: 1px solid var(--border-mid);
   border-radius: 4px;
   overflow: hidden;
   width: 100%;
@@ -1168,7 +1054,6 @@ footer a:hover {
   gap: 8px;
   padding: 12px 16px;
   background: var(--surface);
-  border-bottom: 1px solid var(--border);
 }
 
 .terminal-dot {
@@ -1276,10 +1161,9 @@ footer a:hover {
 .services {
   position: relative;
   z-index: 1;
-  padding: 100px 60px;
-  max-width: 1300px;
+  padding: 120px 0;
+  width: min(92%, 1680px);
   margin: 0 auto;
-  border-bottom: 1px solid var(--border);
   scroll-margin-top: 80px;
 }
 
@@ -1310,14 +1194,12 @@ footer a:hover {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 60px;
 }
 
 .service-card {
-  background: var(--bg);
+  background: transparent;
   padding: 36px 28px;
   display: flex;
   flex-direction: column;
@@ -1326,7 +1208,7 @@ footer a:hover {
 }
 
 .service-card:hover {
-  background: var(--surface);
+  background: transparent;
 }
 
 .service-num {
@@ -1369,7 +1251,6 @@ footer a:hover {
   font-size: 11px;
   letter-spacing: 0.04em;
   color: var(--text-dim);
-  border: 1px solid var(--border-mid);
   border-radius: 999px;
   padding: 4px 11px;
 }
@@ -1380,10 +1261,9 @@ footer a:hover {
 .proof {
   position: relative;
   z-index: 1;
-  padding: 100px 60px;
-  max-width: 1300px;
+  padding: 120px 0;
+  width: min(92%, 1680px);
   margin: 0 auto;
-  border-bottom: 1px solid var(--border);
   scroll-margin-top: 80px;
 }
 
@@ -1413,15 +1293,12 @@ footer a:hover {
 /* ---- stat row ---- */
 .proof-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  margin-bottom: 48px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 60px;
 }
 
 .proof-stat {
-  background: var(--bg);
+  background: transparent;
   padding: 36px 28px;
   text-align: center;
 }
@@ -1452,7 +1329,6 @@ footer a:hover {
 
 .testimonial {
   margin: 0;
-  border: 1px solid var(--border-mid);
   border-left: 2px solid var(--signature);
   border-radius: var(--radius);
   background: var(--surface);
@@ -1498,12 +1374,14 @@ footer a:hover {
 
 @media (max-width: 760px) {
   .proof {
-    padding: 64px 24px;
+    padding: 80px 0;
   }
 
   .proof-stats {
-    grid-template-columns: 1fr;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 60px;
+}
 
   .testimonials {
     grid-template-columns: 1fr;
@@ -1516,10 +1394,9 @@ footer a:hover {
 .contact {
   position: relative;
   z-index: 1;
-  padding: 120px 60px;
-  max-width: 1300px;
+  padding: 140px 0;
+  width: min(92%, 1680px);
   margin: 0 auto;
-  border-bottom: 1px solid var(--border-mid);
   scroll-margin-top: 80px;
 }
 
@@ -1560,7 +1437,6 @@ footer a:hover {
   color: var(--text);
   text-decoration: none;
   padding: 16px 28px;
-  border: 1px solid var(--border-mid);
   border-radius: var(--radius);
   background: var(--surface-2);
   transition: background var(--transition), border-color var(--transition), box-shadow var(--transition);
@@ -1575,15 +1451,11 @@ footer a:hover {
 /* ---------- Responsive: services + contact ---------- */
 @media (max-width: 900px) {
   .services {
-    padding: 60px 24px;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
+    padding: 80px 0;
   }
 
   .contact {
-    padding: 80px 24px;
+    padding: 90px 0;
   }
 }
 
@@ -1591,18 +1463,6 @@ footer a:hover {
    ░░  WESTERN / DESERT / GATOR THEME LAYER  ░░
    Hybrid: cowboy-desert-skeleton  ✕  terminal-dark-tech
    ============================================================ */
-
-/* ---------- Warm grain over the grid (desert dust) ---------- */
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background:
-    radial-gradient(circle at 50% -10%, var(--rust-glow) 0%, transparent 45%),
-    radial-gradient(circle at 100% 120%, rgba(216, 169, 75, 0.05) 0%, transparent 40%);
-}
 
 ::selection {
   background: rgba(196, 98, 46, 0.28);
@@ -1623,19 +1483,13 @@ body::after {
 
 .intro-text h1 {
   font-family: var(--font-display);
-  font-weight: 400;
-  line-height: 1.18;
-  letter-spacing: 0.005em;
-}
-
-.intro-text h1::before {
-  color: var(--rust);
+  font-weight: 600;
 }
 
 .hero-accent {
+  display: block;
   font-style: normal;
   color: var(--signature);
-  text-shadow: 0 0 26px var(--rust-glow);
 }
 
 .technologies>h2,
@@ -1675,37 +1529,6 @@ footer::before {
   color: var(--signature);
 }
 
-/* ---------- Desert sun + gator fossil (hero backdrop) ---------- */
-.desert-sun {
-  position: absolute;
-  z-index: 0;
-  top: -220px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1000px;
-  height: 1000px;
-  max-width: 130vw;
-  pointer-events: none;
-  background: radial-gradient(circle,
-      rgba(224, 145, 63, 0.16) 0%,
-      rgba(196, 98, 46, 0.07) 34%,
-      transparent 68%);
-}
-
-.gator-fossil {
-  position: absolute;
-  z-index: 0;
-  /* right: -3%; */
-  /* bottom: 2%; */
-  transform: translateX(120%);
-  width: min(640px, 66vw);
-  aspect-ratio: 570 / 300;
-  pointer-events: none;
-  background: url('../images/gator.png') no-repeat center / contain;
-  opacity: 0.8;
-  filter: sepia(0.5) saturate(1.1) hue-rotate(-12deg) brightness(0.95);
-}
-
 .hero-section .intro {
   position: relative;
   z-index: 1;
@@ -1740,27 +1563,18 @@ footer::before {
 
 /* ---------- Project cards warm up on hover ---------- */
 .project-item:hover .project-item-img-box img {
-  filter: grayscale(0%) brightness(0.92) sepia(0.18) saturate(1.15);
+  filter: none brightness(0.92) sepia(0.18) saturate(1.15);
 }
 
 .project-item h3 {
   font-family: var(--font-display);
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
 }
 
-/* ---------- Nav: lasso hover ---------- */
+/* ---------- Nav hover ---------- */
 .nav ul li a:hover {
   color: var(--signature-hover);
-}
-
-.nav ul li a::before {
-  content: '⟶ ';
-  color: var(--rust);
-}
-
-.nav ul li a:hover::before {
-  opacity: 1;
 }
 
 /* ---------- Contact emblem + CTA ---------- */
@@ -1794,13 +1608,6 @@ footer a:hover {
 }
 
 @media (max-width: 900px) {
-  .gator-fossil {
-    opacity: 1;
-    bottom: auto;
-    top: 8%;
-    right: -10%;
-  }
-
   .contact-emblem {
     width: clamp(150px, 50vw, 220px);
   }
@@ -1852,7 +1659,6 @@ footer a:hover {
 /* ---- hero ---- */
 .cs-hero {
   padding: 36px 0 48px;
-  border-bottom: 1px solid var(--border-mid);
 }
 
 .cs-title {
@@ -1905,7 +1711,6 @@ footer a:hover {
 /* ---- generic section ---- */
 .cs-section {
   padding: 52px 0;
-  border-bottom: 1px solid var(--border);
 }
 
 .cs-kicker {
@@ -1975,7 +1780,6 @@ footer a:hover {
 .cs-gallery img {
   width: 100%;
   display: block;
-  border: 1px solid var(--border-mid);
   border-radius: var(--radius);
   background: var(--surface);
 }
@@ -1994,7 +1798,6 @@ footer a:hover {
 /* ---- code / API snippet (for backend-heavy projects) ---- */
 .cs-code {
   margin-top: 16px;
-  border: 1px solid var(--border-mid);
   border-radius: var(--radius);
   background: #0d0a07;
   overflow-x: auto;
@@ -2006,7 +1809,6 @@ footer a:hover {
   letter-spacing: 0.06em;
   color: var(--text-dim);
   padding: 10px 16px;
-  border-bottom: 1px solid var(--border);
 }
 
 .cs-code pre {
@@ -2032,7 +1834,6 @@ footer a:hover {
 }
 
 .cs-metric {
-  border: 1px solid var(--border-mid);
   border-radius: var(--radius);
   padding: 24px 20px;
   background: var(--surface);
@@ -2078,7 +1879,6 @@ footer a:hover {
   font-size: 12px;
   letter-spacing: 0.04em;
   color: var(--text);
-  border: 1px solid var(--border-mid);
   border-radius: 999px;
   padding: 6px 14px;
   background: var(--surface);
